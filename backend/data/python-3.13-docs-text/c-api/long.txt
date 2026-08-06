@@ -1,0 +1,548 @@
+Integer Objects
+***************
+
+All integers are implemented as "long" integer objects of arbitrary
+size.
+
+On error, most "PyLong_As*" APIs return "(return type)-1" which cannot
+be distinguished from a number.  Use "PyErr_Occurred()" to
+disambiguate.
+
+type PyLongObject
+    * Part of the Limited API (as an opaque struct).*
+
+   This subtype of "PyObject" represents a Python integer object.
+
+PyTypeObject PyLong_Type
+    * Part of the Stable ABI.*
+
+   This instance of "PyTypeObject" represents the Python integer type.
+   This is the same object as "int" in the Python layer.
+
+int PyLong_Check(PyObject *p)
+
+   Return true if its argument is a "PyLongObject" or a subtype of
+   "PyLongObject".  This function always succeeds.
+
+int PyLong_CheckExact(PyObject *p)
+
+   Return true if its argument is a "PyLongObject", but not a subtype
+   of "PyLongObject".  This function always succeeds.
+
+PyObject *PyLong_FromLong(long v)
+    *Return value: New reference.** Part of the Stable ABI.*
+
+   Return a new "PyLongObject" object from *v*, or "NULL" on failure.
+
+   **CPython implementation detail:** CPython keeps an array of
+   integer objects for all integers between "-5" and "256".  When you
+   create an int in that range you actually just get back a reference
+   to the existing object.
+
+PyObject *PyLong_FromUnsignedLong(unsigned long v)
+    *Return value: New reference.** Part of the Stable ABI.*
+
+   Return a new "PyLongObject" object from a C unsigned long, or
+   "NULL" on failure.
+
+PyObject *PyLong_FromSsize_t(Py_ssize_t v)
+    *Return value: New reference.** Part of the Stable ABI.*
+
+   Return a new "PyLongObject" object from a C "Py_ssize_t", or "NULL"
+   on failure.
+
+PyObject *PyLong_FromSize_t(size_t v)
+    *Return value: New reference.** Part of the Stable ABI.*
+
+   Return a new "PyLongObject" object from a C "size_t", or "NULL" on
+   failure.
+
+PyObject *PyLong_FromLongLong(long long v)
+    *Return value: New reference.** Part of the Stable ABI.*
+
+   Return a new "PyLongObject" object from a C long long, or "NULL" on
+   failure.
+
+PyObject *PyLong_FromUnsignedLongLong(unsigned long long v)
+    *Return value: New reference.** Part of the Stable ABI.*
+
+   Return a new "PyLongObject" object from a C unsigned long long, or
+   "NULL" on failure.
+
+PyObject *PyLong_FromDouble(double v)
+    *Return value: New reference.** Part of the Stable ABI.*
+
+   Return a new "PyLongObject" object from the integer part of *v*, or
+   "NULL" on failure.
+
+PyObject *PyLong_FromString(const char *str, char **pend, int base)
+    *Return value: New reference.** Part of the Stable ABI.*
+
+   Return a new "PyLongObject" based on the string value in *str*,
+   which is interpreted according to the radix in *base*, or "NULL" on
+   failure.  If *pend* is non-"NULL", **pend* will point to the end of
+   *str* on success or to the first character that could not be
+   processed on error.  If *base* is "0", *str* is interpreted using
+   the Integer literals definition; in this case, leading zeros in a
+   non-zero decimal number raises a "ValueError".  If *base* is not
+   "0", it must be between "2" and "36", inclusive.  Leading and
+   trailing whitespace and single underscores after a base specifier
+   and between digits are ignored.  If there are no digits or *str* is
+   not NULL-terminated following the digits and trailing whitespace,
+   "ValueError" will be raised.
+
+   See also:
+
+     Python methods "int.to_bytes()" and "int.from_bytes()" to convert
+     a "PyLongObject" to/from an array of bytes in base "256". You can
+     call those from C using "PyObject_CallMethod()".
+
+PyObject *PyLong_FromUnicodeObject(PyObject *u, int base)
+    *Return value: New reference.*
+
+   Convert a sequence of Unicode digits in the string *u* to a Python
+   integer value.
+
+   Added in version 3.3.
+
+PyObject *PyLong_FromVoidPtr(void *p)
+    *Return value: New reference.** Part of the Stable ABI.*
+
+   Create a Python integer from the pointer *p*. The pointer value can
+   be retrieved from the resulting value using "PyLong_AsVoidPtr()".
+
+PyObject *PyLong_FromNativeBytes(const void *buffer, size_t n_bytes, int flags)
+
+   Create a Python integer from the value contained in the first
+   *n_bytes* of *buffer*, interpreted as a two's-complement signed
+   number.
+
+   *flags* are as for "PyLong_AsNativeBytes()". Passing "-1" will
+   select the native endian that CPython was compiled with and assume
+   that the most-significant bit is a sign bit. Passing
+   "Py_ASNATIVEBYTES_UNSIGNED_BUFFER" will produce the same result as
+   calling "PyLong_FromUnsignedNativeBytes()". Other flags are
+   ignored.
+
+   Added in version 3.13.
+
+PyObject *PyLong_FromUnsignedNativeBytes(const void *buffer, size_t n_bytes, int flags)
+
+   Create a Python integer from the value contained in the first
+   *n_bytes* of *buffer*, interpreted as an unsigned number.
+
+   *flags* are as for "PyLong_AsNativeBytes()". Passing "-1" will
+   select the native endian that CPython was compiled with and assume
+   that the most-significant bit is not a sign bit. Flags other than
+   endian are ignored.
+
+   Added in version 3.13.
+
+PyLong_FromPid(pid)
+
+   Macro for creating a Python integer from a process identifier.
+
+   This can be defined as an alias to "PyLong_FromLong()" or
+   "PyLong_FromLongLong()", depending on the size of the system's PID
+   type.
+
+   Added in version 3.2.
+
+long PyLong_AsLong(PyObject *obj)
+    * Part of the Stable ABI.*
+
+   Return a C long representation of *obj*.  If *obj* is not an
+   instance of "PyLongObject", first call its "__index__()" method (if
+   present) to convert it to a "PyLongObject".
+
+   Raise "OverflowError" if the value of *obj* is out of range for a
+   long.
+
+   Returns "-1" on error.  Use "PyErr_Occurred()" to disambiguate.
+
+   Changed in version 3.8: Use "__index__()" if available.
+
+   Changed in version 3.10: This function will no longer use
+   "__int__()".
+
+   long PyLong_AS_LONG(PyObject *obj)
+
+      Exactly equivalent to the preferred "PyLong_AsLong". In
+      particular, it can fail with "OverflowError" or another
+      exception.
+
+      Soft deprecated since version 3.14.
+
+int PyLong_AsInt(PyObject *obj)
+    * Part of the Stable ABI since version 3.13.*
+
+   Similar to "PyLong_AsLong()", but store the result in a C int
+   instead of a C long.
+
+   Added in version 3.13.
+
+long PyLong_AsLongAndOverflow(PyObject *obj, int *overflow)
+    * Part of the Stable ABI.*
+
+   Return a C long representation of *obj*.  If *obj* is not an
+   instance of "PyLongObject", first call its "__index__()" method (if
+   present) to convert it to a "PyLongObject".
+
+   If the value of *obj* is greater than "LONG_MAX" or less than
+   "LONG_MIN", set **overflow* to "1" or "-1", respectively, and
+   return "-1"; otherwise, set **overflow* to "0".  If any other
+   exception occurs set **overflow* to "0" and return "-1" as usual.
+
+   Returns "-1" on error.  Use "PyErr_Occurred()" to disambiguate.
+
+   Changed in version 3.8: Use "__index__()" if available.
+
+   Changed in version 3.10: This function will no longer use
+   "__int__()".
+
+long long PyLong_AsLongLong(PyObject *obj)
+    * Part of the Stable ABI.*
+
+   Return a C long long representation of *obj*.  If *obj* is not an
+   instance of "PyLongObject", first call its "__index__()" method (if
+   present) to convert it to a "PyLongObject".
+
+   Raise "OverflowError" if the value of *obj* is out of range for a
+   long long.
+
+   Returns "-1" on error.  Use "PyErr_Occurred()" to disambiguate.
+
+   Changed in version 3.8: Use "__index__()" if available.
+
+   Changed in version 3.10: This function will no longer use
+   "__int__()".
+
+long long PyLong_AsLongLongAndOverflow(PyObject *obj, int *overflow)
+    * Part of the Stable ABI.*
+
+   Return a C long long representation of *obj*.  If *obj* is not an
+   instance of "PyLongObject", first call its "__index__()" method (if
+   present) to convert it to a "PyLongObject".
+
+   If the value of *obj* is greater than "LLONG_MAX" or less than
+   "LLONG_MIN", set **overflow* to "1" or "-1", respectively, and
+   return "-1"; otherwise, set **overflow* to "0".  If any other
+   exception occurs set **overflow* to "0" and return "-1" as usual.
+
+   Returns "-1" on error.  Use "PyErr_Occurred()" to disambiguate.
+
+   Added in version 3.2.
+
+   Changed in version 3.8: Use "__index__()" if available.
+
+   Changed in version 3.10: This function will no longer use
+   "__int__()".
+
+Py_ssize_t PyLong_AsSsize_t(PyObject *pylong)
+    * Part of the Stable ABI.*
+
+   Return a C "Py_ssize_t" representation of *pylong*.  *pylong* must
+   be an instance of "PyLongObject".
+
+   Raise "OverflowError" if the value of *pylong* is out of range for
+   a "Py_ssize_t".
+
+   Returns "-1" on error.  Use "PyErr_Occurred()" to disambiguate.
+
+unsigned long PyLong_AsUnsignedLong(PyObject *pylong)
+    * Part of the Stable ABI.*
+
+   Return a C unsigned long representation of *pylong*.  *pylong* must
+   be an instance of "PyLongObject".
+
+   Raise "OverflowError" if the value of *pylong* is out of range for
+   a unsigned long.
+
+   Returns "(unsigned long)-1" on error. Use "PyErr_Occurred()" to
+   disambiguate.
+
+size_t PyLong_AsSize_t(PyObject *pylong)
+    * Part of the Stable ABI.*
+
+   Return a C "size_t" representation of *pylong*.  *pylong* must be
+   an instance of "PyLongObject".
+
+   Raise "OverflowError" if the value of *pylong* is out of range for
+   a "size_t".
+
+   Returns "(size_t)-1" on error. Use "PyErr_Occurred()" to
+   disambiguate.
+
+unsigned long long PyLong_AsUnsignedLongLong(PyObject *pylong)
+    * Part of the Stable ABI.*
+
+   Return a C unsigned long long representation of *pylong*.  *pylong*
+   must be an instance of "PyLongObject".
+
+   Raise "OverflowError" if the value of *pylong* is out of range for
+   an unsigned long long.
+
+   Returns "(unsigned long long)-1" on error. Use "PyErr_Occurred()"
+   to disambiguate.
+
+   Changed in version 3.1: A negative *pylong* now raises
+   "OverflowError", not "TypeError".
+
+unsigned long PyLong_AsUnsignedLongMask(PyObject *obj)
+    * Part of the Stable ABI.*
+
+   Return a C unsigned long representation of *obj*.  If *obj* is not
+   an instance of "PyLongObject", first call its "__index__()" method
+   (if present) to convert it to a "PyLongObject".
+
+   If the value of *obj* is out of range for an unsigned long, return
+   the reduction of that value modulo "ULONG_MAX + 1".
+
+   Returns "(unsigned long)-1" on error.  Use "PyErr_Occurred()" to
+   disambiguate.
+
+   Changed in version 3.8: Use "__index__()" if available.
+
+   Changed in version 3.10: This function will no longer use
+   "__int__()".
+
+unsigned long long PyLong_AsUnsignedLongLongMask(PyObject *obj)
+    * Part of the Stable ABI.*
+
+   Return a C unsigned long long representation of *obj*.  If *obj* is
+   not an instance of "PyLongObject", first call its "__index__()"
+   method (if present) to convert it to a "PyLongObject".
+
+   If the value of *obj* is out of range for an unsigned long long,
+   return the reduction of that value modulo "ULLONG_MAX + 1".
+
+   Returns "(unsigned long long)-1" on error.  Use "PyErr_Occurred()"
+   to disambiguate.
+
+   Changed in version 3.8: Use "__index__()" if available.
+
+   Changed in version 3.10: This function will no longer use
+   "__int__()".
+
+double PyLong_AsDouble(PyObject *pylong)
+    * Part of the Stable ABI.*
+
+   Return a C double representation of *pylong*.  *pylong* must be an
+   instance of "PyLongObject".
+
+   Raise "OverflowError" if the value of *pylong* is out of range for
+   a double.
+
+   Returns "-1.0" on error.  Use "PyErr_Occurred()" to disambiguate.
+
+void *PyLong_AsVoidPtr(PyObject *pylong)
+    * Part of the Stable ABI.*
+
+   Convert a Python integer *pylong* to a C void pointer. If *pylong*
+   cannot be converted, an "OverflowError" will be raised.  This is
+   only assured to produce a usable void pointer for values created
+   with "PyLong_FromVoidPtr()".
+
+   Returns "NULL" on error.  Use "PyErr_Occurred()" to disambiguate.
+
+PyLong_AsPid(pid)
+
+   Macro for converting a Python integer into a process identifier.
+
+   This can be defined as an alias to "PyLong_AsLong()",
+   "PyLong_FromLongLong()", or "PyLong_AsInt()", depending on the size
+   of the system's PID type.
+
+   Added in version 3.2.
+
+Py_ssize_t PyLong_AsNativeBytes(PyObject *pylong, void *buffer, Py_ssize_t n_bytes, int flags)
+
+   Copy the Python integer value *pylong* to a native *buffer* of size
+   *n_bytes*. The *flags* can be set to "-1" to behave similarly to a
+   C cast, or to values documented below to control the behavior.
+
+   Returns "-1" with an exception raised on error.  This may happen if
+   *pylong* cannot be interpreted as an integer, or if *pylong* was
+   negative and the "Py_ASNATIVEBYTES_REJECT_NEGATIVE" flag was set.
+
+   Otherwise, returns the number of bytes required to store the value.
+   If this is equal to or less than *n_bytes*, the entire value was
+   copied. All *n_bytes* of the buffer are written: remaining bytes
+   filled by copies of the sign bit.
+
+   If the returned value is greater than *n_bytes*, the value was
+   truncated: as many of the lowest bits of the value as could fit are
+   written, and the higher bits are ignored. This matches the typical
+   behavior of a C-style downcast.
+
+   Note:
+
+     Overflow is not considered an error. If the returned value is
+     larger than *n_bytes*, most significant bits were discarded.
+
+   "0" will never be returned.
+
+   Values are always copied as two's-complement.
+
+   Usage example:
+
+      int32_t value;
+      Py_ssize_t bytes = PyLong_AsNativeBytes(pylong, &value, sizeof(value), -1);
+      if (bytes < 0) {
+          // Failed. A Python exception was set with the reason.
+          return NULL;
+      }
+      else if (bytes <= (Py_ssize_t)sizeof(value)) {
+          // Success!
+      }
+      else {
+          // Overflow occurred, but 'value' contains the truncated
+          // lowest bits of pylong.
+      }
+
+   Passing zero to *n_bytes* will return the size of a buffer that
+   would be large enough to hold the value. This may be larger than
+   technically necessary, but not unreasonably so. If *n_bytes=0*,
+   *buffer* may be "NULL".
+
+   Note:
+
+     Passing *n_bytes=0* to this function is not an accurate way to
+     determine the bit length of the value.
+
+   To get at the entire Python value of an unknown size, the function
+   can be called twice: first to determine the buffer size, then to
+   fill it:
+
+      // Ask how much space we need.
+      Py_ssize_t expected = PyLong_AsNativeBytes(pylong, NULL, 0, -1);
+      if (expected < 0) {
+          // Failed. A Python exception was set with the reason.
+          return NULL;
+      }
+      assert(expected != 0);  // Impossible per the API definition.
+      uint8_t *bignum = malloc(expected);
+      if (!bignum) {
+          PyErr_SetString(PyExc_MemoryError, "bignum malloc failed.");
+          return NULL;
+      }
+      // Safely get the entire value.
+      Py_ssize_t bytes = PyLong_AsNativeBytes(pylong, bignum, expected, -1);
+      if (bytes < 0) {  // Exception has been set.
+          free(bignum);
+          return NULL;
+      }
+      else if (bytes > expected) {  // This should not be possible.
+          PyErr_SetString(PyExc_RuntimeError,
+              "Unexpected bignum truncation after a size check.");
+          free(bignum);
+          return NULL;
+      }
+      // The expected success given the above pre-check.
+      // ... use bignum ...
+      free(bignum);
+
+   *flags* is either "-1" ("Py_ASNATIVEBYTES_DEFAULTS") to select
+   defaults that behave most like a C cast, or a combination of the
+   other flags in the table below. Note that "-1" cannot be combined
+   with other flags.
+
+   Currently, "-1" corresponds to "Py_ASNATIVEBYTES_NATIVE_ENDIAN |
+   Py_ASNATIVEBYTES_UNSIGNED_BUFFER".
+
+   +-----------------------------------------------+--------+
+   | Flag                                          | Value  |
+   |===============================================|========|
+   | Py_ASNATIVEBYTES_DEFAULTS                     | "-1"   |
+   +-----------------------------------------------+--------+
+   | Py_ASNATIVEBYTES_BIG_ENDIAN                   | "0"    |
+   +-----------------------------------------------+--------+
+   | Py_ASNATIVEBYTES_LITTLE_ENDIAN                | "1"    |
+   +-----------------------------------------------+--------+
+   | Py_ASNATIVEBYTES_NATIVE_ENDIAN                | "3"    |
+   +-----------------------------------------------+--------+
+   | Py_ASNATIVEBYTES_UNSIGNED_BUFFER              | "4"    |
+   +-----------------------------------------------+--------+
+   | Py_ASNATIVEBYTES_REJECT_NEGATIVE              | "8"    |
+   +-----------------------------------------------+--------+
+   | Py_ASNATIVEBYTES_ALLOW_INDEX                  | "16"   |
+   +-----------------------------------------------+--------+
+
+   Specifying "Py_ASNATIVEBYTES_NATIVE_ENDIAN" will override any other
+   endian flags. Passing "2" is reserved.
+
+   By default, sufficient buffer will be requested to include a sign
+   bit. For example, when converting 128 with *n_bytes=1*, the
+   function will return 2 (or more) in order to store a zero sign bit.
+
+   If "Py_ASNATIVEBYTES_UNSIGNED_BUFFER" is specified, a zero sign bit
+   will be omitted from size calculations. This allows, for example,
+   128 to fit in a single-byte buffer. If the destination buffer is
+   later treated as signed, a positive input value may become
+   negative. Note that the flag does not affect handling of negative
+   values: for those, space for a sign bit is always requested.
+
+   Specifying "Py_ASNATIVEBYTES_REJECT_NEGATIVE" causes an exception
+   to be set if *pylong* is negative. Without this flag, negative
+   values will be copied provided there is enough space for at least
+   one sign bit, regardless of whether
+   "Py_ASNATIVEBYTES_UNSIGNED_BUFFER" was specified.
+
+   If "Py_ASNATIVEBYTES_ALLOW_INDEX" is specified and a non-integer
+   value is passed, its "__index__()" method will be called first.
+   This may result in Python code executing and other threads being
+   allowed to run, which could cause changes to other objects or
+   values in use. When *flags* is "-1", this option is not set, and
+   non-integer values will raise "TypeError".
+
+   Note:
+
+     With the default *flags* ("-1", or *UNSIGNED_BUFFER*  without
+     *REJECT_NEGATIVE*), multiple Python integers can map to a single
+     value without overflow. For example, both "255" and "-1" fit a
+     single-byte buffer and set all its bits. This matches typical C
+     cast behavior.
+
+   Added in version 3.13.
+
+PyObject *PyLong_GetInfo(void)
+    * Part of the Stable ABI.*
+
+   On success, return a read only *named tuple*, that holds
+   information about Python's internal representation of integers. See
+   "sys.int_info" for description of individual fields.
+
+   On failure, return "NULL" with an exception set.
+
+   Added in version 3.1.
+
+int PyUnstable_Long_IsCompact(const PyLongObject *op)
+
+   *This is Unstable API. It may change without warning in minor
+   releases.*
+
+   Return 1 if *op* is compact, 0 otherwise.
+
+   This function makes it possible for performance-critical code to
+   implement a “fast path” for small integers. For compact values use
+   "PyUnstable_Long_CompactValue()"; for others fall back to a
+   "PyLong_As*" function or "PyLong_AsNativeBytes()".
+
+   The speedup is expected to be negligible for most users.
+
+   Exactly what values are considered compact is an implementation
+   detail and is subject to change.
+
+   Added in version 3.12.
+
+Py_ssize_t PyUnstable_Long_CompactValue(const PyLongObject *op)
+
+   *This is Unstable API. It may change without warning in minor
+   releases.*
+
+   If *op* is compact, as determined by "PyUnstable_Long_IsCompact()",
+   return its value.
+
+   Otherwise, the return value is undefined.
+
+   Added in version 3.12.

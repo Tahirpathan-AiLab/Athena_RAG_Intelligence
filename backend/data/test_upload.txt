@@ -1,0 +1,1 @@
+Python is a programming language used for web development, automation, and data science. Tahir Khan is an intern working on RAG systems.

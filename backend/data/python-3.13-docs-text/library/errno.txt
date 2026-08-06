@@ -1,0 +1,706 @@
+"errno" --- Standard errno system symbols
+*****************************************
+
+======================================================================
+
+This module makes available standard "errno" system symbols. The value
+of each symbol is the corresponding integer value. The names and
+descriptions are borrowed from "linux/include/errno.h", which should
+be all-inclusive.
+
+errno.errorcode
+
+   Dictionary providing a mapping from the errno value to the string
+   name in the underlying system.  For instance,
+   "errno.errorcode[errno.EPERM]" maps to "'EPERM'".
+
+To translate a numeric error code to an error message, use
+"os.strerror()".
+
+Of the following list, symbols that are not used on the current
+platform are not defined by the module.  The specific list of defined
+symbols is available as "errno.errorcode.keys()".  Symbols available
+can include:
+
+errno.EPERM
+
+   Operation not permitted. This error is mapped to the exception
+   "PermissionError".
+
+errno.ENOENT
+
+   No such file or directory. This error is mapped to the exception
+   "FileNotFoundError".
+
+errno.ESRCH
+
+   No such process. This error is mapped to the exception
+   "ProcessLookupError".
+
+errno.EINTR
+
+   Interrupted system call. This error is mapped to the exception
+   "InterruptedError".
+
+errno.EIO
+
+   I/O error
+
+errno.ENXIO
+
+   No such device or address
+
+errno.E2BIG
+
+   Arg list too long
+
+errno.ENOEXEC
+
+   Exec format error
+
+errno.EBADF
+
+   Bad file number
+
+errno.ECHILD
+
+   No child processes. This error is mapped to the exception
+   "ChildProcessError".
+
+errno.EAGAIN
+
+   Try again. This error is mapped to the exception "BlockingIOError".
+
+errno.ENOMEM
+
+   Out of memory
+
+errno.EACCES
+
+   Permission denied.  This error is mapped to the exception
+   "PermissionError".
+
+errno.EFAULT
+
+   Bad address
+
+errno.ENOTBLK
+
+   Block device required
+
+errno.EBUSY
+
+   Device or resource busy
+
+errno.EEXIST
+
+   File exists. This error is mapped to the exception
+   "FileExistsError".
+
+errno.EXDEV
+
+   Cross-device link
+
+errno.ENODEV
+
+   No such device
+
+errno.ENOTDIR
+
+   Not a directory. This error is mapped to the exception
+   "NotADirectoryError".
+
+errno.EISDIR
+
+   Is a directory. This error is mapped to the exception
+   "IsADirectoryError".
+
+errno.EINVAL
+
+   Invalid argument
+
+errno.ENFILE
+
+   File table overflow
+
+errno.EMFILE
+
+   Too many open files
+
+errno.ENOTTY
+
+   Not a typewriter
+
+errno.ETXTBSY
+
+   Text file busy
+
+errno.EFBIG
+
+   File too large
+
+errno.ENOSPC
+
+   No space left on device
+
+errno.ESPIPE
+
+   Illegal seek
+
+errno.EROFS
+
+   Read-only file system
+
+errno.EMLINK
+
+   Too many links
+
+errno.EPIPE
+
+   Broken pipe. This error is mapped to the exception
+   "BrokenPipeError".
+
+errno.EDOM
+
+   Math argument out of domain of func
+
+errno.ERANGE
+
+   Math result not representable
+
+errno.EDEADLK
+
+   Resource deadlock would occur
+
+errno.ENAMETOOLONG
+
+   File name too long
+
+errno.ENOLCK
+
+   No record locks available
+
+errno.ENOSYS
+
+   Function not implemented
+
+errno.ENOTEMPTY
+
+   Directory not empty
+
+errno.ELOOP
+
+   Too many symbolic links encountered
+
+errno.EWOULDBLOCK
+
+   Operation would block. This error is mapped to the exception
+   "BlockingIOError".
+
+errno.ENOMSG
+
+   No message of desired type
+
+errno.EIDRM
+
+   Identifier removed
+
+errno.ECHRNG
+
+   Channel number out of range
+
+errno.EL2NSYNC
+
+   Level 2 not synchronized
+
+errno.EL3HLT
+
+   Level 3 halted
+
+errno.EL3RST
+
+   Level 3 reset
+
+errno.ELNRNG
+
+   Link number out of range
+
+errno.EUNATCH
+
+   Protocol driver not attached
+
+errno.ENOCSI
+
+   No CSI structure available
+
+errno.EL2HLT
+
+   Level 2 halted
+
+errno.EBADE
+
+   Invalid exchange
+
+errno.EBADR
+
+   Invalid request descriptor
+
+errno.EXFULL
+
+   Exchange full
+
+errno.ENOANO
+
+   No anode
+
+errno.EBADRQC
+
+   Invalid request code
+
+errno.EBADSLT
+
+   Invalid slot
+
+errno.EDEADLOCK
+
+   File locking deadlock error
+
+errno.EBFONT
+
+   Bad font file format
+
+errno.ENOSTR
+
+   Device not a stream
+
+errno.ENODATA
+
+   No data available
+
+errno.ETIME
+
+   Timer expired
+
+errno.ENOSR
+
+   Out of streams resources
+
+errno.ENONET
+
+   Machine is not on the network
+
+errno.ENOPKG
+
+   Package not installed
+
+errno.EREMOTE
+
+   Object is remote
+
+errno.ENOLINK
+
+   Link has been severed
+
+errno.EADV
+
+   Advertise error
+
+errno.ESRMNT
+
+   Srmount error
+
+errno.ECOMM
+
+   Communication error on send
+
+errno.EPROTO
+
+   Protocol error
+
+errno.EMULTIHOP
+
+   Multihop attempted
+
+errno.EDOTDOT
+
+   RFS specific error
+
+errno.EBADMSG
+
+   Not a data message
+
+errno.EOVERFLOW
+
+   Value too large for defined data type
+
+errno.ENOTUNIQ
+
+   Name not unique on network
+
+errno.EBADFD
+
+   File descriptor in bad state
+
+errno.EREMCHG
+
+   Remote address changed
+
+errno.ELIBACC
+
+   Can not access a needed shared library
+
+errno.ELIBBAD
+
+   Accessing a corrupted shared library
+
+errno.ELIBSCN
+
+   .lib section in a.out corrupted
+
+errno.ELIBMAX
+
+   Attempting to link in too many shared libraries
+
+errno.ELIBEXEC
+
+   Cannot exec a shared library directly
+
+errno.EILSEQ
+
+   Illegal byte sequence
+
+errno.ERESTART
+
+   Interrupted system call should be restarted
+
+errno.ESTRPIPE
+
+   Streams pipe error
+
+errno.EUSERS
+
+   Too many users
+
+errno.ENOTSOCK
+
+   Socket operation on non-socket
+
+errno.EDESTADDRREQ
+
+   Destination address required
+
+errno.EMSGSIZE
+
+   Message too long
+
+errno.EPROTOTYPE
+
+   Protocol wrong type for socket
+
+errno.ENOPROTOOPT
+
+   Protocol not available
+
+errno.EPROTONOSUPPORT
+
+   Protocol not supported
+
+errno.ESOCKTNOSUPPORT
+
+   Socket type not supported
+
+errno.EOPNOTSUPP
+
+   Operation not supported on transport endpoint
+
+errno.ENOTSUP
+
+   Operation not supported
+
+   Added in version 3.2.
+
+errno.EPFNOSUPPORT
+
+   Protocol family not supported
+
+errno.EAFNOSUPPORT
+
+   Address family not supported by protocol
+
+errno.EADDRINUSE
+
+   Address already in use
+
+errno.EADDRNOTAVAIL
+
+   Cannot assign requested address
+
+errno.ENETDOWN
+
+   Network is down
+
+errno.ENETUNREACH
+
+   Network is unreachable
+
+errno.ENETRESET
+
+   Network dropped connection because of reset
+
+errno.ECONNABORTED
+
+   Software caused connection abort. This error is mapped to the
+   exception "ConnectionAbortedError".
+
+errno.ECONNRESET
+
+   Connection reset by peer. This error is mapped to the exception
+   "ConnectionResetError".
+
+errno.ENOBUFS
+
+   No buffer space available
+
+errno.EISCONN
+
+   Transport endpoint is already connected
+
+errno.ENOTCONN
+
+   Transport endpoint is not connected
+
+errno.ESHUTDOWN
+
+   Cannot send after transport endpoint shutdown. This error is mapped
+   to the exception "BrokenPipeError".
+
+errno.ETOOMANYREFS
+
+   Too many references: cannot splice
+
+errno.ETIMEDOUT
+
+   Connection timed out. This error is mapped to the exception
+   "TimeoutError".
+
+errno.ECONNREFUSED
+
+   Connection refused. This error is mapped to the exception
+   "ConnectionRefusedError".
+
+errno.EHOSTDOWN
+
+   Host is down
+
+errno.EHOSTUNREACH
+
+   No route to host
+
+errno.EALREADY
+
+   Operation already in progress. This error is mapped to the
+   exception "BlockingIOError".
+
+errno.EINPROGRESS
+
+   Operation now in progress. This error is mapped to the exception
+   "BlockingIOError".
+
+errno.ESTALE
+
+   Stale NFS file handle
+
+errno.EUCLEAN
+
+   Structure needs cleaning
+
+errno.ENOTNAM
+
+   Not a XENIX named type file
+
+errno.ENAVAIL
+
+   No XENIX semaphores available
+
+errno.EISNAM
+
+   Is a named type file
+
+errno.EREMOTEIO
+
+   Remote I/O error
+
+errno.EDQUOT
+
+   Quota exceeded
+
+errno.EQFULL
+
+   Interface output queue is full
+
+   Added in version 3.11.
+
+errno.ENOMEDIUM
+
+   No medium found
+
+errno.EMEDIUMTYPE
+
+   Wrong medium type
+
+errno.ENOKEY
+
+   Required key not available
+
+errno.EKEYEXPIRED
+
+   Key has expired
+
+errno.EKEYREVOKED
+
+   Key has been revoked
+
+errno.EKEYREJECTED
+
+   Key was rejected by service
+
+errno.ERFKILL
+
+   Operation not possible due to RF-kill
+
+errno.ELOCKUNMAPPED
+
+   Locked lock was unmapped
+
+errno.ENOTACTIVE
+
+   Facility is not active
+
+errno.EAUTH
+
+   Authentication error
+
+   Added in version 3.2.
+
+errno.EBADARCH
+
+   Bad CPU type in executable
+
+   Added in version 3.2.
+
+errno.EBADEXEC
+
+   Bad executable (or shared library)
+
+   Added in version 3.2.
+
+errno.EBADMACHO
+
+   Malformed Mach-o file
+
+   Added in version 3.2.
+
+errno.EDEVERR
+
+   Device error
+
+   Added in version 3.2.
+
+errno.EFTYPE
+
+   Inappropriate file type or format
+
+   Added in version 3.2.
+
+errno.ENEEDAUTH
+
+   Need authenticator
+
+   Added in version 3.2.
+
+errno.ENOATTR
+
+   Attribute not found
+
+   Added in version 3.2.
+
+errno.ENOPOLICY
+
+   Policy not found
+
+   Added in version 3.2.
+
+errno.EPROCLIM
+
+   Too many processes
+
+   Added in version 3.2.
+
+errno.EPROCUNAVAIL
+
+   Bad procedure for program
+
+   Added in version 3.2.
+
+errno.EPROGMISMATCH
+
+   Program version wrong
+
+   Added in version 3.2.
+
+errno.EPROGUNAVAIL
+
+   RPC prog. not avail
+
+   Added in version 3.2.
+
+errno.EPWROFF
+
+   Device power is off
+
+   Added in version 3.2.
+
+errno.EBADRPC
+
+   RPC struct is bad
+
+   Added in version 3.2.
+
+errno.ERPCMISMATCH
+
+   RPC version wrong
+
+   Added in version 3.2.
+
+errno.ESHLIBVERS
+
+   Shared library version mismatch
+
+   Added in version 3.2.
+
+errno.ENOTCAPABLE
+
+   Capabilities insufficient. This error is mapped to the exception
+   "PermissionError".
+
+   Availability: WASI, FreeBSD
+
+   Added in version 3.11.1.
+
+errno.ECANCELED
+
+   Operation canceled
+
+   Added in version 3.2.
+
+errno.EOWNERDEAD
+
+   Owner died
+
+   Added in version 3.2.
+
+errno.ENOTRECOVERABLE
+
+   State not recoverable
+
+   Added in version 3.2.

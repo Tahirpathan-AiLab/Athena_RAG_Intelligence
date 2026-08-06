@@ -1,0 +1,314 @@
+Development Tools
+*****************
+
+The modules described in this chapter help you write software.  For
+example, the "pydoc" module takes a module and generates documentation
+based on the module's contents.  The "doctest" and "unittest" modules
+contains frameworks for writing unit tests that automatically exercise
+code and verify that the expected output is produced.
+
+The list of modules described in this chapter is:
+
+* "typing" --- Support for type hints
+
+  * Specification for the Python Type System
+
+  * Type aliases
+
+  * NewType
+
+  * Annotating callable objects
+
+  * Generics
+
+  * Annotating tuples
+
+  * The type of class objects
+
+  * Annotating generators and coroutines
+
+  * User-defined generic types
+
+  * The "Any" type
+
+  * Nominal vs structural subtyping
+
+  * Module contents
+
+    * Special typing primitives
+
+      * Special types
+
+      * Special forms
+
+      * Building generic types and type aliases
+
+      * Other special directives
+
+    * Protocols
+
+    * ABCs for working with IO
+
+    * Functions and decorators
+
+    * Introspection helpers
+
+    * Constant
+
+    * Deprecated aliases
+
+      * Aliases to built-in types
+
+      * Aliases to types in "collections"
+
+      * Aliases to other concrete types
+
+      * Aliases to container ABCs in "collections.abc"
+
+      * Aliases to asynchronous ABCs in "collections.abc"
+
+      * Aliases to other ABCs in "collections.abc"
+
+      * Aliases to "contextlib" ABCs
+
+  * Deprecation Timeline of Major Features
+
+* "pydoc" --- Documentation generator and online help system
+
+* Python Development Mode
+
+  * Effects of the Python Development Mode
+
+  * ResourceWarning Example
+
+  * Bad file descriptor error example
+
+* "doctest" --- Test interactive Python examples
+
+  * Simple Usage: Checking Examples in Docstrings
+
+  * Simple Usage: Checking Examples in a Text File
+
+  * Command-line Usage
+
+  * How It Works
+
+    * Which Docstrings Are Examined?
+
+    * How are Docstring Examples Recognized?
+
+    * What's the Execution Context?
+
+    * What About Exceptions?
+
+    * Option Flags
+
+    * Directives
+
+    * Warnings
+
+  * Basic API
+
+  * Unittest API
+
+  * Advanced API
+
+    * DocTest Objects
+
+    * Example Objects
+
+    * DocTestFinder objects
+
+    * DocTestParser objects
+
+    * TestResults objects
+
+    * DocTestRunner objects
+
+    * OutputChecker objects
+
+  * Debugging
+
+  * Soapbox
+
+* "unittest" --- Unit testing framework
+
+  * Basic example
+
+  * Command-Line Interface
+
+    * Command-line options
+
+  * Test Discovery
+
+  * Organizing test code
+
+  * Re-using old test code
+
+  * Skipping tests and expected failures
+
+  * Distinguishing test iterations using subtests
+
+  * Classes and functions
+
+    * Test cases
+
+    * Grouping tests
+
+    * Loading and running tests
+
+      * load_tests Protocol
+
+  * Class and Module Fixtures
+
+    * setUpClass and tearDownClass
+
+    * setUpModule and tearDownModule
+
+  * Signal Handling
+
+* "unittest.mock" --- mock object library
+
+  * Quick Guide
+
+  * The Mock Class
+
+    * Calling
+
+    * Deleting Attributes
+
+    * Mock names and the name attribute
+
+    * Attaching Mocks as Attributes
+
+  * The patchers
+
+    * patch
+
+    * patch.object
+
+    * patch.dict
+
+    * patch.multiple
+
+    * patch methods: start and stop
+
+    * patch builtins
+
+    * TEST_PREFIX
+
+    * Nesting Patch Decorators
+
+    * Where to patch
+
+    * Patching Descriptors and Proxy Objects
+
+  * MagicMock and magic method support
+
+    * Mocking Magic Methods
+
+    * Magic Mock
+
+  * Helpers
+
+    * sentinel
+
+    * DEFAULT
+
+    * call
+
+    * create_autospec
+
+    * ANY
+
+    * FILTER_DIR
+
+    * mock_open
+
+    * Autospeccing
+
+    * Sealing mocks
+
+  * Order of precedence of "side_effect", "return_value" and *wraps*
+
+* "unittest.mock" --- getting started
+
+  * Using Mock
+
+    * Mock patching methods
+
+    * Mock for method calls on an object
+
+    * Mocking classes
+
+    * Naming your mocks
+
+    * Tracking all calls
+
+    * Setting return values and attributes
+
+    * Raising exceptions with mocks
+
+    * Side effect functions and iterables
+
+    * Mocking asynchronous iterators
+
+    * Mocking asynchronous context manager
+
+    * Creating a mock from an existing object
+
+    * Using side_effect to return per file content
+
+  * Patch decorators
+
+  * Further examples
+
+    * Mocking chained calls
+
+    * Partial mocking
+
+    * Mocking a generator method
+
+    * Applying the same patch to every test method
+
+    * Mocking unbound methods
+
+    * Checking multiple calls with mock
+
+    * Coping with mutable arguments
+
+    * Nesting patches
+
+    * Mocking a dictionary with MagicMock
+
+    * Mock subclasses and their attributes
+
+    * Mocking imports with patch.dict
+
+    * Tracking order of calls and less verbose call assertions
+
+    * More complex argument matching
+
+* "test" --- Regression tests package for Python
+
+  * Writing Unit Tests for the "test" package
+
+  * Running tests using the command-line interface
+
+* "test.support" --- Utilities for the Python test suite
+
+* "test.support.socket_helper" --- Utilities for socket tests
+
+* "test.support.script_helper" --- Utilities for the Python execution
+  tests
+
+* "test.support.bytecode_helper" --- Support tools for testing correct
+  bytecode generation
+
+* "test.support.threading_helper" --- Utilities for threading tests
+
+* "test.support.os_helper" --- Utilities for os tests
+
+* "test.support.import_helper" --- Utilities for import tests
+
+* "test.support.warnings_helper" --- Utilities for warnings tests

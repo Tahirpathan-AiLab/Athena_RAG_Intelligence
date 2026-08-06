@@ -1,0 +1,11209 @@
+Python Documentation contents
+*****************************
+
+* What's New in Python
+
+  * What's New In Python 3.13
+
+    * Summary -- Release Highlights
+
+    * New Features
+
+      * A better interactive interpreter
+
+      * Improved error messages
+
+      * Free-threaded CPython
+
+      * An experimental just-in-time (JIT) compiler
+
+      * Defined mutation semantics for "locals()"
+
+      * Support for mobile platforms
+
+    * Other Language Changes
+
+    * New Modules
+
+    * Improved Modules
+
+      * argparse
+
+      * array
+
+      * ast
+
+      * asyncio
+
+      * base64
+
+      * compileall
+
+      * concurrent.futures
+
+      * configparser
+
+      * copy
+
+      * ctypes
+
+      * dbm
+
+      * dis
+
+      * doctest
+
+      * email
+
+      * enum
+
+      * fractions
+
+      * glob
+
+      * importlib
+
+      * io
+
+      * ipaddress
+
+      * itertools
+
+      * marshal
+
+      * math
+
+      * mimetypes
+
+      * mmap
+
+      * multiprocessing
+
+      * os
+
+      * os.path
+
+      * pathlib
+
+      * pdb
+
+      * queue
+
+      * random
+
+      * re
+
+      * shutil
+
+      * site
+
+      * sqlite3
+
+      * ssl
+
+      * statistics
+
+      * subprocess
+
+      * sys
+
+      * tempfile
+
+      * time
+
+      * tkinter
+
+      * traceback
+
+      * types
+
+      * typing
+
+      * unicodedata
+
+      * venv
+
+      * warnings
+
+      * xml
+
+      * zipimport
+
+    * Optimizations
+
+    * Removed Modules And APIs
+
+      * PEP 594: Remove "dead batteries" from the standard library
+
+      * 2to3
+
+      * builtins
+
+      * configparser
+
+      * importlib.metadata
+
+      * locale
+
+      * opcode
+
+      * optparse
+
+      * pathlib
+
+      * re
+
+      * tkinter.tix
+
+      * turtle
+
+      * typing
+
+      * unittest
+
+      * urllib
+
+      * webbrowser
+
+    * New Deprecations
+
+      * Pending Removal in Python 3.14
+
+      * Pending Removal in Python 3.15
+
+      * Pending removal in Python 3.16
+
+      * Pending removal in Python 3.17
+
+      * Pending removal in Python 3.18
+
+      * Pending Removal in Future Versions
+
+    * CPython Bytecode Changes
+
+    * C API Changes
+
+      * New Features
+
+      * Changed C APIs
+
+      * Limited C API Changes
+
+      * Removed C APIs
+
+      * Deprecated C APIs
+
+        * Pending Removal in Python 3.14
+
+        * Pending Removal in Python 3.15
+
+        * Pending removal in Python 3.16
+
+        * Pending Removal in Future Versions
+
+    * Build Changes
+
+    * Porting to Python 3.13
+
+      * Changes in the Python API
+
+      * Changes in the C API
+
+    * Regression Test Changes
+
+    * Notable changes in 3.13.1
+
+      * sys
+
+    * Notable changes in 3.13.4
+
+      * os.path
+
+      * tarfile
+
+  * What's New In Python 3.12
+
+    * Summary -- Release highlights
+
+    * New Features
+
+      * PEP 695: Type Parameter Syntax
+
+      * PEP 701: Syntactic formalization of f-strings
+
+      * PEP 684: A Per-Interpreter GIL
+
+      * PEP 669: Low impact monitoring for CPython
+
+      * PEP 688: Making the buffer protocol accessible in Python
+
+      * PEP 709: Comprehension inlining
+
+      * Improved Error Messages
+
+    * New Features Related to Type Hints
+
+      * PEP 692: Using "TypedDict" for more precise "**kwargs" typing
+
+      * PEP 698: Override Decorator for Static Typing
+
+    * Other Language Changes
+
+    * New Modules
+
+    * Improved Modules
+
+      * array
+
+      * asyncio
+
+      * calendar
+
+      * csv
+
+      * dis
+
+      * fractions
+
+      * importlib.resources
+
+      * inspect
+
+      * itertools
+
+      * math
+
+      * os
+
+      * os.path
+
+      * pathlib
+
+      * platform
+
+      * pdb
+
+      * random
+
+      * shutil
+
+      * sqlite3
+
+      * statistics
+
+      * sys
+
+      * tempfile
+
+      * threading
+
+      * tkinter
+
+      * tokenize
+
+      * types
+
+      * typing
+
+      * unicodedata
+
+      * unittest
+
+      * uuid
+
+    * Optimizations
+
+    * CPython bytecode changes
+
+    * Demos and Tools
+
+    * Deprecated
+
+      * Pending Removal in Python 3.13
+
+      * Pending Removal in Python 3.14
+
+      * Pending Removal in Python 3.15
+
+      * Pending removal in Python 3.16
+
+      * Pending removal in Python 3.17
+
+      * Pending Removal in Future Versions
+
+    * Removed
+
+      * asynchat and asyncore
+
+      * configparser
+
+      * distutils
+
+      * ensurepip
+
+      * enum
+
+      * ftplib
+
+      * gzip
+
+      * hashlib
+
+      * importlib
+
+      * imp
+
+      * io
+
+      * locale
+
+      * smtpd
+
+      * sqlite3
+
+      * ssl
+
+      * unittest
+
+      * webbrowser
+
+      * xml.etree.ElementTree
+
+      * zipimport
+
+      * Others
+
+    * Porting to Python 3.12
+
+      * Changes in the Python API
+
+    * Build Changes
+
+    * C API Changes
+
+      * New Features
+
+      * Porting to Python 3.12
+
+      * Deprecated
+
+        * Pending Removal in Python 3.14
+
+        * Pending Removal in Python 3.15
+
+        * Pending removal in Python 3.16
+
+        * Pending Removal in Future Versions
+
+      * Removed
+
+  * What's New In Python 3.11
+
+    * Summary -- Release highlights
+
+    * New Features
+
+      * PEP 657: Fine-grained error locations in tracebacks
+
+      * PEP 654: Exception Groups and "except*"
+
+      * PEP 678: Exceptions can be enriched with notes
+
+      * Windows "py.exe" launcher improvements
+
+    * New Features Related to Type Hints
+
+      * PEP 646: Variadic generics
+
+      * PEP 655: Marking individual "TypedDict" items as required or
+        not-required
+
+      * PEP 673: "Self" type
+
+      * PEP 675: Arbitrary literal string type
+
+      * PEP 681: Data class transforms
+
+      * PEP 563 may not be the future
+
+    * Other Language Changes
+
+    * Other CPython Implementation Changes
+
+    * New Modules
+
+    * Improved Modules
+
+      * asyncio
+
+      * contextlib
+
+      * dataclasses
+
+      * datetime
+
+      * enum
+
+      * fcntl
+
+      * fractions
+
+      * functools
+
+      * gzip
+
+      * hashlib
+
+      * IDLE and idlelib
+
+      * inspect
+
+      * locale
+
+      * logging
+
+      * math
+
+      * operator
+
+      * os
+
+      * pathlib
+
+      * re
+
+      * shutil
+
+      * socket
+
+      * sqlite3
+
+      * string
+
+      * sys
+
+      * sysconfig
+
+      * tempfile
+
+      * threading
+
+      * time
+
+      * tkinter
+
+      * traceback
+
+      * typing
+
+      * unicodedata
+
+      * unittest
+
+      * venv
+
+      * warnings
+
+      * zipfile
+
+    * Optimizations
+
+    * Faster CPython
+
+      * Faster Startup
+
+        * Frozen imports / Static code objects
+
+      * Faster Runtime
+
+        * Cheaper, lazy Python frames
+
+        * Inlined Python function calls
+
+        * PEP 659: Specializing Adaptive Interpreter
+
+      * Misc
+
+      * FAQ
+
+        * How should I write my code to utilize these speedups?
+
+        * Will CPython 3.11 use more memory?
+
+        * I don't see any speedups in my workload. Why?
+
+        * Is there a JIT compiler?
+
+      * About
+
+    * CPython bytecode changes
+
+      * New opcodes
+
+      * Replaced opcodes
+
+      * Changed/removed opcodes
+
+    * Deprecated
+
+      * Language/Builtins
+
+      * Modules
+
+      * Standard Library
+
+    * Pending Removal in Python 3.12
+
+    * Removed
+
+    * Porting to Python 3.11
+
+    * Build Changes
+
+    * C API Changes
+
+      * New Features
+
+      * Porting to Python 3.11
+
+      * Deprecated
+
+      * Pending Removal in Python 3.12
+
+      * Removed
+
+    * Notable changes in 3.11.4
+
+      * tarfile
+
+    * Notable changes in 3.11.5
+
+      * OpenSSL
+
+  * What's New In Python 3.10
+
+    * Summary -- Release highlights
+
+    * New Features
+
+      * Parenthesized context managers
+
+      * Better error messages
+
+        * SyntaxErrors
+
+        * IndentationErrors
+
+        * AttributeErrors
+
+        * NameErrors
+
+      * PEP 626: Precise line numbers for debugging and other tools
+
+      * PEP 634: Structural Pattern Matching
+
+        * Syntax and operations
+
+        * Declarative approach
+
+        * Simple pattern: match to a literal
+
+          * Behavior without the wildcard
+
+        * Patterns with a literal and variable
+
+        * Patterns and classes
+
+          * Patterns with positional parameters
+
+        * Nested patterns
+
+        * Complex patterns and the wildcard
+
+        * Guard
+
+        * Other Key Features
+
+      * Optional "EncodingWarning" and "encoding="locale"" option
+
+    * New Features Related to Type Hints
+
+      * PEP 604: New Type Union Operator
+
+      * PEP 612: Parameter Specification Variables
+
+      * PEP 613: TypeAlias
+
+      * PEP 647: User-Defined Type Guards
+
+    * Other Language Changes
+
+    * New Modules
+
+    * Improved Modules
+
+      * asyncio
+
+      * argparse
+
+      * array
+
+      * asynchat, asyncore, smtpd
+
+      * base64
+
+      * bdb
+
+      * bisect
+
+      * codecs
+
+      * collections.abc
+
+      * contextlib
+
+      * curses
+
+      * dataclasses
+
+        * __slots__
+
+        * Keyword-only fields
+
+      * distutils
+
+      * doctest
+
+      * encodings
+
+      * enum
+
+      * fileinput
+
+      * faulthandler
+
+      * gc
+
+      * glob
+
+      * hashlib
+
+      * hmac
+
+      * IDLE and idlelib
+
+      * importlib.metadata
+
+      * inspect
+
+      * itertools
+
+      * linecache
+
+      * os
+
+      * os.path
+
+      * pathlib
+
+      * platform
+
+      * pprint
+
+      * py_compile
+
+      * pyclbr
+
+      * shelve
+
+      * statistics
+
+      * site
+
+      * socket
+
+      * ssl
+
+      * sqlite3
+
+      * sys
+
+      * _thread
+
+      * threading
+
+      * traceback
+
+      * types
+
+      * typing
+
+      * unittest
+
+      * urllib.parse
+
+      * xml
+
+      * zipimport
+
+    * Optimizations
+
+    * Deprecated
+
+    * Removed
+
+    * Porting to Python 3.10
+
+      * Changes in the Python syntax
+
+      * Changes in the Python API
+
+      * Changes in the C API
+
+    * CPython bytecode changes
+
+    * Build Changes
+
+    * C API Changes
+
+      * PEP 652: Maintaining the Stable ABI
+
+      * New Features
+
+      * Porting to Python 3.10
+
+      * Deprecated
+
+      * Removed
+
+    * Notable security feature in 3.10.7
+
+    * Notable security feature in 3.10.8
+
+    * Notable changes in 3.10.12
+
+      * tarfile
+
+  * What's New In Python 3.9
+
+    * Summary -- Release highlights
+
+    * You should check for DeprecationWarning in your code
+
+    * New Features
+
+      * Dictionary Merge & Update Operators
+
+      * New String Methods to Remove Prefixes and Suffixes
+
+      * Type Hinting Generics in Standard Collections
+
+      * New Parser
+
+    * Other Language Changes
+
+    * New Modules
+
+      * zoneinfo
+
+      * graphlib
+
+    * Improved Modules
+
+      * ast
+
+      * asyncio
+
+      * compileall
+
+      * concurrent.futures
+
+      * curses
+
+      * datetime
+
+      * distutils
+
+      * fcntl
+
+      * ftplib
+
+      * gc
+
+      * hashlib
+
+      * http
+
+      * IDLE and idlelib
+
+      * imaplib
+
+      * importlib
+
+      * inspect
+
+      * ipaddress
+
+      * math
+
+      * multiprocessing
+
+      * nntplib
+
+      * os
+
+      * pathlib
+
+      * pdb
+
+      * poplib
+
+      * pprint
+
+      * pydoc
+
+      * random
+
+      * signal
+
+      * smtplib
+
+      * socket
+
+      * time
+
+      * sys
+
+      * tracemalloc
+
+      * typing
+
+      * unicodedata
+
+      * venv
+
+      * xml
+
+    * Optimizations
+
+    * Deprecated
+
+    * Removed
+
+    * Porting to Python 3.9
+
+      * Changes in the Python API
+
+      * Changes in the C API
+
+      * CPython bytecode changes
+
+    * Build Changes
+
+    * C API Changes
+
+      * New Features
+
+      * Porting to Python 3.9
+
+      * Removed
+
+    * Notable changes in Python 3.9.1
+
+      * typing
+
+      * macOS 11.0 (Big Sur) and Apple Silicon Mac support
+
+    * Notable changes in Python 3.9.2
+
+      * collections.abc
+
+      * urllib.parse
+
+    * Notable changes in Python 3.9.3
+
+    * Notable changes in Python 3.9.5
+
+      * urllib.parse
+
+    * Notable security feature in 3.9.14
+
+    * Notable changes in 3.9.17
+
+      * tarfile
+
+  * What's New In Python 3.8
+
+    * Summary -- Release highlights
+
+    * New Features
+
+      * Assignment expressions
+
+      * Positional-only parameters
+
+      * Parallel filesystem cache for compiled bytecode files
+
+      * Debug build uses the same ABI as release build
+
+      * f-strings support "=" for self-documenting expressions and
+        debugging
+
+      * PEP 578: Python Runtime Audit Hooks
+
+      * PEP 587: Python Initialization Configuration
+
+      * PEP 590: Vectorcall: a fast calling protocol for CPython
+
+      * Pickle protocol 5 with out-of-band data buffers
+
+    * Other Language Changes
+
+    * New Modules
+
+    * Improved Modules
+
+      * ast
+
+      * asyncio
+
+      * builtins
+
+      * collections
+
+      * cProfile
+
+      * csv
+
+      * curses
+
+      * ctypes
+
+      * datetime
+
+      * functools
+
+      * gc
+
+      * gettext
+
+      * gzip
+
+      * IDLE and idlelib
+
+      * inspect
+
+      * io
+
+      * itertools
+
+      * json.tool
+
+      * logging
+
+      * math
+
+      * mmap
+
+      * multiprocessing
+
+      * os
+
+      * os.path
+
+      * pathlib
+
+      * pickle
+
+      * plistlib
+
+      * pprint
+
+      * py_compile
+
+      * shlex
+
+      * shutil
+
+      * socket
+
+      * ssl
+
+      * statistics
+
+      * sys
+
+      * tarfile
+
+      * threading
+
+      * tokenize
+
+      * tkinter
+
+      * time
+
+      * typing
+
+      * unicodedata
+
+      * unittest
+
+      * venv
+
+      * weakref
+
+      * xml
+
+      * xmlrpc
+
+    * Optimizations
+
+    * Build and C API Changes
+
+    * Deprecated
+
+    * API and Feature Removals
+
+    * Porting to Python 3.8
+
+      * Changes in Python behavior
+
+      * Changes in the Python API
+
+      * Changes in the C API
+
+      * CPython bytecode changes
+
+      * Demos and Tools
+
+    * Notable changes in Python 3.8.1
+
+    * Notable changes in Python 3.8.2
+
+    * Notable changes in Python 3.8.3
+
+    * Notable changes in Python 3.8.8
+
+    * Notable changes in Python 3.8.9
+
+    * Notable changes in Python 3.8.10
+
+      * macOS 11.0 (Big Sur) and Apple Silicon Mac support
+
+    * Notable changes in Python 3.8.10
+
+      * urllib.parse
+
+    * Notable changes in Python 3.8.12
+
+      * Changes in the Python API
+
+    * Notable security feature in 3.8.14
+
+    * Notable changes in 3.8.17
+
+      * tarfile
+
+  * What's New In Python 3.7
+
+    * Summary -- Release Highlights
+
+    * New Features
+
+      * PEP 563: Postponed Evaluation of Annotations
+
+      * PEP 538: Legacy C Locale Coercion
+
+      * PEP 540: Forced UTF-8 Runtime Mode
+
+      * PEP 553: Built-in "breakpoint()"
+
+      * PEP 539: New C API for Thread-Local Storage
+
+      * PEP 562: Customization of Access to Module Attributes
+
+      * PEP 564: New Time Functions With Nanosecond Resolution
+
+      * PEP 565: Show DeprecationWarning in "__main__"
+
+      * PEP 560: Core Support for "typing" module and Generic Types
+
+      * PEP 552: Hash-based .pyc Files
+
+      * PEP 545: Python Documentation Translations
+
+      * Python Development Mode (-X dev)
+
+    * Other Language Changes
+
+    * New Modules
+
+      * contextvars
+
+      * dataclasses
+
+      * importlib.resources
+
+    * Improved Modules
+
+      * argparse
+
+      * asyncio
+
+      * binascii
+
+      * calendar
+
+      * collections
+
+      * compileall
+
+      * concurrent.futures
+
+      * contextlib
+
+      * cProfile
+
+      * crypt
+
+      * datetime
+
+      * dbm
+
+      * decimal
+
+      * dis
+
+      * distutils
+
+      * enum
+
+      * functools
+
+      * gc
+
+      * hmac
+
+      * http.client
+
+      * http.server
+
+      * idlelib and IDLE
+
+      * importlib
+
+      * io
+
+      * ipaddress
+
+      * itertools
+
+      * locale
+
+      * logging
+
+      * math
+
+      * mimetypes
+
+      * msilib
+
+      * multiprocessing
+
+      * os
+
+      * pathlib
+
+      * pdb
+
+      * py_compile
+
+      * pydoc
+
+      * queue
+
+      * re
+
+      * signal
+
+      * socket
+
+      * socketserver
+
+      * sqlite3
+
+      * ssl
+
+      * string
+
+      * subprocess
+
+      * sys
+
+      * time
+
+      * tkinter
+
+      * tracemalloc
+
+      * types
+
+      * unicodedata
+
+      * unittest
+
+      * unittest.mock
+
+      * urllib.parse
+
+      * uu
+
+      * uuid
+
+      * warnings
+
+      * xml
+
+      * xml.etree
+
+      * xmlrpc.server
+
+      * zipapp
+
+      * zipfile
+
+    * C API Changes
+
+    * Build Changes
+
+    * Optimizations
+
+    * Other CPython Implementation Changes
+
+    * Deprecated Python Behavior
+
+    * Deprecated Python modules, functions and methods
+
+      * aifc
+
+      * asyncio
+
+      * collections
+
+      * dbm
+
+      * enum
+
+      * gettext
+
+      * importlib
+
+      * locale
+
+      * macpath
+
+      * threading
+
+      * socket
+
+      * ssl
+
+      * sunau
+
+      * sys
+
+      * wave
+
+    * Deprecated functions and types of the C API
+
+    * Platform Support Removals
+
+    * API and Feature Removals
+
+    * Module Removals
+
+    * Windows-only Changes
+
+    * Porting to Python 3.7
+
+      * Changes in Python Behavior
+
+      * Changes in the Python API
+
+      * Changes in the C API
+
+      * CPython bytecode changes
+
+      * Windows-only Changes
+
+      * Other CPython implementation changes
+
+    * Notable changes in Python 3.7.1
+
+    * Notable changes in Python 3.7.2
+
+    * Notable changes in Python 3.7.6
+
+    * Notable changes in Python 3.7.10
+
+    * Notable changes in Python 3.7.11
+
+    * Notable security feature in 3.7.14
+
+  * What's New In Python 3.6
+
+    * Summary -- Release highlights
+
+    * New Features
+
+      * PEP 498: Formatted string literals
+
+      * PEP 526: Syntax for variable annotations
+
+      * PEP 515: Underscores in Numeric Literals
+
+      * PEP 525: Asynchronous Generators
+
+      * PEP 530: Asynchronous Comprehensions
+
+      * PEP 487: Simpler customization of class creation
+
+      * PEP 487: Descriptor Protocol Enhancements
+
+      * PEP 519: Adding a file system path protocol
+
+      * PEP 495: Local Time Disambiguation
+
+      * PEP 529: Change Windows filesystem encoding to UTF-8
+
+      * PEP 528: Change Windows console encoding to UTF-8
+
+      * PEP 520: Preserving Class Attribute Definition Order
+
+      * PEP 468: Preserving Keyword Argument Order
+
+      * New *dict* implementation
+
+      * PEP 523: Adding a frame evaluation API to CPython
+
+      * PYTHONMALLOC environment variable
+
+      * DTrace and SystemTap probing support
+
+    * Other Language Changes
+
+    * New Modules
+
+      * secrets
+
+    * Improved Modules
+
+      * array
+
+      * ast
+
+      * asyncio
+
+      * binascii
+
+      * cmath
+
+      * collections
+
+      * concurrent.futures
+
+      * contextlib
+
+      * datetime
+
+      * decimal
+
+      * distutils
+
+      * email
+
+      * encodings
+
+      * enum
+
+      * faulthandler
+
+      * fileinput
+
+      * hashlib
+
+      * http.client
+
+      * idlelib and IDLE
+
+      * importlib
+
+      * inspect
+
+      * json
+
+      * logging
+
+      * math
+
+      * multiprocessing
+
+      * os
+
+      * pathlib
+
+      * pdb
+
+      * pickle
+
+      * pickletools
+
+      * pydoc
+
+      * random
+
+      * re
+
+      * readline
+
+      * rlcompleter
+
+      * shlex
+
+      * site
+
+      * sqlite3
+
+      * socket
+
+      * socketserver
+
+      * ssl
+
+      * statistics
+
+      * struct
+
+      * subprocess
+
+      * sys
+
+      * telnetlib
+
+      * time
+
+      * timeit
+
+      * tkinter
+
+      * traceback
+
+      * tracemalloc
+
+      * typing
+
+      * unicodedata
+
+      * unittest.mock
+
+      * urllib.request
+
+      * urllib.robotparser
+
+      * venv
+
+      * warnings
+
+      * winreg
+
+      * winsound
+
+      * xmlrpc.client
+
+      * zipfile
+
+      * zlib
+
+    * Optimizations
+
+    * Build and C API Changes
+
+    * Other Improvements
+
+    * Deprecated
+
+      * New Keywords
+
+      * Deprecated Python behavior
+
+      * Deprecated Python modules, functions and methods
+
+        * asynchat
+
+        * asyncore
+
+        * dbm
+
+        * distutils
+
+        * grp
+
+        * importlib
+
+        * os
+
+        * re
+
+        * ssl
+
+        * tkinter
+
+        * venv
+
+      * xml
+
+      * Deprecated functions and types of the C API
+
+      * Deprecated Build Options
+
+    * Removed
+
+      * API and Feature Removals
+
+    * Porting to Python 3.6
+
+      * Changes in 'python' Command Behavior
+
+      * Changes in the Python API
+
+      * Changes in the C API
+
+      * CPython bytecode changes
+
+    * Notable changes in Python 3.6.2
+
+      * New "make regen-all" build target
+
+      * Removal of "make touch" build target
+
+    * Notable changes in Python 3.6.4
+
+    * Notable changes in Python 3.6.5
+
+    * Notable changes in Python 3.6.7
+
+    * Notable changes in Python 3.6.10
+
+    * Notable changes in Python 3.6.13
+
+    * Notable changes in Python 3.6.14
+
+  * What's New In Python 3.5
+
+    * Summary -- Release highlights
+
+    * New Features
+
+      * PEP 492 - Coroutines with async and await syntax
+
+      * PEP 465 - A dedicated infix operator for matrix multiplication
+
+      * PEP 448 - Additional Unpacking Generalizations
+
+      * PEP 461 - percent formatting support for bytes and bytearray
+
+      * PEP 484 - Type Hints
+
+      * PEP 471 - os.scandir() function -- a better and faster
+        directory iterator
+
+      * PEP 475: Retry system calls failing with EINTR
+
+      * PEP 479: Change StopIteration handling inside generators
+
+      * PEP 485: A function for testing approximate equality
+
+      * PEP 486: Make the Python Launcher aware of virtual
+        environments
+
+      * PEP 488: Elimination of PYO files
+
+      * PEP 489: Multi-phase extension module initialization
+
+    * Other Language Changes
+
+    * New Modules
+
+      * typing
+
+      * zipapp
+
+    * Improved Modules
+
+      * argparse
+
+      * asyncio
+
+      * bz2
+
+      * cgi
+
+      * cmath
+
+      * code
+
+      * collections
+
+      * collections.abc
+
+      * compileall
+
+      * concurrent.futures
+
+      * configparser
+
+      * contextlib
+
+      * csv
+
+      * curses
+
+      * dbm
+
+      * difflib
+
+      * distutils
+
+      * doctest
+
+      * email
+
+      * enum
+
+      * faulthandler
+
+      * functools
+
+      * glob
+
+      * gzip
+
+      * heapq
+
+      * http
+
+      * http.client
+
+      * idlelib and IDLE
+
+      * imaplib
+
+      * imghdr
+
+      * importlib
+
+      * inspect
+
+      * io
+
+      * ipaddress
+
+      * json
+
+      * linecache
+
+      * locale
+
+      * logging
+
+      * lzma
+
+      * math
+
+      * multiprocessing
+
+      * operator
+
+      * os
+
+      * pathlib
+
+      * pickle
+
+      * poplib
+
+      * re
+
+      * readline
+
+      * selectors
+
+      * shutil
+
+      * signal
+
+      * smtpd
+
+      * smtplib
+
+      * sndhdr
+
+      * socket
+
+      * ssl
+
+        * Memory BIO Support
+
+        * Application-Layer Protocol Negotiation Support
+
+        * Other Changes
+
+      * sqlite3
+
+      * subprocess
+
+      * sys
+
+      * sysconfig
+
+      * tarfile
+
+      * threading
+
+      * time
+
+      * timeit
+
+      * tkinter
+
+      * traceback
+
+      * types
+
+      * unicodedata
+
+      * unittest
+
+      * unittest.mock
+
+      * urllib
+
+      * wsgiref
+
+      * xmlrpc
+
+      * xml.sax
+
+      * zipfile
+
+    * Other module-level changes
+
+    * Optimizations
+
+    * Build and C API Changes
+
+    * Deprecated
+
+      * New Keywords
+
+      * Deprecated Python Behavior
+
+      * Unsupported Operating Systems
+
+      * Deprecated Python modules, functions and methods
+
+    * Removed
+
+      * API and Feature Removals
+
+    * Porting to Python 3.5
+
+      * Changes in Python behavior
+
+      * Changes in the Python API
+
+      * Changes in the C API
+
+    * Notable changes in Python 3.5.4
+
+      * New "make regen-all" build target
+
+      * Removal of "make touch" build target
+
+  * What's New In Python 3.4
+
+    * Summary -- Release Highlights
+
+    * New Features
+
+      * PEP 453: Explicit Bootstrapping of PIP in Python Installations
+
+        * Bootstrapping pip By Default
+
+        * Documentation Changes
+
+      * PEP 446: Newly Created File Descriptors Are Non-Inheritable
+
+      * Improvements to Codec Handling
+
+      * PEP 451: A ModuleSpec Type for the Import System
+
+      * Other Language Changes
+
+    * New Modules
+
+      * asyncio
+
+      * ensurepip
+
+      * enum
+
+      * pathlib
+
+      * selectors
+
+      * statistics
+
+      * tracemalloc
+
+    * Improved Modules
+
+      * abc
+
+      * aifc
+
+      * argparse
+
+      * audioop
+
+      * base64
+
+      * collections
+
+      * colorsys
+
+      * contextlib
+
+      * dbm
+
+      * dis
+
+      * doctest
+
+      * email
+
+      * filecmp
+
+      * functools
+
+      * gc
+
+      * glob
+
+      * hashlib
+
+      * hmac
+
+      * html
+
+      * http
+
+      * idlelib and IDLE
+
+      * importlib
+
+      * inspect
+
+      * ipaddress
+
+      * logging
+
+      * marshal
+
+      * mmap
+
+      * multiprocessing
+
+      * operator
+
+      * os
+
+      * pdb
+
+      * pickle
+
+      * plistlib
+
+      * poplib
+
+      * pprint
+
+      * pty
+
+      * pydoc
+
+      * re
+
+      * resource
+
+      * select
+
+      * shelve
+
+      * shutil
+
+      * smtpd
+
+      * smtplib
+
+      * socket
+
+      * sqlite3
+
+      * ssl
+
+      * stat
+
+      * struct
+
+      * subprocess
+
+      * sunau
+
+      * sys
+
+      * tarfile
+
+      * textwrap
+
+      * threading
+
+      * traceback
+
+      * types
+
+      * urllib
+
+      * unittest
+
+      * venv
+
+      * wave
+
+      * weakref
+
+      * xml.etree
+
+      * zipfile
+
+    * CPython Implementation Changes
+
+      * PEP 445: Customization of CPython Memory Allocators
+
+      * PEP 442: Safe Object Finalization
+
+      * PEP 456: Secure and Interchangeable Hash Algorithm
+
+      * PEP 436: Argument Clinic
+
+      * Other Build and C API Changes
+
+      * Other Improvements
+
+      * Significant Optimizations
+
+    * Deprecated
+
+      * Deprecations in the Python API
+
+      * Deprecated Features
+
+    * Removed
+
+      * Operating Systems No Longer Supported
+
+      * API and Feature Removals
+
+      * Code Cleanups
+
+    * Porting to Python 3.4
+
+      * Changes in 'python' Command Behavior
+
+      * Changes in the Python API
+
+      * Changes in the C API
+
+    * Changed in 3.4.3
+
+      * PEP 476: Enabling certificate verification by default for
+        stdlib http clients
+
+  * What's New In Python 3.3
+
+    * Summary -- Release highlights
+
+    * PEP 405: Virtual Environments
+
+    * PEP 420: Implicit Namespace Packages
+
+    * PEP 3118: New memoryview implementation and buffer protocol
+      documentation
+
+      * Features
+
+      * API changes
+
+    * PEP 393: Flexible String Representation
+
+      * Functionality
+
+      * Performance and resource usage
+
+    * PEP 397: Python Launcher for Windows
+
+    * PEP 3151: Reworking the OS and IO exception hierarchy
+
+    * PEP 380: Syntax for Delegating to a Subgenerator
+
+    * PEP 409: Suppressing exception context
+
+    * PEP 414: Explicit Unicode literals
+
+    * PEP 3155: Qualified name for classes and functions
+
+    * PEP 412: Key-Sharing Dictionary
+
+    * PEP 362: Function Signature Object
+
+    * PEP 421: Adding sys.implementation
+
+      * SimpleNamespace
+
+    * Using importlib as the Implementation of Import
+
+      * New APIs
+
+      * Visible Changes
+
+    * Other Language Changes
+
+    * A Finer-Grained Import Lock
+
+    * Builtin functions and types
+
+    * New Modules
+
+      * faulthandler
+
+      * ipaddress
+
+      * lzma
+
+    * Improved Modules
+
+      * abc
+
+      * array
+
+      * base64
+
+      * binascii
+
+      * bz2
+
+      * codecs
+
+      * collections
+
+      * contextlib
+
+      * crypt
+
+      * curses
+
+      * datetime
+
+      * decimal
+
+        * Features
+
+        * API changes
+
+      * email
+
+        * Policy Framework
+
+        * Provisional Policy with New Header API
+
+        * Other API Changes
+
+      * ftplib
+
+      * functools
+
+      * gc
+
+      * hmac
+
+      * http
+
+      * html
+
+      * imaplib
+
+      * inspect
+
+      * io
+
+      * itertools
+
+      * logging
+
+      * math
+
+      * mmap
+
+      * multiprocessing
+
+      * nntplib
+
+      * os
+
+      * pdb
+
+      * pickle
+
+      * pydoc
+
+      * re
+
+      * sched
+
+      * select
+
+      * shlex
+
+      * shutil
+
+      * signal
+
+      * smtpd
+
+      * smtplib
+
+      * socket
+
+      * socketserver
+
+      * sqlite3
+
+      * ssl
+
+      * stat
+
+      * struct
+
+      * subprocess
+
+      * sys
+
+      * tarfile
+
+      * tempfile
+
+      * textwrap
+
+      * threading
+
+      * time
+
+      * types
+
+      * unittest
+
+      * urllib
+
+      * webbrowser
+
+      * xml.etree.ElementTree
+
+      * zlib
+
+    * Optimizations
+
+    * Build and C API Changes
+
+    * Deprecated
+
+      * Unsupported Operating Systems
+
+      * Deprecated Python modules, functions and methods
+
+      * Deprecated functions and types of the C API
+
+      * Deprecated features
+
+    * Porting to Python 3.3
+
+      * Porting Python code
+
+      * Porting C code
+
+      * Building C extensions
+
+      * Command Line Switch Changes
+
+  * What's New In Python 3.2
+
+    * PEP 384: Defining a Stable ABI
+
+    * PEP 389: Argparse Command Line Parsing Module
+
+    * PEP 391:  Dictionary Based Configuration for Logging
+
+    * PEP 3148:  The "concurrent.futures" module
+
+    * PEP 3147:  PYC Repository Directories
+
+    * PEP 3149: ABI Version Tagged .so Files
+
+    * PEP 3333: Python Web Server Gateway Interface v1.0.1
+
+    * Other Language Changes
+
+    * New, Improved, and Deprecated Modules
+
+      * email
+
+      * elementtree
+
+      * functools
+
+      * itertools
+
+      * collections
+
+      * threading
+
+      * datetime and time
+
+      * math
+
+      * abc
+
+      * io
+
+      * reprlib
+
+      * logging
+
+      * csv
+
+      * contextlib
+
+      * decimal and fractions
+
+      * ftp
+
+      * popen
+
+      * select
+
+      * gzip and zipfile
+
+      * tarfile
+
+      * hashlib
+
+      * ast
+
+      * os
+
+      * shutil
+
+      * sqlite3
+
+      * html
+
+      * socket
+
+      * ssl
+
+      * nntp
+
+      * certificates
+
+      * imaplib
+
+      * http.client
+
+      * unittest
+
+      * random
+
+      * poplib
+
+      * asyncore
+
+      * tempfile
+
+      * inspect
+
+      * pydoc
+
+      * dis
+
+      * dbm
+
+      * ctypes
+
+      * site
+
+      * sysconfig
+
+      * pdb
+
+      * configparser
+
+      * urllib.parse
+
+      * mailbox
+
+      * turtledemo
+
+    * Multi-threading
+
+    * Optimizations
+
+    * Unicode
+
+    * Codecs
+
+    * Documentation
+
+    * IDLE
+
+    * Code Repository
+
+    * Build and C API Changes
+
+    * Porting to Python 3.2
+
+  * What's New In Python 3.1
+
+    * PEP 372: Ordered Dictionaries
+
+    * PEP 378: Format Specifier for Thousands Separator
+
+    * Other Language Changes
+
+    * New, Improved, and Deprecated Modules
+
+    * Optimizations
+
+    * IDLE
+
+    * Build and C API Changes
+
+    * Porting to Python 3.1
+
+  * What's New In Python 3.0
+
+    * Common Stumbling Blocks
+
+      * Print Is A Function
+
+      * Views And Iterators Instead Of Lists
+
+      * Ordering Comparisons
+
+      * Integers
+
+      * Text Vs. Data Instead Of Unicode Vs. 8-bit
+
+    * Overview Of Syntax Changes
+
+      * New Syntax
+
+      * Changed Syntax
+
+      * Removed Syntax
+
+    * Changes Already Present In Python 2.6
+
+    * Library Changes
+
+    * **PEP 3101**: A New Approach To String Formatting
+
+    * Changes To Exceptions
+
+    * Miscellaneous Other Changes
+
+      * Operators And Special Methods
+
+      * Builtins
+
+    * Build and C API Changes
+
+    * Performance
+
+    * Porting To Python 3.0
+
+  * What's New in Python 2.7
+
+    * The Future for Python 2.x
+
+    * Changes to the Handling of Deprecation Warnings
+
+    * Python 3.1 Features
+
+    * PEP 372: Adding an Ordered Dictionary to collections
+
+    * PEP 378: Format Specifier for Thousands Separator
+
+    * PEP 389: The argparse Module for Parsing Command Lines
+
+    * PEP 391: Dictionary-Based Configuration For Logging
+
+    * PEP 3106: Dictionary Views
+
+    * PEP 3137: The memoryview Object
+
+    * Other Language Changes
+
+      * Interpreter Changes
+
+      * Optimizations
+
+    * New and Improved Modules
+
+      * New module: importlib
+
+      * New module: sysconfig
+
+      * ttk: Themed Widgets for Tk
+
+      * Updated module: unittest
+
+      * Updated module: ElementTree 1.3
+
+    * Build and C API Changes
+
+      * Capsules
+
+      * Port-Specific Changes: Windows
+
+      * Port-Specific Changes: Mac OS X
+
+      * Port-Specific Changes: FreeBSD
+
+    * Other Changes and Fixes
+
+    * Porting to Python 2.7
+
+    * New Features Added to Python 2.7 Maintenance Releases
+
+      * Two new environment variables for debug mode
+
+      * PEP 434: IDLE Enhancement Exception for All Branches
+
+      * PEP 466: Network Security Enhancements for Python 2.7
+
+      * PEP 477: Backport ensurepip (PEP 453) to Python 2.7
+
+        * Bootstrapping pip By Default
+
+        * Documentation Changes
+
+      * PEP 476: Enabling certificate verification by default for
+        stdlib http clients
+
+      * PEP 493: HTTPS verification migration tools for Python 2.7
+
+      * New "make regen-all" build target
+
+      * Removal of "make touch" build target
+
+    * Acknowledgements
+
+  * What's New in Python 2.6
+
+    * Python 3.0
+
+    * Changes to the Development Process
+
+      * New Issue Tracker: Roundup
+
+      * New Documentation Format: reStructuredText Using Sphinx
+
+    * PEP 343: The 'with' statement
+
+      * Writing Context Managers
+
+      * The contextlib module
+
+    * PEP 366: Explicit Relative Imports From a Main Module
+
+    * PEP 370: Per-user "site-packages" Directory
+
+    * PEP 371: The "multiprocessing" Package
+
+    * PEP 3101: Advanced String Formatting
+
+    * PEP 3105: "print" As a Function
+
+    * PEP 3110: Exception-Handling Changes
+
+    * PEP 3112: Byte Literals
+
+    * PEP 3116: New I/O Library
+
+    * PEP 3118: Revised Buffer Protocol
+
+    * PEP 3119: Abstract Base Classes
+
+    * PEP 3127: Integer Literal Support and Syntax
+
+    * PEP 3129: Class Decorators
+
+    * PEP 3141: A Type Hierarchy for Numbers
+
+      * The "fractions" Module
+
+    * Other Language Changes
+
+      * Optimizations
+
+      * Interpreter Changes
+
+    * New and Improved Modules
+
+      * The "ast" module
+
+      * The "future_builtins" module
+
+      * The "json" module: JavaScript Object Notation
+
+      * The "plistlib" module: A Property-List Parser
+
+      * ctypes Enhancements
+
+      * Improved SSL Support
+
+    * Deprecations and Removals
+
+    * Build and C API Changes
+
+      * Port-Specific Changes: Windows
+
+      * Port-Specific Changes: Mac OS X
+
+      * Port-Specific Changes: IRIX
+
+    * Porting to Python 2.6
+
+    * Acknowledgements
+
+  * What's New in Python 2.5
+
+    * PEP 308: Conditional Expressions
+
+    * PEP 309: Partial Function Application
+
+    * PEP 314: Metadata for Python Software Packages v1.1
+
+    * PEP 328: Absolute and Relative Imports
+
+    * PEP 338: Executing Modules as Scripts
+
+    * PEP 341: Unified try/except/finally
+
+    * PEP 342: New Generator Features
+
+    * PEP 343: The 'with' statement
+
+      * Writing Context Managers
+
+      * The contextlib module
+
+    * PEP 352: Exceptions as New-Style Classes
+
+    * PEP 353: Using ssize_t as the index type
+
+    * PEP 357: The '__index__' method
+
+    * Other Language Changes
+
+      * Interactive Interpreter Changes
+
+      * Optimizations
+
+    * New, Improved, and Removed Modules
+
+      * The ctypes package
+
+      * The ElementTree package
+
+      * The hashlib package
+
+      * The sqlite3 package
+
+      * The wsgiref package
+
+    * Build and C API Changes
+
+      * Port-Specific Changes
+
+    * Porting to Python 2.5
+
+    * Acknowledgements
+
+  * What's New in Python 2.4
+
+    * PEP 218: Built-In Set Objects
+
+    * PEP 237: Unifying Long Integers and Integers
+
+    * PEP 289: Generator Expressions
+
+    * PEP 292: Simpler String Substitutions
+
+    * PEP 318: Decorators for Functions and Methods
+
+    * PEP 322: Reverse Iteration
+
+    * PEP 324: New subprocess Module
+
+    * PEP 327: Decimal Data Type
+
+      * Why is Decimal needed?
+
+      * The "Decimal" type
+
+      * The "Context" type
+
+    * PEP 328: Multi-line Imports
+
+    * PEP 331: Locale-Independent Float/String Conversions
+
+    * Other Language Changes
+
+      * Optimizations
+
+    * New, Improved, and Deprecated Modules
+
+      * cookielib
+
+      * doctest
+
+    * Build and C API Changes
+
+      * Port-Specific Changes
+
+    * Porting to Python 2.4
+
+    * Acknowledgements
+
+  * What's New in Python 2.3
+
+    * PEP 218: A Standard Set Datatype
+
+    * PEP 255: Simple Generators
+
+    * PEP 263: Source Code Encodings
+
+    * PEP 273: Importing Modules from ZIP Archives
+
+    * PEP 277: Unicode file name support for Windows NT
+
+    * PEP 278: Universal Newline Support
+
+    * PEP 279: enumerate()
+
+    * PEP 282: The logging Package
+
+    * PEP 285: A Boolean Type
+
+    * PEP 293: Codec Error Handling Callbacks
+
+    * PEP 301: Package Index and Metadata for Distutils
+
+    * PEP 302: New Import Hooks
+
+    * PEP 305: Comma-separated Files
+
+    * PEP 307: Pickle Enhancements
+
+    * Extended Slices
+
+    * Other Language Changes
+
+      * String Changes
+
+      * Optimizations
+
+    * New, Improved, and Deprecated Modules
+
+      * Date/Time Type
+
+      * The optparse Module
+
+    * Pymalloc: A Specialized Object Allocator
+
+    * Build and C API Changes
+
+      * Port-Specific Changes
+
+    * Other Changes and Fixes
+
+    * Porting to Python 2.3
+
+    * Acknowledgements
+
+  * What's New in Python 2.2
+
+    * Introduction
+
+    * PEPs 252 and 253: Type and Class Changes
+
+      * Old and New Classes
+
+      * Descriptors
+
+      * Multiple Inheritance: The Diamond Rule
+
+      * Attribute Access
+
+      * Related Links
+
+    * PEP 234: Iterators
+
+    * PEP 255: Simple Generators
+
+    * PEP 237: Unifying Long Integers and Integers
+
+    * PEP 238: Changing the Division Operator
+
+    * Unicode Changes
+
+    * PEP 227: Nested Scopes
+
+    * New and Improved Modules
+
+    * Interpreter Changes and Fixes
+
+    * Other Changes and Fixes
+
+    * Acknowledgements
+
+  * What's New in Python 2.1
+
+    * Introduction
+
+    * PEP 227: Nested Scopes
+
+    * PEP 236: __future__ Directives
+
+    * PEP 207: Rich Comparisons
+
+    * PEP 230: Warning Framework
+
+    * PEP 229: New Build System
+
+    * PEP 205: Weak References
+
+    * PEP 232: Function Attributes
+
+    * PEP 235: Importing Modules on Case-Insensitive Platforms
+
+    * PEP 217: Interactive Display Hook
+
+    * PEP 208: New Coercion Model
+
+    * PEP 241: Metadata in Python Packages
+
+    * New and Improved Modules
+
+    * Other Changes and Fixes
+
+    * Acknowledgements
+
+  * What's New in Python 2.0
+
+    * Introduction
+
+    * What About Python 1.6?
+
+    * New Development Process
+
+    * Unicode
+
+    * List Comprehensions
+
+    * Augmented Assignment
+
+    * String Methods
+
+    * Garbage Collection of Cycles
+
+    * Other Core Changes
+
+      * Minor Language Changes
+
+      * Changes to Built-in Functions
+
+    * Porting to 2.0
+
+    * Extending/Embedding Changes
+
+    * Distutils: Making Modules Easy to Install
+
+    * XML Modules
+
+      * SAX2 Support
+
+      * DOM Support
+
+      * Relationship to PyXML
+
+    * Module changes
+
+    * New modules
+
+    * IDLE Improvements
+
+    * Deleted and Deprecated Modules
+
+    * Acknowledgements
+
+  * Changelog
+
+    * Python next
+
+      * Windows
+
+      * Tools/Demos
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.14 final
+
+      * macOS
+
+      * Windows
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.13 final
+
+      * macOS
+
+      * Windows
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * Documentation
+
+      * Core and Builtins
+
+      * Build
+
+    * Python 3.13.12 final
+
+      * Windows
+
+      * Tools/Demos
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.11 final
+
+      * Security
+
+      * Library
+
+      * Core and Builtins
+
+    * Python 3.13.10 final
+
+      * Tools/Demos
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Core and Builtins
+
+      * C API
+
+    * Python 3.13.9 final
+
+      * Library
+
+    * Python 3.13.8 final
+
+      * macOS
+
+      * Windows
+
+      * Tools/Demos
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.7 final
+
+      * Library
+
+      * Documentation
+
+      * Core and Builtins
+
+    * Python 3.13.6 final
+
+      * macOS
+
+      * Windows
+
+      * Tools/Demos
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * Documentation
+
+      * Core and Builtins
+
+      * Build
+
+    * Python 3.13.5 final
+
+      * Windows
+
+      * Tests
+
+      * Library
+
+      * Core and Builtins
+
+      * C API
+
+    * Python 3.13.4 final
+
+      * Windows
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.3 final
+
+      * macOS
+
+      * Windows
+
+      * Tools/Demos
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.2 final
+
+      * macOS
+
+      * Windows
+
+      * Tools/Demos
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * Documentation
+
+      * Library
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.1 final
+
+      * macOS
+
+      * Windows
+
+      * Tools/Demos
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.0 final
+
+      * Library
+
+      * Core and Builtins
+
+    * Python 3.13.0 release candidate 3
+
+      * macOS
+
+      * Windows
+
+      * Tests
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.0 release candidate 2
+
+      * macOS
+
+      * Windows
+
+      * Tools/Demos
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * IDLE
+
+      * Library
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.0 release candidate 1
+
+      * Tests
+
+      * Security
+
+      * Library
+
+      * IDLE
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.0 beta 4
+
+      * Tests
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Core and Builtins
+
+      * C API
+
+      * Build
+
+    * Python 3.13.0 beta 3
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Build
+
+      * C API
+
+    * Python 3.13.0 beta 2
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * C API
+
+    * Python 3.13.0 beta 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * C API
+
+    * Python 3.13.0 alpha 6
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * C API
+
+    * Python 3.13.0 alpha 5
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.13.0 alpha 4
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.13.0 alpha 3
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * C API
+
+    * Python 3.13.0 alpha 2
+
+      * Core and Builtins
+
+      * Library
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.13.0 alpha 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.12.0 beta 1
+
+      * Security
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.12.0 alpha 7
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Build
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.12.0 alpha 6
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * C API
+
+    * Python 3.12.0 alpha 5
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+    * Python 3.12.0 alpha 4
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.12.0 alpha 3
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.12.0 alpha 2
+
+      * Security
+
+      * Core and Builtins
+
+      * Build
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * C API
+
+    * Python 3.12.0 alpha 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.11.0 beta 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Build
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.11.0 alpha 7
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.11.0 alpha 6
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * IDLE
+
+      * C API
+
+    * Python 3.11.0 alpha 5
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Build
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * C API
+
+    * Python 3.11.0 alpha 4
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * C API
+
+    * Python 3.11.0 alpha 3
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * C API
+
+    * Python 3.11.0 alpha 2
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * C API
+
+    * Python 3.11.0 alpha 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.10.0 beta 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * C API
+
+    * Python 3.10.0 alpha 7
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * IDLE
+
+      * C API
+
+    * Python 3.10.0 alpha 6
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * C API
+
+    * Python 3.10.0 alpha 5
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * C API
+
+    * Python 3.10.0 alpha 4
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * macOS
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.10.0 alpha 3
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.10.0 alpha 2
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * C API
+
+    * Python 3.10.0 alpha 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * C API
+
+    * Python 3.9.0 beta 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.9.0 alpha 6
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.9.0 alpha 5
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.9.0 alpha 4
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * IDLE
+
+      * C API
+
+    * Python 3.9.0 alpha 3
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Build
+
+      * IDLE
+
+      * C API
+
+    * Python 3.9.0 alpha 2
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * C API
+
+    * Python 3.9.0 alpha 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.8.0 beta 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.8.0 alpha 4
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.8.0 alpha 3
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.8.0 alpha 2
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Windows
+
+      * IDLE
+
+    * Python 3.8.0 alpha 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.7.0 final
+
+      * Library
+
+      * C API
+
+    * Python 3.7.0 release candidate 1
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Build
+
+      * Windows
+
+      * IDLE
+
+    * Python 3.7.0 beta 5
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * macOS
+
+      * IDLE
+
+    * Python 3.7.0 beta 4
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+    * Python 3.7.0 beta 3
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.7.0 beta 2
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+    * Python 3.7.0 beta 1
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * C API
+
+    * Python 3.7.0 alpha 4
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Windows
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.7.0 alpha 3
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.7.0 alpha 2
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Build
+
+      * IDLE
+
+      * C API
+
+    * Python 3.7.0 alpha 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.6.6 final
+
+    * Python 3.6.6 release candidate 1
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.6.5 final
+
+      * Tests
+
+      * Build
+
+    * Python 3.6.5 release candidate 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.6.4 final
+
+    * Python 3.6.4 release candidate 1
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * macOS
+
+      * IDLE
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.6.3 final
+
+      * Library
+
+      * Build
+
+    * Python 3.6.3 release candidate 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * IDLE
+
+      * Tools/Demos
+
+    * Python 3.6.2 final
+
+    * Python 3.6.2 release candidate 2
+
+      * Security
+
+    * Python 3.6.2 release candidate 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * C API
+
+      * Build
+
+      * Documentation
+
+      * Tools/Demos
+
+      * Tests
+
+      * Windows
+
+    * Python 3.6.1 final
+
+      * Core and Builtins
+
+      * Build
+
+    * Python 3.6.1 release candidate 1
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * Windows
+
+      * C API
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+    * Python 3.6.0 final
+
+    * Python 3.6.0 release candidate 2
+
+      * Core and Builtins
+
+      * Tools/Demos
+
+      * Windows
+
+      * Build
+
+    * Python 3.6.0 release candidate 1
+
+      * Core and Builtins
+
+      * Library
+
+      * C API
+
+      * Documentation
+
+      * Tools/Demos
+
+    * Python 3.6.0 beta 4
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+    * Python 3.6.0 beta 3
+
+      * Core and Builtins
+
+      * Library
+
+      * Windows
+
+      * Build
+
+      * Tests
+
+    * Python 3.6.0 beta 2
+
+      * Core and Builtins
+
+      * Library
+
+      * Windows
+
+      * C API
+
+      * Build
+
+      * Tests
+
+    * Python 3.6.0 beta 1
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * C API
+
+      * Tests
+
+      * Build
+
+      * Tools/Demos
+
+      * Windows
+
+    * Python 3.6.0 alpha 4
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * Tests
+
+      * Windows
+
+      * Build
+
+    * Python 3.6.0 alpha 3
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * C API
+
+      * Build
+
+      * Tools/Demos
+
+      * Documentation
+
+      * Tests
+
+    * Python 3.6.0 alpha 2
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Tests
+
+      * Windows
+
+      * Build
+
+      * C API
+
+      * Tools/Demos
+
+    * Python 3.6.0 alpha 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.5.5 final
+
+    * Python 3.5.5 release candidate 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+    * Python 3.5.4 final
+
+      * Library
+
+    * Python 3.5.4 release candidate 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * C API
+
+    * Python 3.5.3 final
+
+    * Python 3.5.3 release candidate 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * C API
+
+      * Documentation
+
+      * Tests
+
+      * Tools/Demos
+
+      * Windows
+
+      * Build
+
+    * Python 3.5.2 final
+
+      * Core and Builtins
+
+      * Tests
+
+      * IDLE
+
+    * Python 3.5.2 release candidate 1
+
+      * Security
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * Tools/Demos
+
+    * Python 3.5.1 final
+
+      * Core and Builtins
+
+      * Windows
+
+    * Python 3.5.1 release candidate 1
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Tests
+
+      * Build
+
+      * Windows
+
+      * Tools/Demos
+
+    * Python 3.5.0 final
+
+      * Build
+
+    * Python 3.5.0 release candidate 4
+
+      * Library
+
+      * Build
+
+    * Python 3.5.0 release candidate 3
+
+      * Core and Builtins
+
+      * Library
+
+    * Python 3.5.0 release candidate 2
+
+      * Core and Builtins
+
+      * Library
+
+    * Python 3.5.0 release candidate 1
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * Documentation
+
+      * Tests
+
+    * Python 3.5.0 beta 4
+
+      * Core and Builtins
+
+      * Library
+
+      * Build
+
+    * Python 3.5.0 beta 3
+
+      * Core and Builtins
+
+      * Library
+
+      * Tests
+
+      * Documentation
+
+      * Build
+
+    * Python 3.5.0 beta 2
+
+      * Core and Builtins
+
+      * Library
+
+    * Python 3.5.0 beta 1
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * Tests
+
+      * Documentation
+
+      * Tools/Demos
+
+    * Python 3.5.0 alpha 4
+
+      * Core and Builtins
+
+      * Library
+
+      * Build
+
+      * Tests
+
+      * Tools/Demos
+
+      * C API
+
+    * Python 3.5.0 alpha 3
+
+      * Core and Builtins
+
+      * Library
+
+      * Build
+
+      * Tests
+
+      * Tools/Demos
+
+    * Python 3.5.0 alpha 2
+
+      * Core and Builtins
+
+      * Library
+
+      * Build
+
+      * C API
+
+      * Windows
+
+    * Python 3.5.0 alpha 1
+
+      * Core and Builtins
+
+      * Library
+
+      * IDLE
+
+      * Build
+
+      * C API
+
+      * Documentation
+
+      * Tests
+
+      * Tools/Demos
+
+      * Windows
+
+* The Python Tutorial
+
+  * 1. Whetting Your Appetite
+
+  * 2. Using the Python Interpreter
+
+    * 2.1. Invoking the Interpreter
+
+      * 2.1.1. Argument Passing
+
+      * 2.1.2. Interactive Mode
+
+    * 2.2. The Interpreter and Its Environment
+
+      * 2.2.1. Source Code Encoding
+
+  * 3. An Informal Introduction to Python
+
+    * 3.1. Using Python as a Calculator
+
+      * 3.1.1. Numbers
+
+      * 3.1.2. Text
+
+      * 3.1.3. Lists
+
+    * 3.2. First Steps Towards Programming
+
+  * 4. More Control Flow Tools
+
+    * 4.1. "if" Statements
+
+    * 4.2. "for" Statements
+
+    * 4.3. The "range()" Function
+
+    * 4.4. "break" and "continue" Statements
+
+    * 4.5. "else" Clauses on Loops
+
+    * 4.6. "pass" Statements
+
+    * 4.7. "match" Statements
+
+    * 4.8. Defining Functions
+
+    * 4.9. More on Defining Functions
+
+      * 4.9.1. Default Argument Values
+
+      * 4.9.2. Keyword Arguments
+
+      * 4.9.3. Special parameters
+
+        * 4.9.3.1. Positional-or-Keyword Arguments
+
+        * 4.9.3.2. Positional-Only Parameters
+
+        * 4.9.3.3. Keyword-Only Arguments
+
+        * 4.9.3.4. Function Examples
+
+        * 4.9.3.5. Recap
+
+      * 4.9.4. Arbitrary Argument Lists
+
+      * 4.9.5. Unpacking Argument Lists
+
+      * 4.9.6. Lambda Expressions
+
+      * 4.9.7. Documentation Strings
+
+      * 4.9.8. Function Annotations
+
+    * 4.10. Intermezzo: Coding Style
+
+  * 5. Data Structures
+
+    * 5.1. More on Lists
+
+      * 5.1.1. Using Lists as Stacks
+
+      * 5.1.2. Using Lists as Queues
+
+      * 5.1.3. List Comprehensions
+
+      * 5.1.4. Nested List Comprehensions
+
+    * 5.2. The "del" statement
+
+    * 5.3. Tuples and Sequences
+
+    * 5.4. Sets
+
+    * 5.5. Dictionaries
+
+    * 5.6. Looping Techniques
+
+    * 5.7. More on Conditions
+
+    * 5.8. Comparing Sequences and Other Types
+
+  * 6. Modules
+
+    * 6.1. More on Modules
+
+      * 6.1.1. Executing modules as scripts
+
+      * 6.1.2. The Module Search Path
+
+      * 6.1.3. "Compiled" Python files
+
+    * 6.2. Standard Modules
+
+    * 6.3. The "dir()" Function
+
+    * 6.4. Packages
+
+      * 6.4.1. Importing * From a Package
+
+      * 6.4.2. Intra-package References
+
+      * 6.4.3. Packages in Multiple Directories
+
+  * 7. Input and Output
+
+    * 7.1. Fancier Output Formatting
+
+      * 7.1.1. Formatted String Literals
+
+      * 7.1.2. The String format() Method
+
+      * 7.1.3. Manual String Formatting
+
+      * 7.1.4. Old string formatting
+
+    * 7.2. Reading and Writing Files
+
+      * 7.2.1. Methods of File Objects
+
+      * 7.2.2. Saving structured data with "json"
+
+  * 8. Errors and Exceptions
+
+    * 8.1. Syntax Errors
+
+    * 8.2. Exceptions
+
+    * 8.3. Handling Exceptions
+
+    * 8.4. Raising Exceptions
+
+    * 8.5. Exception Chaining
+
+    * 8.6. User-defined Exceptions
+
+    * 8.7. Defining Clean-up Actions
+
+    * 8.8. Predefined Clean-up Actions
+
+    * 8.9. Raising and Handling Multiple Unrelated Exceptions
+
+    * 8.10. Enriching Exceptions with Notes
+
+  * 9. Classes
+
+    * 9.1. A Word About Names and Objects
+
+    * 9.2. Python Scopes and Namespaces
+
+      * 9.2.1. Scopes and Namespaces Example
+
+    * 9.3. A First Look at Classes
+
+      * 9.3.1. Class Definition Syntax
+
+      * 9.3.2. Class Objects
+
+      * 9.3.3. Instance Objects
+
+      * 9.3.4. Method Objects
+
+      * 9.3.5. Class and Instance Variables
+
+    * 9.4. Random Remarks
+
+    * 9.5. Inheritance
+
+      * 9.5.1. Multiple Inheritance
+
+    * 9.6. Private Variables
+
+    * 9.7. Odds and Ends
+
+    * 9.8. Iterators
+
+    * 9.9. Generators
+
+    * 9.10. Generator Expressions
+
+  * 10. Brief tour of the standard library
+
+    * 10.1. Operating system interface
+
+    * 10.2. File wildcards
+
+    * 10.3. Command-line arguments
+
+    * 10.4. Error output redirection and program termination
+
+    * 10.5. String pattern matching
+
+    * 10.6. Mathematics
+
+    * 10.7. Internet access
+
+    * 10.8. Dates and times
+
+    * 10.9. Data compression
+
+    * 10.10. Performance measurement
+
+    * 10.11. Quality control
+
+    * 10.12. Batteries included
+
+  * 11. Brief tour of the standard library --- part II
+
+    * 11.1. Output formatting
+
+    * 11.2. Templating
+
+    * 11.3. Working with binary data record layouts
+
+    * 11.4. Multi-threading
+
+    * 11.5. Logging
+
+    * 11.6. Weak references
+
+    * 11.7. Tools for working with lists
+
+    * 11.8. Decimal floating-point arithmetic
+
+  * 12. Virtual Environments and Packages
+
+    * 12.1. Introduction
+
+    * 12.2. Creating Virtual Environments
+
+    * 12.3. Managing Packages with pip
+
+  * 13. What Now?
+
+  * 14. Interactive Input Editing and History Substitution
+
+    * 14.1. Tab Completion and History Editing
+
+    * 14.2. Alternatives to the Interactive Interpreter
+
+  * 15. Floating-Point Arithmetic:  Issues and Limitations
+
+    * 15.1. Representation Error
+
+  * 16. Appendix
+
+    * 16.1. Interactive Mode
+
+      * 16.1.1. Error Handling
+
+      * 16.1.2. Executable Python Scripts
+
+      * 16.1.3. The Interactive Startup File
+
+      * 16.1.4. The Customization Modules
+
+* Python Setup and Usage
+
+  * 1. Command line and environment
+
+    * 1.1. Command line
+
+      * 1.1.1. Interface options
+
+      * 1.1.2. Generic options
+
+      * 1.1.3. Miscellaneous options
+
+      * 1.1.4. Controlling color
+
+      * 1.1.5. Options you shouldn't use
+
+    * 1.2. Environment variables
+
+      * 1.2.1. Debug-mode variables
+
+  * 2. Using Python on Unix platforms
+
+    * 2.1. Getting and installing the latest version of Python
+
+      * 2.1.1. On Linux
+
+        * 2.1.1.1. Installing IDLE
+
+      * 2.1.2. On FreeBSD and OpenBSD
+
+    * 2.2. Building Python
+
+    * 2.3. Python-related paths and files
+
+    * 2.4. Miscellaneous
+
+    * 2.5. Custom OpenSSL
+
+  * 3. Configure Python
+
+    * 3.1. Build Requirements
+
+    * 3.2. Generated files
+
+      * 3.2.1. configure script
+
+    * 3.3. Configure Options
+
+      * 3.3.1. General Options
+
+      * 3.3.2. C compiler options
+
+      * 3.3.3. Linker options
+
+      * 3.3.4. Options for third-party dependencies
+
+      * 3.3.5. WebAssembly Options
+
+      * 3.3.6. Install Options
+
+      * 3.3.7. Performance options
+
+      * 3.3.8. Python Debug Build
+
+      * 3.3.9. Debug options
+
+      * 3.3.10. Linker options
+
+      * 3.3.11. Libraries options
+
+      * 3.3.12. Security Options
+
+      * 3.3.13. macOS Options
+
+      * 3.3.14. iOS Options
+
+      * 3.3.15. Cross Compiling Options
+
+    * 3.4. Python Build System
+
+      * 3.4.1. Main files of the build system
+
+      * 3.4.2. Main build steps
+
+      * 3.4.3. Main Makefile targets
+
+        * 3.4.3.1. make
+
+        * 3.4.3.2. make platform
+
+        * 3.4.3.3. make profile-opt
+
+        * 3.4.3.4. make clean
+
+        * 3.4.3.5. make distclean
+
+        * 3.4.3.6. make install
+
+        * 3.4.3.7. make test
+
+        * 3.4.3.8. make buildbottest
+
+        * 3.4.3.9. make regen-all
+
+      * 3.4.4. C extensions
+
+    * 3.5. Compiler and linker flags
+
+      * 3.5.1. Preprocessor flags
+
+      * 3.5.2. Compiler flags
+
+      * 3.5.3. Linker flags
+
+  * 4. Using Python on Windows
+
+    * 4.1. The full installer
+
+      * 4.1.1. Installation steps
+
+      * 4.1.2. Removing the MAX_PATH Limitation
+
+      * 4.1.3. Installing Without UI
+
+      * 4.1.4. Installing Without Downloading
+
+      * 4.1.5. Modifying an install
+
+      * 4.1.6. Installing Free-threaded Binaries
+
+    * 4.2. The Microsoft Store package
+
+      * 4.2.1. Known issues
+
+        * 4.2.1.1. Redirection of local data, registry, and temporary
+          paths
+
+    * 4.3. The nuget.org packages
+
+      * 4.3.1. Free-threaded packages
+
+    * 4.4. The embeddable package
+
+      * 4.4.1. Python Application
+
+      * 4.4.2. Embedding Python
+
+    * 4.5. Alternative bundles
+
+    * 4.6. Configuring Python
+
+      * 4.6.1. Excursus: Setting environment variables
+
+      * 4.6.2. Finding the Python executable
+
+    * 4.7. UTF-8 mode
+
+    * 4.8. Python Launcher for Windows
+
+      * 4.8.1. Getting started
+
+        * 4.8.1.1. From the command-line
+
+        * 4.8.1.2. Virtual environments
+
+        * 4.8.1.3. From a script
+
+        * 4.8.1.4. From file associations
+
+      * 4.8.2. Shebang Lines
+
+      * 4.8.3. Arguments in shebang lines
+
+      * 4.8.4. Customization
+
+        * 4.8.4.1. Customization via INI files
+
+        * 4.8.4.2. Customizing default Python versions
+
+      * 4.8.5. Diagnostics
+
+      * 4.8.6. Dry Run
+
+      * 4.8.7. Install on demand
+
+      * 4.8.8. Return codes
+
+    * 4.9. Finding modules
+
+    * 4.10. Additional modules
+
+      * 4.10.1. PyWin32
+
+      * 4.10.2. cx_Freeze
+
+    * 4.11. Compiling Python on Windows
+
+    * 4.12. Other Platforms
+
+  * 5. Using Python on macOS
+
+    * 5.1. Using Python for macOS from "python.org"
+
+      * 5.1.1. Installation steps
+
+      * 5.1.2. How to run a Python script
+
+    * 5.2. Alternative Distributions
+
+    * 5.3. Installing Additional Python Packages
+
+    * 5.4. GUI Programming
+
+    * 5.5. Advanced Topics
+
+      * 5.5.1. Installing Free-threaded Binaries
+
+      * 5.5.2. Installing using the command line
+
+      * 5.5.3. Distributing Python Applications
+
+      * 5.5.4. App Store Compliance
+
+    * 5.6. Other Resources
+
+  * 6. Using Python on Android
+
+    * 6.1. Adding Python to an Android app
+
+    * 6.2. Building a Python package for Android
+
+  * 7. Using Python on iOS
+
+    * 7.1. Python at runtime on iOS
+
+      * 7.1.1. iOS version compatibility
+
+      * 7.1.2. Platform identification
+
+      * 7.1.3. Standard library availability
+
+      * 7.1.4. Binary extension modules
+
+      * 7.1.5. Compiler stub binaries
+
+    * 7.2. Installing Python on iOS
+
+      * 7.2.1. Tools for building iOS apps
+
+      * 7.2.2. Adding Python to an iOS project
+
+      * 7.2.3. Testing a Python package
+
+    * 7.3. App Store Compliance
+
+  * 8. Editors and IDEs
+
+    * 8.1. IDLE --- Python editor and shell
+
+    * 8.2. Other Editors and IDEs
+
+* The Python Language Reference
+
+  * 1. Introduction
+
+    * 1.1. Alternate Implementations
+
+    * 1.2. Notation
+
+  * 2. Lexical analysis
+
+    * 2.1. Line structure
+
+      * 2.1.1. Logical lines
+
+      * 2.1.2. Physical lines
+
+      * 2.1.3. Comments
+
+      * 2.1.4. Encoding declarations
+
+      * 2.1.5. Explicit line joining
+
+      * 2.1.6. Implicit line joining
+
+      * 2.1.7. Blank lines
+
+      * 2.1.8. Indentation
+
+      * 2.1.9. Whitespace between tokens
+
+    * 2.2. Other tokens
+
+    * 2.3. Identifiers and keywords
+
+      * 2.3.1. Keywords
+
+      * 2.3.2. Soft Keywords
+
+      * 2.3.3. Reserved classes of identifiers
+
+    * 2.4. Literals
+
+      * 2.4.1. String and Bytes literals
+
+        * 2.4.1.1. Escape sequences
+
+      * 2.4.2. String literal concatenation
+
+      * 2.4.3. f-strings
+
+      * 2.4.4. Numeric literals
+
+      * 2.4.5. Integer literals
+
+      * 2.4.6. Floating-point literals
+
+      * 2.4.7. Imaginary literals
+
+    * 2.5. Operators
+
+    * 2.6. Delimiters
+
+  * 3. Data model
+
+    * 3.1. Objects, values and types
+
+    * 3.2. The standard type hierarchy
+
+      * 3.2.1. None
+
+      * 3.2.2. NotImplemented
+
+      * 3.2.3. Ellipsis
+
+      * 3.2.4. "numbers.Number"
+
+        * 3.2.4.1. "numbers.Integral"
+
+        * 3.2.4.2. "numbers.Real" ("float")
+
+        * 3.2.4.3. "numbers.Complex" ("complex")
+
+      * 3.2.5. Sequences
+
+        * 3.2.5.1. Immutable sequences
+
+        * 3.2.5.2. Mutable sequences
+
+      * 3.2.6. Set types
+
+      * 3.2.7. Mappings
+
+        * 3.2.7.1. Dictionaries
+
+      * 3.2.8. Callable types
+
+        * 3.2.8.1. User-defined functions
+
+          * 3.2.8.1.1. Special read-only attributes
+
+          * 3.2.8.1.2. Special writable attributes
+
+        * 3.2.8.2. Instance methods
+
+        * 3.2.8.3. Generator functions
+
+        * 3.2.8.4. Coroutine functions
+
+        * 3.2.8.5. Asynchronous generator functions
+
+        * 3.2.8.6. Built-in functions
+
+        * 3.2.8.7. Built-in methods
+
+        * 3.2.8.8. Classes
+
+        * 3.2.8.9. Class Instances
+
+      * 3.2.9. Modules
+
+        * 3.2.9.1. Import-related attributes on module objects
+
+        * 3.2.9.2. Other writable attributes on module objects
+
+        * 3.2.9.3. Module dictionaries
+
+      * 3.2.10. Custom classes
+
+        * 3.2.10.1. Special attributes
+
+        * 3.2.10.2. Special methods
+
+      * 3.2.11. Class instances
+
+        * 3.2.11.1. Special attributes
+
+      * 3.2.12. I/O objects (also known as file objects)
+
+      * 3.2.13. Internal types
+
+        * 3.2.13.1. Code objects
+
+          * 3.2.13.1.1. Special read-only attributes
+
+          * 3.2.13.1.2. Methods on code objects
+
+        * 3.2.13.2. Frame objects
+
+          * 3.2.13.2.1. Special read-only attributes
+
+          * 3.2.13.2.2. Special writable attributes
+
+          * 3.2.13.2.3. Frame object methods
+
+        * 3.2.13.3. Traceback objects
+
+        * 3.2.13.4. Slice objects
+
+        * 3.2.13.5. Static method objects
+
+        * 3.2.13.6. Class method objects
+
+    * 3.3. Special method names
+
+      * 3.3.1. Basic customization
+
+      * 3.3.2. Customizing attribute access
+
+        * 3.3.2.1. Customizing module attribute access
+
+        * 3.3.2.2. Implementing Descriptors
+
+        * 3.3.2.3. Invoking Descriptors
+
+        * 3.3.2.4. __slots__
+
+      * 3.3.3. Customizing class creation
+
+        * 3.3.3.1. Metaclasses
+
+        * 3.3.3.2. Resolving MRO entries
+
+        * 3.3.3.3. Determining the appropriate metaclass
+
+        * 3.3.3.4. Preparing the class namespace
+
+        * 3.3.3.5. Executing the class body
+
+        * 3.3.3.6. Creating the class object
+
+        * 3.3.3.7. Uses for metaclasses
+
+      * 3.3.4. Customizing instance and subclass checks
+
+      * 3.3.5. Emulating generic types
+
+        * 3.3.5.1. The purpose of *__class_getitem__*
+
+        * 3.3.5.2. *__class_getitem__* versus *__getitem__*
+
+      * 3.3.6. Emulating callable objects
+
+      * 3.3.7. Emulating container types
+
+      * 3.3.8. Emulating numeric types
+
+      * 3.3.9. With Statement Context Managers
+
+      * 3.3.10. Customizing positional arguments in class pattern
+        matching
+
+      * 3.3.11. Emulating buffer types
+
+      * 3.3.12. Special method lookup
+
+    * 3.4. Coroutines
+
+      * 3.4.1. Awaitable Objects
+
+      * 3.4.2. Coroutine Objects
+
+      * 3.4.3. Asynchronous Iterators
+
+      * 3.4.4. Asynchronous Context Managers
+
+  * 4. Execution model
+
+    * 4.1. Structure of a program
+
+    * 4.2. Naming and binding
+
+      * 4.2.1. Binding of names
+
+      * 4.2.2. Resolution of names
+
+      * 4.2.3. Annotation scopes
+
+      * 4.2.4. Lazy evaluation
+
+      * 4.2.5. Builtins and restricted execution
+
+      * 4.2.6. Interaction with dynamic features
+
+    * 4.3. Exceptions
+
+    * 4.4. Runtime Components
+
+      * 4.4.1. General Computing Model
+
+      * 4.4.2. Python Runtime Model
+
+  * 5. The import system
+
+    * 5.1. "importlib"
+
+    * 5.2. Packages
+
+      * 5.2.1. Regular packages
+
+      * 5.2.2. Namespace packages
+
+    * 5.3. Searching
+
+      * 5.3.1. The module cache
+
+      * 5.3.2. Finders and loaders
+
+      * 5.3.3. Import hooks
+
+      * 5.3.4. The meta path
+
+    * 5.4. Loading
+
+      * 5.4.1. Loaders
+
+      * 5.4.2. Submodules
+
+      * 5.4.3. Module specs
+
+      * 5.4.4. __path__ attributes on modules
+
+      * 5.4.5. Module reprs
+
+      * 5.4.6. Cached bytecode invalidation
+
+    * 5.5. The Path Based Finder
+
+      * 5.5.1. Path entry finders
+
+      * 5.5.2. Path entry finder protocol
+
+    * 5.6. Replacing the standard import system
+
+    * 5.7. Package Relative Imports
+
+    * 5.8. Special considerations for __main__
+
+      * 5.8.1. __main__.__spec__
+
+    * 5.9. References
+
+  * 6. Expressions
+
+    * 6.1. Arithmetic conversions
+
+    * 6.2. Atoms
+
+      * 6.2.1. Identifiers (Names)
+
+        * 6.2.1.1. Private name mangling
+
+      * 6.2.2. Literals
+
+      * 6.2.3. Parenthesized forms
+
+      * 6.2.4. Displays for lists, sets and dictionaries
+
+      * 6.2.5. List displays
+
+      * 6.2.6. Set displays
+
+      * 6.2.7. Dictionary displays
+
+      * 6.2.8. Generator expressions
+
+      * 6.2.9. Yield expressions
+
+        * 6.2.9.1. Generator-iterator methods
+
+        * 6.2.9.2. Examples
+
+        * 6.2.9.3. Asynchronous generator functions
+
+        * 6.2.9.4. Asynchronous generator-iterator methods
+
+    * 6.3. Primaries
+
+      * 6.3.1. Attribute references
+
+      * 6.3.2. Subscriptions
+
+      * 6.3.3. Slicings
+
+      * 6.3.4. Calls
+
+    * 6.4. Await expression
+
+    * 6.5. The power operator
+
+    * 6.6. Unary arithmetic and bitwise operations
+
+    * 6.7. Binary arithmetic operations
+
+    * 6.8. Shifting operations
+
+    * 6.9. Binary bitwise operations
+
+    * 6.10. Comparisons
+
+      * 6.10.1. Value comparisons
+
+      * 6.10.2. Membership test operations
+
+      * 6.10.3. Identity comparisons
+
+    * 6.11. Boolean operations
+
+    * 6.12. Assignment expressions
+
+    * 6.13. Conditional expressions
+
+    * 6.14. Lambdas
+
+    * 6.15. Expression lists
+
+    * 6.16. Evaluation order
+
+    * 6.17. Operator precedence
+
+  * 7. Simple statements
+
+    * 7.1. Expression statements
+
+    * 7.2. Assignment statements
+
+      * 7.2.1. Augmented assignment statements
+
+      * 7.2.2. Annotated assignment statements
+
+    * 7.3. The "assert" statement
+
+    * 7.4. The "pass" statement
+
+    * 7.5. The "del" statement
+
+    * 7.6. The "return" statement
+
+    * 7.7. The "yield" statement
+
+    * 7.8. The "raise" statement
+
+    * 7.9. The "break" statement
+
+    * 7.10. The "continue" statement
+
+    * 7.11. The "import" statement
+
+      * 7.11.1. Future statements
+
+    * 7.12. The "global" statement
+
+    * 7.13. The "nonlocal" statement
+
+    * 7.14. The "type" statement
+
+  * 8. Compound statements
+
+    * 8.1. The "if" statement
+
+    * 8.2. The "while" statement
+
+    * 8.3. The "for" statement
+
+    * 8.4. The "try" statement
+
+      * 8.4.1. "except" clause
+
+      * 8.4.2. "except*" clause
+
+      * 8.4.3. "else" clause
+
+      * 8.4.4. "finally" clause
+
+    * 8.5. The "with" statement
+
+    * 8.6. The "match" statement
+
+      * 8.6.1. Overview
+
+      * 8.6.2. Guards
+
+      * 8.6.3. Irrefutable Case Blocks
+
+      * 8.6.4. Patterns
+
+        * 8.6.4.1. OR Patterns
+
+        * 8.6.4.2. AS Patterns
+
+        * 8.6.4.3. Literal Patterns
+
+        * 8.6.4.4. Capture Patterns
+
+        * 8.6.4.5. Wildcard Patterns
+
+        * 8.6.4.6. Value Patterns
+
+        * 8.6.4.7. Group Patterns
+
+        * 8.6.4.8. Sequence Patterns
+
+        * 8.6.4.9. Mapping Patterns
+
+        * 8.6.4.10. Class Patterns
+
+    * 8.7. Function definitions
+
+    * 8.8. Class definitions
+
+    * 8.9. Coroutines
+
+      * 8.9.1. Coroutine function definition
+
+      * 8.9.2. The "async for" statement
+
+      * 8.9.3. The "async with" statement
+
+    * 8.10. Type parameter lists
+
+      * 8.10.1. Generic functions
+
+      * 8.10.2. Generic classes
+
+      * 8.10.3. Generic type aliases
+
+  * 9. Top-level components
+
+    * 9.1. Complete Python programs
+
+    * 9.2. File input
+
+    * 9.3. Interactive input
+
+    * 9.4. Expression input
+
+  * 10. Full Grammar specification
+
+* The Python Standard Library
+
+  * Introduction
+
+    * Notes on availability
+
+      * WebAssembly platforms
+
+      * Mobile platforms
+
+  * Built-in Functions
+
+  * Built-in Constants
+
+    * Constants added by the "site" module
+
+  * Built-in Types
+
+    * Truth Value Testing
+
+    * Boolean Operations --- "and", "or", "not"
+
+    * Comparisons
+
+    * Numeric Types --- "int", "float", "complex"
+
+      * Bitwise Operations on Integer Types
+
+      * Additional Methods on Integer Types
+
+      * Additional Methods on Float
+
+      * Hashing of numeric types
+
+    * Boolean Type - "bool"
+
+    * Iterator Types
+
+      * Generator Types
+
+    * Sequence Types --- "list", "tuple", "range"
+
+      * Common Sequence Operations
+
+      * Immutable Sequence Types
+
+      * Mutable Sequence Types
+
+      * Lists
+
+      * Tuples
+
+      * Ranges
+
+    * Text Sequence Type --- "str"
+
+      * String Methods
+
+      * Formatted String Literals (f-strings)
+
+      * "printf"-style String Formatting
+
+    * Binary Sequence Types --- "bytes", "bytearray", "memoryview"
+
+      * Bytes Objects
+
+      * Bytearray Objects
+
+      * Bytes and Bytearray Operations
+
+      * "printf"-style Bytes Formatting
+
+      * Memory Views
+
+    * Set Types --- "set", "frozenset"
+
+    * Mapping Types --- "dict"
+
+      * Dictionary view objects
+
+    * Context Manager Types
+
+    * Type Annotation Types --- *Generic Alias*, *Union*
+
+      * Generic Alias Type
+
+        * Standard Generic Classes
+
+        * Special Attributes of "GenericAlias" objects
+
+      * Union Type
+
+    * Other Built-in Types
+
+      * Modules
+
+      * Classes and Class Instances
+
+      * Functions
+
+      * Methods
+
+      * Code Objects
+
+      * Type Objects
+
+      * The Null Object
+
+      * The Ellipsis Object
+
+      * The NotImplemented Object
+
+      * Internal Objects
+
+    * Special Attributes
+
+    * Integer string conversion length limitation
+
+      * Affected APIs
+
+      * Configuring the limit
+
+      * Recommended configuration
+
+  * Built-in Exceptions
+
+    * Exception context
+
+    * Inheriting from built-in exceptions
+
+    * Base classes
+
+    * Concrete exceptions
+
+      * OS exceptions
+
+    * Warnings
+
+    * Exception groups
+
+    * Exception hierarchy
+
+  * Text Processing Services
+
+    * "string" --- Common string operations
+
+      * String constants
+
+      * Custom string formatting
+
+      * Format string syntax
+
+        * Format specification mini-language
+
+        * Format examples
+
+      * Template strings
+
+      * Helper functions
+
+    * "re" --- Regular expression operations
+
+      * Regular Expression Syntax
+
+      * Module Contents
+
+        * Flags
+
+        * Functions
+
+        * Exceptions
+
+      * Regular Expression Objects
+
+      * Match Objects
+
+      * Regular Expression Examples
+
+        * Checking for a Pair
+
+        * Simulating scanf()
+
+        * search() vs. match()
+
+        * Making a Phonebook
+
+        * Text Munging
+
+        * Finding all Adverbs
+
+        * Finding all Adverbs and their Positions
+
+        * Raw String Notation
+
+        * Writing a Tokenizer
+
+    * "difflib" --- Helpers for computing deltas
+
+      * Junk heuristic
+
+      * The "difflib" algorithm
+
+      * Diff generation
+
+      * Junk definition functions
+
+      * SequenceMatcher objects
+
+      * Examples
+
+        * SequenceMatcher examples
+
+        * Differ example
+
+        * A command-line interface to difflib
+
+        * ndiff example
+
+    * "textwrap" --- Text wrapping and filling
+
+    * "unicodedata" --- Unicode Database
+
+    * "stringprep" --- Internet String Preparation
+
+    * "readline" --- GNU readline interface
+
+      * Init file
+
+      * Line buffer
+
+      * History file
+
+      * History list
+
+      * Startup hooks
+
+      * Completion
+
+      * Example
+
+    * "rlcompleter" --- Completion function for GNU readline
+
+  * Binary Data Services
+
+    * "struct" --- Interpret bytes as packed binary data
+
+      * Functions and Exceptions
+
+      * Format Strings
+
+        * Byte Order, Size, and Alignment
+
+        * Format Characters
+
+        * Examples
+
+      * Applications
+
+        * Native Formats
+
+        * Standard Formats
+
+      * Classes
+
+    * "codecs" --- Codec registry and base classes
+
+      * Codec Base Classes
+
+        * Error Handlers
+
+        * Stateless Encoding and Decoding
+
+        * Incremental Encoding and Decoding
+
+          * IncrementalEncoder Objects
+
+          * IncrementalDecoder Objects
+
+        * Stream Encoding and Decoding
+
+          * StreamWriter Objects
+
+          * StreamReader Objects
+
+          * StreamReaderWriter Objects
+
+          * StreamRecoder Objects
+
+      * Encodings and Unicode
+
+      * Standard Encodings
+
+      * Python Specific Encodings
+
+        * Text Encodings
+
+        * Binary Transforms
+
+        * Standalone Codec Functions
+
+        * Text Transforms
+
+      * "encodings" --- Encodings package
+
+      * "encodings.idna" --- Internationalized Domain Names in
+        Applications
+
+      * "encodings.mbcs" --- Windows ANSI codepage
+
+      * "encodings.utf_8_sig" --- UTF-8 codec with BOM signature
+
+  * Data Types
+
+    * "datetime" --- Basic date and time types
+
+      * Aware and Naive Objects
+
+      * Constants
+
+      * Available Types
+
+        * Common Properties
+
+        * Determining if an Object is Aware or Naive
+
+      * "timedelta" Objects
+
+        * Examples of usage: "timedelta"
+
+      * "date" Objects
+
+        * Examples of Usage: "date"
+
+      * "datetime" Objects
+
+        * Examples of Usage: "datetime"
+
+      * "time" Objects
+
+        * Examples of Usage: "time"
+
+      * "tzinfo" Objects
+
+      * "timezone" Objects
+
+      * "strftime()" and "strptime()" Behavior
+
+        * "strftime()" and "strptime()" Format Codes
+
+        * Technical Detail
+
+    * "zoneinfo" --- IANA time zone support
+
+      * Using "ZoneInfo"
+
+      * Data sources
+
+        * Configuring the data sources
+
+          * Compile-time configuration
+
+          * Environment configuration
+
+          * Runtime configuration
+
+      * The "ZoneInfo" class
+
+        * String representations
+
+        * Pickle serialization
+
+      * Functions
+
+      * Globals
+
+      * Exceptions and warnings
+
+    * "calendar" --- General calendar-related functions
+
+      * Command-Line Usage
+
+    * "collections" --- Container datatypes
+
+      * "ChainMap" objects
+
+        * "ChainMap" Examples and Recipes
+
+      * "Counter" objects
+
+      * "deque" objects
+
+        * "deque" Recipes
+
+      * "defaultdict" objects
+
+        * "defaultdict" Examples
+
+      * "namedtuple()" Factory Function for Tuples with Named Fields
+
+      * "OrderedDict" objects
+
+        * "OrderedDict" Examples and Recipes
+
+      * "UserDict" objects
+
+      * "UserList" objects
+
+      * "UserString" objects
+
+    * "collections.abc" --- Abstract Base Classes for Containers
+
+      * Collections Abstract Base Classes
+
+      * Collections Abstract Base Classes -- Detailed Descriptions
+
+      * Examples and Recipes
+
+    * "heapq" --- Heap queue algorithm
+
+      * Basic Examples
+
+      * Priority Queue Implementation Notes
+
+      * Theory
+
+    * "bisect" --- Array bisection algorithm
+
+      * Performance Notes
+
+      * Searching Sorted Lists
+
+      * Examples
+
+    * "array" --- Efficient arrays of numeric values
+
+    * "weakref" --- Weak references
+
+      * Weak Reference Objects
+
+      * Example
+
+      * Finalizer Objects
+
+      * Comparing finalizers with "__del__()" methods
+
+    * "types" --- Dynamic type creation and names for built-in types
+
+      * Dynamic Type Creation
+
+      * Standard Interpreter Types
+
+      * Additional Utility Classes and Functions
+
+      * Coroutine Utility Functions
+
+    * "copy" --- Shallow and deep copy operations
+
+    * "pprint" --- Data pretty printer
+
+      * Functions
+
+      * PrettyPrinter Objects
+
+      * Example
+
+    * "reprlib" --- Alternate "repr()" implementation
+
+      * Repr Objects
+
+      * Subclassing Repr Objects
+
+    * "enum" --- Support for enumerations
+
+      * Module contents
+
+      * Data types
+
+        * Supported "__dunder__" names
+
+        * Supported "_sunder_" names
+
+      * Utilities and decorators
+
+      * Notes
+
+    * "graphlib" --- Functionality to operate with graph-like
+      structures
+
+      * Exceptions
+
+  * Numeric and Mathematical Modules
+
+    * "numbers" --- Numeric abstract base classes
+
+      * The numeric tower
+
+      * Notes for type implementers
+
+        * Adding More Numeric ABCs
+
+        * Implementing the arithmetic operations
+
+    * "math" --- Mathematical functions
+
+      * Number-theoretic functions
+
+      * Floating point arithmetic
+
+      * Floating point manipulation functions
+
+      * Power, exponential and logarithmic functions
+
+      * Summation and product functions
+
+      * Angular conversion
+
+      * Trigonometric functions
+
+      * Hyperbolic functions
+
+      * Special functions
+
+      * Constants
+
+    * "cmath" --- Mathematical functions for complex numbers
+
+      * Conversions to and from polar coordinates
+
+      * Power and logarithmic functions
+
+      * Trigonometric functions
+
+      * Hyperbolic functions
+
+      * Classification functions
+
+      * Constants
+
+    * "decimal" --- Decimal fixed-point and floating-point arithmetic
+
+      * Quick-start tutorial
+
+      * Decimal objects
+
+        * Logical operands
+
+      * Context objects
+
+      * Constants
+
+      * Rounding modes
+
+      * Signals
+
+      * Floating-point notes
+
+        * Mitigating round-off error with increased precision
+
+        * Special values
+
+      * Working with threads
+
+      * Recipes
+
+      * Decimal FAQ
+
+    * "fractions" --- Rational numbers
+
+    * "random" --- Generate pseudo-random numbers
+
+      * Bookkeeping functions
+
+      * Functions for bytes
+
+      * Functions for integers
+
+      * Functions for sequences
+
+      * Discrete distributions
+
+      * Real-valued distributions
+
+      * Alternative Generator
+
+      * Notes on Reproducibility
+
+      * Examples
+
+      * Recipes
+
+      * Command-line usage
+
+      * Command-line example
+
+    * "statistics" --- Mathematical statistics functions
+
+      * Averages and measures of central location
+
+      * Measures of spread
+
+      * Statistics for relations between two inputs
+
+      * Function details
+
+      * Exceptions
+
+      * "NormalDist" objects
+
+      * Examples and Recipes
+
+        * Classic probability problems
+
+        * Monte Carlo inputs for simulations
+
+        * Approximating binomial distributions
+
+        * Naive bayesian classifier
+
+  * Functional Programming Modules
+
+    * "itertools" --- Functions creating iterators for efficient
+      looping
+
+      * Itertool Functions
+
+      * Itertools Recipes
+
+    * "functools" --- Higher-order functions and operations on
+      callable objects
+
+      * "partial" Objects
+
+    * "operator" --- Standard operators as functions
+
+      * Mapping Operators to Functions
+
+      * In-place Operators
+
+  * File and Directory Access
+
+    * "pathlib" --- Object-oriented filesystem paths
+
+      * Basic use
+
+      * Exceptions
+
+      * Pure paths
+
+        * General properties
+
+        * Operators
+
+        * Accessing individual parts
+
+        * Methods and properties
+
+      * Concrete paths
+
+        * Parsing and generating URIs
+
+        * Expanding and resolving paths
+
+        * Querying file type and status
+
+        * Reading and writing files
+
+        * Reading directories
+
+        * Creating files and directories
+
+        * Renaming and deleting
+
+        * Permissions and ownership
+
+      * Pattern language
+
+      * Comparison to the "glob" module
+
+      * Comparison to the "os" and "os.path" modules
+
+        * Corresponding tools
+
+    * "os.path" --- Common pathname manipulations
+
+    * "stat" --- Interpreting "stat()" results
+
+    * "filecmp" --- File and Directory Comparisons
+
+      * The "dircmp" class
+
+    * "tempfile" --- Generate temporary files and directories
+
+      * Examples
+
+      * Deprecated functions and variables
+
+    * "glob" --- Unix style pathname pattern expansion
+
+      * Examples
+
+    * "fnmatch" --- Unix filename pattern matching
+
+    * "linecache" --- Random access to text lines
+
+    * "shutil" --- High-level file operations
+
+      * Directory and files operations
+
+        * Platform-dependent efficient copy operations
+
+        * copytree example
+
+        * rmtree example
+
+      * Archiving operations
+
+        * Archiving example
+
+        * Archiving example with *base_dir*
+
+      * Querying the size of the output terminal
+
+  * Data Persistence
+
+    * "pickle" --- Python object serialization
+
+      * Relationship to other Python modules
+
+        * Comparison with "marshal"
+
+        * Comparison with "json"
+
+      * Data stream format
+
+      * Module Interface
+
+      * What can be pickled and unpickled?
+
+      * Pickling Class Instances
+
+        * Persistence of External Objects
+
+        * Dispatch Tables
+
+        * Handling Stateful Objects
+
+      * Custom Reduction for Types, Functions, and Other Objects
+
+      * Out-of-band Buffers
+
+        * Provider API
+
+        * Consumer API
+
+        * Example
+
+      * Restricting Globals
+
+      * Performance
+
+      * Examples
+
+    * "copyreg" --- Register "pickle" support functions
+
+      * Example
+
+    * "shelve" --- Python object persistence
+
+      * Restrictions
+
+      * Example
+
+    * "marshal" --- Internal Python object serialization
+
+    * "dbm" --- Interfaces to Unix "databases"
+
+      * "dbm.sqlite3" --- SQLite backend for dbm
+
+      * "dbm.gnu" --- GNU database manager
+
+      * "dbm.ndbm" --- New Database Manager
+
+      * "dbm.dumb" --- Portable DBM implementation
+
+    * "sqlite3" --- DB-API 2.0 interface for SQLite databases
+
+      * Tutorial
+
+      * Reference
+
+        * Module functions
+
+        * Module constants
+
+        * Connection objects
+
+        * Cursor objects
+
+        * Row objects
+
+        * Blob objects
+
+        * PrepareProtocol objects
+
+        * Exceptions
+
+        * SQLite and Python types
+
+        * Default adapters and converters (deprecated)
+
+        * Command-line interface
+
+      * How-to guides
+
+        * How to use placeholders to bind values in SQL queries
+
+        * How to adapt custom Python types to SQLite values
+
+          * How to write adaptable objects
+
+          * How to register adapter callables
+
+        * How to convert SQLite values to custom Python types
+
+        * Adapter and converter recipes
+
+        * How to use connection shortcut methods
+
+        * How to use the connection context manager
+
+        * How to work with SQLite URIs
+
+        * How to create and use row factories
+
+        * How to handle non-UTF-8 text encodings
+
+      * Explanation
+
+        * Transaction control
+
+          * Transaction control via the "autocommit" attribute
+
+          * Transaction control via the "isolation_level" attribute
+
+  * Data Compression and Archiving
+
+    * "zlib" --- Compression compatible with **gzip**
+
+    * "gzip" --- Support for **gzip** files
+
+      * Examples of usage
+
+      * Command-line interface
+
+        * Command-line options
+
+    * "bz2" --- Support for **bzip2** compression
+
+      * (De)compression of files
+
+      * Incremental (de)compression
+
+      * One-shot (de)compression
+
+      * Examples of usage
+
+    * "lzma" --- Compression using the LZMA algorithm
+
+      * Reading and writing compressed files
+
+      * Compressing and decompressing data in memory
+
+      * Miscellaneous
+
+      * Specifying custom filter chains
+
+      * Constants
+
+      * Examples
+
+    * "zipfile" --- Work with ZIP archives
+
+      * ZipFile objects
+
+      * Path objects
+
+      * PyZipFile objects
+
+      * ZipInfo objects
+
+      * Command-line interface
+
+        * Command-line options
+
+      * Decompression pitfalls
+
+        * From file itself
+
+        * File system limitations
+
+        * Resources limitations
+
+        * Interruption
+
+        * Default behaviors of extraction
+
+    * "tarfile" --- Read and write tar archive files
+
+      * TarFile Objects
+
+      * TarInfo Objects
+
+      * Extraction filters
+
+        * Default named filters
+
+        * Filter errors
+
+        * Hints for further verification
+
+        * Supporting older Python versions
+
+        * Stateful extraction filter example
+
+      * Command-Line Interface
+
+        * Command-line options
+
+      * Examples
+
+        * Reading examples
+
+        * Writing examples
+
+      * Supported tar formats
+
+      * Unicode issues
+
+  * File Formats
+
+    * "csv" --- CSV File Reading and Writing
+
+      * Module Contents
+
+      * Dialects and Formatting Parameters
+
+      * Reader Objects
+
+      * Writer Objects
+
+      * Examples
+
+    * "configparser" --- Configuration file parser
+
+      * Quick Start
+
+      * Supported Datatypes
+
+      * Fallback Values
+
+      * Supported INI File Structure
+
+      * Unnamed Sections
+
+      * Interpolation of values
+
+      * Mapping Protocol Access
+
+      * Customizing Parser Behaviour
+
+      * Legacy API Examples
+
+      * ConfigParser Objects
+
+      * RawConfigParser Objects
+
+      * Exceptions
+
+    * "tomllib" --- Parse TOML files
+
+      * Examples
+
+      * Conversion Table
+
+    * "netrc" --- netrc file processing
+
+      * netrc Objects
+
+    * "plistlib" --- Generate and parse Apple ".plist" files
+
+      * Examples
+
+  * Cryptographic Services
+
+    * "hashlib" --- Secure hashes and message digests
+
+      * Hash algorithms
+
+      * Usage
+
+      * Constructors
+
+      * Attributes
+
+      * Hash Objects
+
+      * SHAKE variable length digests
+
+      * File hashing
+
+      * Key derivation
+
+      * BLAKE2
+
+        * Creating hash objects
+
+        * Constants
+
+        * Examples
+
+          * Simple hashing
+
+          * Using different digest sizes
+
+          * Keyed hashing
+
+          * Randomized hashing
+
+          * Personalization
+
+          * Tree mode
+
+        * Credits
+
+    * "hmac" --- Keyed-Hashing for Message Authentication
+
+    * "secrets" --- Generate secure random numbers for managing
+      secrets
+
+      * Random numbers
+
+      * Generating tokens
+
+        * How many bytes should tokens use?
+
+      * Other functions
+
+      * Recipes and best practices
+
+  * Generic Operating System Services
+
+    * "os" --- Miscellaneous operating system interfaces
+
+      * File Names, Command Line Arguments, and Environment Variables
+
+      * Python UTF-8 Mode
+
+      * Process Parameters
+
+      * File Object Creation
+
+      * File Descriptor Operations
+
+        * Querying the size of a terminal
+
+        * Inheritance of File Descriptors
+
+      * Files and Directories
+
+        * Timer File Descriptors
+
+        * Linux extended attributes
+
+      * Process Management
+
+      * Interface to the scheduler
+
+      * Miscellaneous System Information
+
+      * Random numbers
+
+    * "io" --- Core tools for working with streams
+
+      * Overview
+
+        * Text I/O
+
+        * Binary I/O
+
+        * Raw I/O
+
+      * Text Encoding
+
+        * Opt-in EncodingWarning
+
+      * High-level Module Interface
+
+      * Class hierarchy
+
+        * I/O Base Classes
+
+        * Raw File I/O
+
+        * Buffered Streams
+
+        * Text I/O
+
+      * Performance
+
+        * Binary I/O
+
+        * Text I/O
+
+        * Multi-threading
+
+        * Reentrancy
+
+    * "time" --- Time access and conversions
+
+      * Functions
+
+      * Clock ID Constants
+
+      * Timezone Constants
+
+    * "logging" --- Logging facility for Python
+
+      * Logger Objects
+
+      * Logging Levels
+
+      * Handler Objects
+
+      * Formatter Objects
+
+      * Filter Objects
+
+      * LogRecord Objects
+
+      * LogRecord attributes
+
+      * LoggerAdapter Objects
+
+      * Thread Safety
+
+      * Module-Level Functions
+
+      * Module-Level Attributes
+
+      * Integration with the warnings module
+
+    * "logging.config" --- Logging configuration
+
+      * Configuration functions
+
+      * Security considerations
+
+      * Configuration dictionary schema
+
+        * Dictionary Schema Details
+
+        * Incremental Configuration
+
+        * Object connections
+
+        * User-defined objects
+
+        * Handler configuration order
+
+        * Access to external objects
+
+        * Access to internal objects
+
+        * Import resolution and custom importers
+
+        * Configuring QueueHandler and QueueListener
+
+      * Configuration file format
+
+    * "logging.handlers" --- Logging handlers
+
+      * StreamHandler
+
+      * FileHandler
+
+      * NullHandler
+
+      * WatchedFileHandler
+
+      * BaseRotatingHandler
+
+      * RotatingFileHandler
+
+      * TimedRotatingFileHandler
+
+      * SocketHandler
+
+      * DatagramHandler
+
+      * SysLogHandler
+
+      * NTEventLogHandler
+
+      * SMTPHandler
+
+      * MemoryHandler
+
+      * HTTPHandler
+
+      * QueueHandler
+
+      * QueueListener
+
+    * "platform" ---  Access to underlying platform's identifying data
+
+      * Cross platform
+
+      * Java platform
+
+      * Windows platform
+
+      * macOS platform
+
+      * iOS platform
+
+      * Unix platforms
+
+      * Linux platforms
+
+      * Android platform
+
+      * Command-line usage
+
+    * "errno" --- Standard errno system symbols
+
+    * "ctypes" --- A foreign function library for Python
+
+      * ctypes tutorial
+
+        * Loading dynamic link libraries
+
+        * Accessing functions from loaded dlls
+
+        * Calling functions
+
+        * Fundamental data types
+
+        * Calling functions, continued
+
+        * Calling variadic functions
+
+        * Calling functions with your own custom data types
+
+        * Specifying the required argument types (function prototypes)
+
+        * Return types
+
+        * Passing pointers (or: passing parameters by reference)
+
+        * Structures and unions
+
+        * Structure/union alignment and byte order
+
+        * Bit fields in structures and unions
+
+        * Arrays
+
+        * Pointers
+
+        * Type conversions
+
+        * Incomplete Types
+
+        * Callback functions
+
+        * Accessing values exported from dlls
+
+        * Surprises
+
+        * Variable-sized data types
+
+      * ctypes reference
+
+        * Finding shared libraries
+
+        * Loading shared libraries
+
+        * Foreign functions
+
+        * Function prototypes
+
+        * Utility functions
+
+        * Data types
+
+        * Fundamental data types
+
+        * Structured data types
+
+        * Arrays and pointers
+
+  * Command-line interface libraries
+
+    * "argparse" --- Parser for command-line options, arguments and
+      subcommands
+
+      * ArgumentParser objects
+
+        * prog
+
+        * usage
+
+        * description
+
+        * epilog
+
+        * parents
+
+        * formatter_class
+
+        * prefix_chars
+
+        * fromfile_prefix_chars
+
+        * argument_default
+
+        * allow_abbrev
+
+        * conflict_handler
+
+        * add_help
+
+        * exit_on_error
+
+      * The add_argument() method
+
+        * name or flags
+
+        * action
+
+        * nargs
+
+        * const
+
+        * default
+
+        * type
+
+        * choices
+
+        * required
+
+        * help
+
+        * metavar
+
+        * dest
+
+        * deprecated
+
+        * Action classes
+
+      * The parse_args() method
+
+        * Option value syntax
+
+        * Invalid arguments
+
+        * Arguments containing "-"
+
+        * Argument abbreviations (prefix matching)
+
+        * Beyond "sys.argv"
+
+        * The Namespace object
+
+      * Other utilities
+
+        * Subcommands
+
+        * FileType objects
+
+        * Argument groups
+
+        * Mutual exclusion
+
+        * Parser defaults
+
+        * Printing help
+
+        * Partial parsing
+
+        * Customizing file parsing
+
+        * Exiting methods
+
+        * Intermixed parsing
+
+        * Registering custom types or actions
+
+      * Exceptions
+
+        * Argparse Tutorial
+
+          * Concepts
+
+          * The basics
+
+          * Introducing Positional arguments
+
+          * Introducing Optional arguments
+
+            * Short options
+
+          * Combining Positional and Optional arguments
+
+          * Getting a little more advanced
+
+            * Specifying ambiguous arguments
+
+            * Conflicting options
+
+          * How to translate the argparse output
+
+          * Custom type converters
+
+          * Conclusion
+
+        * Migrating "optparse" code to "argparse"
+
+    * "optparse" --- Parser for command line options
+
+      * Choosing an argument parsing library
+
+      * Introduction
+
+      * Background
+
+        * Terminology
+
+        * What are options for?
+
+        * What are positional arguments for?
+
+      * Tutorial
+
+        * Understanding option actions
+
+        * The store action
+
+        * Handling boolean (flag) options
+
+        * Other actions
+
+        * Default values
+
+        * Generating help
+
+          * Grouping Options
+
+        * Printing a version string
+
+        * How "optparse" handles errors
+
+        * Putting it all together
+
+      * Reference Guide
+
+        * Creating the parser
+
+        * Populating the parser
+
+        * Defining options
+
+        * Option attributes
+
+        * Standard option actions
+
+        * Standard option types
+
+        * Parsing arguments
+
+        * Querying and manipulating your option parser
+
+        * Conflicts between options
+
+        * Cleanup
+
+        * Other methods
+
+      * Option Callbacks
+
+        * Defining a callback option
+
+        * How callbacks are called
+
+        * Raising errors in a callback
+
+        * Callback example 1: trivial callback
+
+        * Callback example 2: check option order
+
+        * Callback example 3: check option order (generalized)
+
+        * Callback example 4: check arbitrary condition
+
+        * Callback example 5: fixed arguments
+
+        * Callback example 6: variable arguments
+
+      * Extending "optparse"
+
+        * Adding new types
+
+        * Adding new actions
+
+      * Exceptions
+
+    * "getpass" --- Portable password input
+
+    * "fileinput" --- Iterate over lines from multiple input streams
+
+    * "curses" --- Terminal handling for character-cell displays
+
+      * Functions
+
+      * Window objects
+
+      * Constants
+
+    * "curses.textpad" --- Text input widget for curses programs
+
+      * Textbox objects
+
+    * "curses.ascii" --- Utilities for ASCII characters
+
+    * "curses.panel" --- A panel stack extension for curses
+
+      * Functions
+
+      * Panel objects
+
+    * "cmd" --- Support for line-oriented command interpreters
+
+      * Cmd Objects
+
+      * Cmd Example
+
+  * Concurrent Execution
+
+    * "threading" --- Thread-based parallelism
+
+      * Introduction
+
+      * GIL and performance considerations
+
+      * Reference
+
+        * Thread-local data
+
+        * Thread objects
+
+        * Lock objects
+
+        * RLock objects
+
+        * Condition objects
+
+        * Semaphore objects
+
+        * "Semaphore" example
+
+        * Event objects
+
+        * Timer objects
+
+        * Barrier objects
+
+      * Using locks, conditions, and semaphores in the "with"
+        statement
+
+    * "multiprocessing" --- Process-based parallelism
+
+      * Introduction
+
+        * The "Process" class
+
+        * Contexts and start methods
+
+        * Exchanging objects between processes
+
+        * Synchronization between processes
+
+        * Sharing state between processes
+
+        * Using a pool of workers
+
+      * Reference
+
+        * Global start method
+
+        * "Process" and exceptions
+
+        * Pipes and Queues
+
+        * Miscellaneous
+
+        * Connection Objects
+
+        * Synchronization primitives
+
+        * Shared "ctypes" Objects
+
+          * The "multiprocessing.sharedctypes" module
+
+        * Managers
+
+          * Customized managers
+
+          * Using a remote manager
+
+        * Proxy Objects
+
+          * Cleanup
+
+        * Process Pools
+
+        * Listeners and Clients
+
+          * Address Formats
+
+        * Authentication keys
+
+        * Logging
+
+        * The "multiprocessing.dummy" module
+
+      * Programming guidelines
+
+        * All start methods
+
+        * The *spawn* and *forkserver* start methods
+
+      * Examples
+
+    * "multiprocessing.shared_memory" --- Shared memory for direct
+      access across processes
+
+    * The "concurrent" package
+
+    * "concurrent.futures" --- Launching parallel tasks
+
+      * Executor Objects
+
+      * ThreadPoolExecutor
+
+        * ThreadPoolExecutor Example
+
+      * ProcessPoolExecutor
+
+        * ProcessPoolExecutor Example
+
+      * Future Objects
+
+      * Module Functions
+
+      * Exception classes
+
+    * "subprocess" --- Subprocess management
+
+      * Using the "subprocess" Module
+
+        * Frequently Used Arguments
+
+        * Popen Constructor
+
+        * Exceptions
+
+      * Security Considerations
+
+      * Popen Objects
+
+      * Windows Popen Helpers
+
+        * Windows Constants
+
+      * Older high-level API
+
+      * Replacing Older Functions with the "subprocess" Module
+
+        * Replacing **/bin/sh** shell command substitution
+
+        * Replacing shell pipeline
+
+        * Replacing "os.system()"
+
+        * Replacing the "os.spawn" family
+
+        * Replacing "os.popen()", "os.popen2()", "os.popen3()"
+
+        * Replacing functions from the "popen2" module
+
+      * Legacy Shell Invocation Functions
+
+      * Notes
+
+        * Timeout Behavior
+
+        * Converting an argument sequence to a string on Windows
+
+        * Disabling use of "vfork()" or "posix_spawn()"
+
+    * "sched" --- Event scheduler
+
+      * Scheduler Objects
+
+    * "queue" --- A synchronized queue class
+
+      * Queue Objects
+
+        * Waiting for task completion
+
+        * Terminating queues
+
+      * SimpleQueue Objects
+
+    * "contextvars" --- Context Variables
+
+      * Context Variables
+
+      * Manual Context Management
+
+      * asyncio support
+
+    * "_thread" --- Low-level threading API
+
+  * Networking and Interprocess Communication
+
+    * "asyncio" --- Asynchronous I/O
+
+      * Runners
+
+        * Running an asyncio Program
+
+        * Runner context manager
+
+        * Handling Keyboard Interruption
+
+      * Coroutines and tasks
+
+        * Coroutines
+
+        * Awaitables
+
+        * Creating tasks
+
+        * Task cancellation
+
+        * Task groups
+
+          * Terminating a task group
+
+        * Sleeping
+
+        * Running tasks concurrently
+
+        * Eager task factory
+
+        * Shielding from cancellation
+
+        * Timeouts
+
+        * Waiting primitives
+
+        * Running in threads
+
+        * Scheduling from other threads
+
+        * Introspection
+
+        * Task object
+
+      * Streams
+
+        * StreamReader
+
+        * StreamWriter
+
+        * Examples
+
+          * TCP echo client using streams
+
+          * TCP echo server using streams
+
+          * Get HTTP headers
+
+          * Register an open socket to wait for data using streams
+
+      * Synchronization Primitives
+
+        * Lock
+
+        * Event
+
+        * Condition
+
+        * Semaphore
+
+        * BoundedSemaphore
+
+        * Barrier
+
+      * Subprocesses
+
+        * Creating Subprocesses
+
+        * Constants
+
+        * Interacting with Subprocesses
+
+          * Subprocess and Threads
+
+          * Examples
+
+      * Queues
+
+        * Queue
+
+        * Priority Queue
+
+        * LIFO Queue
+
+        * Exceptions
+
+        * Examples
+
+      * Exceptions
+
+      * Event loop
+
+        * Event loop methods
+
+          * Running and stopping the loop
+
+          * Scheduling callbacks
+
+          * Scheduling delayed callbacks
+
+          * Creating futures and tasks
+
+          * Opening network connections
+
+          * Creating network servers
+
+          * Transferring files
+
+          * TLS upgrade
+
+          * Watching file descriptors
+
+          * Working with socket objects directly
+
+          * DNS
+
+          * Working with pipes
+
+          * Unix signals
+
+          * Executing code in thread or process pools
+
+          * Error handling API
+
+          * Enabling debug mode
+
+          * Running subprocesses
+
+        * Callback handles
+
+        * Server objects
+
+        * Event loop implementations
+
+        * Examples
+
+          * Hello World with call_soon()
+
+          * Display the current date with call_later()
+
+          * Watch a file descriptor for read events
+
+          * Set signal handlers for SIGINT and SIGTERM
+
+      * Futures
+
+        * Future Functions
+
+        * Future Object
+
+      * Transports and Protocols
+
+        * Transports
+
+          * Transports Hierarchy
+
+          * Base Transport
+
+          * Read-only Transports
+
+          * Write-only Transports
+
+          * Datagram Transports
+
+          * Subprocess Transports
+
+        * Protocols
+
+          * Base Protocols
+
+          * Base Protocol
+
+          * Streaming Protocols
+
+          * Buffered Streaming Protocols
+
+          * Datagram Protocols
+
+          * Subprocess Protocols
+
+        * Examples
+
+          * TCP Echo Server
+
+          * TCP Echo Client
+
+          * UDP Echo Server
+
+          * UDP Echo Client
+
+          * Connecting Existing Sockets
+
+          * loop.subprocess_exec() and SubprocessProtocol
+
+      * Policies
+
+        * Getting and Setting the Policy
+
+        * Policy Objects
+
+        * Process Watchers
+
+        * Custom Policies
+
+      * Platform Support
+
+        * All Platforms
+
+        * Windows
+
+          * Subprocess Support on Windows
+
+        * macOS
+
+      * Extending
+
+        * Writing a Custom Event Loop
+
+        * Future and Task private constructors
+
+        * Task lifetime support
+
+      * High-level API Index
+
+        * Tasks
+
+        * Queues
+
+        * Subprocesses
+
+        * Streams
+
+        * Synchronization
+
+        * Exceptions
+
+      * Low-level API Index
+
+        * Obtaining the Event Loop
+
+        * Event Loop Methods
+
+        * Transports
+
+        * Protocols
+
+        * Event Loop Policies
+
+      * Developing with asyncio
+
+        * Debug Mode
+
+        * Concurrency and Multithreading
+
+        * Running Blocking Code
+
+        * Logging
+
+        * Detect never-awaited coroutines
+
+        * Detect never-retrieved exceptions
+
+        * Asynchronous generators best practices
+
+          * Close asynchronous generators explicitly
+
+          * Create asynchronous generators only when the event loop is
+            running
+
+          * Avoid concurrent iteration and closure of the same
+            generator
+
+    * "socket" --- Low-level networking interface
+
+      * Socket families
+
+      * Module contents
+
+        * Exceptions
+
+        * Constants
+
+        * Functions
+
+          * Creating sockets
+
+          * Other functions
+
+      * Socket Objects
+
+      * Notes on socket timeouts
+
+        * Timeouts and the "connect" method
+
+        * Timeouts and the "accept" method
+
+      * Example
+
+    * "ssl" --- TLS/SSL wrapper for socket objects
+
+      * Functions, constants, and exceptions
+
+        * Socket creation
+
+        * Context creation
+
+        * Exceptions
+
+        * Random generation
+
+        * Certificate handling
+
+        * Constants
+
+      * SSL sockets
+
+      * SSL contexts
+
+      * Certificates
+
+        * Certificate chains
+
+        * CA certificates
+
+        * Combined key and certificate
+
+        * Self-signed certificates
+
+      * Examples
+
+        * Testing for SSL support
+
+        * Client-side operation
+
+        * Server-side operation
+
+      * Notes on non-blocking sockets
+
+      * Memory BIO support
+
+      * SSL session
+
+      * Security considerations
+
+        * Best defaults
+
+        * Manual settings
+
+          * Verifying certificates
+
+          * Protocol versions
+
+          * Cipher selection
+
+        * Multi-processing
+
+      * TLS 1.3
+
+    * "select" --- Waiting for I/O completion
+
+      * "/dev/poll" polling objects
+
+      * Edge and level trigger polling (epoll) objects
+
+      * Polling objects
+
+      * Kqueue objects
+
+      * Kevent objects
+
+    * "selectors" --- High-level I/O multiplexing
+
+      * Introduction
+
+      * Classes
+
+      * Examples
+
+    * "signal" --- Set handlers for asynchronous events
+
+      * General rules
+
+        * Execution of Python signal handlers
+
+        * Signals and threads
+
+      * Module contents
+
+      * Examples
+
+      * Note on SIGPIPE
+
+      * Note on Signal Handlers and Exceptions
+
+    * "mmap" --- Memory-mapped file support
+
+      * MADV_* Constants
+
+      * MAP_* Constants
+
+  * Internet Data Handling
+
+    * "email" --- An email and MIME handling package
+
+      * "email.message": Representing an email message
+
+      * "email.parser": Parsing email messages
+
+        * FeedParser API
+
+        * Parser API
+
+        * Additional notes
+
+      * "email.generator": Generating MIME documents
+
+      * "email.policy": Policy Objects
+
+      * "email.errors": Exception and Defect classes
+
+      * "email.headerregistry": Custom Header Objects
+
+      * "email.contentmanager": Managing MIME Content
+
+        * Content Manager Instances
+
+      * "email": Examples
+
+      * "email.message.Message": Representing an email message using
+        the "compat32" API
+
+      * "email.mime": Creating email and MIME objects from scratch
+
+      * "email.header": Internationalized headers
+
+      * "email.charset": Representing character sets
+
+      * "email.encoders": Encoders
+
+      * "email.utils": Miscellaneous utilities
+
+      * "email.iterators": Iterators
+
+    * "json" --- JSON encoder and decoder
+
+      * Basic Usage
+
+      * Encoders and Decoders
+
+      * Exceptions
+
+      * Standard Compliance and Interoperability
+
+        * Character Encodings
+
+        * Infinite and NaN Number Values
+
+        * Repeated Names Within an Object
+
+        * Top-level Non-Object, Non-Array Values
+
+        * Implementation Limitations
+
+      * Command Line Interface
+
+        * Command line options
+
+    * "mailbox" --- Manipulate mailboxes in various formats
+
+      * "Mailbox" objects
+
+        * "Maildir" objects
+
+        * "mbox" objects
+
+        * "MH" objects
+
+        * "Babyl" objects
+
+        * "MMDF" objects
+
+      * "Message" objects
+
+        * "MaildirMessage" objects
+
+        * "mboxMessage" objects
+
+        * "MHMessage" objects
+
+        * "BabylMessage" objects
+
+        * "MMDFMessage" objects
+
+      * Exceptions
+
+      * Examples
+
+    * "mimetypes" --- Map filenames to MIME types
+
+      * MimeTypes Objects
+
+    * "base64" --- Base16, Base32, Base64, Base85 Data Encodings
+
+      * RFC 4648 Encodings
+
+      * Base85 Encodings
+
+      * Legacy Interface
+
+      * Security Considerations
+
+    * "binascii" --- Convert between binary and ASCII
+
+    * "quopri" --- Encode and decode MIME quoted-printable data
+
+  * Structured Markup Processing Tools
+
+    * "html" --- HyperText Markup Language support
+
+    * "html.parser" --- Simple HTML and XHTML parser
+
+      * Example HTML Parser Application
+
+      * "HTMLParser" Methods
+
+      * Examples
+
+    * "html.entities" --- Definitions of HTML general entities
+
+    * XML Processing Modules
+
+      * XML security
+
+    * "xml.etree.ElementTree" --- The ElementTree XML API
+
+      * Tutorial
+
+        * XML tree and elements
+
+        * Parsing XML
+
+        * Pull API for non-blocking parsing
+
+        * Finding interesting elements
+
+        * Modifying an XML File
+
+        * Building XML documents
+
+        * Parsing XML with Namespaces
+
+      * XPath support
+
+        * Example
+
+        * Supported XPath syntax
+
+      * Reference
+
+        * Functions
+
+      * XInclude support
+
+        * Example
+
+      * Reference
+
+        * Functions
+
+        * Element Objects
+
+        * ElementTree Objects
+
+        * QName Objects
+
+        * TreeBuilder Objects
+
+        * XMLParser Objects
+
+        * XMLPullParser Objects
+
+        * Exceptions
+
+    * "xml.dom" --- The Document Object Model API
+
+      * Module Contents
+
+      * Objects in the DOM
+
+        * DOMImplementation Objects
+
+        * Node Objects
+
+        * NodeList Objects
+
+        * DocumentType Objects
+
+        * Document Objects
+
+        * Element Objects
+
+        * Attr Objects
+
+        * NamedNodeMap Objects
+
+        * Comment Objects
+
+        * Text and CDATASection Objects
+
+        * ProcessingInstruction Objects
+
+        * Exceptions
+
+      * Conformance
+
+        * Type Mapping
+
+        * Accessor Methods
+
+    * "xml.dom.minidom" --- Minimal DOM implementation
+
+      * DOM Objects
+
+      * DOM Example
+
+      * minidom and the DOM standard
+
+    * "xml.dom.pulldom" --- Support for building partial DOM trees
+
+      * DOMEventStream Objects
+
+    * "xml.sax" --- Support for SAX2 parsers
+
+      * SAXException Objects
+
+    * "xml.sax.handler" --- Base classes for SAX handlers
+
+      * ContentHandler Objects
+
+      * DTDHandler Objects
+
+      * EntityResolver Objects
+
+      * ErrorHandler Objects
+
+      * LexicalHandler Objects
+
+    * "xml.sax.saxutils" --- SAX Utilities
+
+    * "xml.sax.xmlreader" --- Interface for XML parsers
+
+      * XMLReader Objects
+
+      * IncrementalParser Objects
+
+      * Locator Objects
+
+      * InputSource Objects
+
+      * The "Attributes" Interface
+
+      * The "AttributesNS" Interface
+
+    * "xml.parsers.expat" --- Fast XML parsing using Expat
+
+      * XMLParser Objects
+
+      * ExpatError Exceptions
+
+      * Example
+
+      * Content Model Descriptions
+
+      * Expat error constants
+
+  * Internet Protocols and Support
+
+    * "webbrowser" --- Convenient web-browser controller
+
+      * Command-line interface
+
+      * Browser controller objects
+
+    * "wsgiref" --- WSGI Utilities and Reference Implementation
+
+      * "wsgiref.util" -- WSGI environment utilities
+
+      * "wsgiref.headers" -- WSGI response header tools
+
+      * "wsgiref.simple_server" -- a simple WSGI HTTP server
+
+      * "wsgiref.validate" --- WSGI conformance checker
+
+      * "wsgiref.handlers" -- server/gateway base classes
+
+      * "wsgiref.types" -- WSGI types for static type checking
+
+      * Examples
+
+    * "urllib" --- URL handling modules
+
+    * "urllib.request" --- Extensible library for opening URLs
+
+      * Request Objects
+
+      * OpenerDirector Objects
+
+      * BaseHandler Objects
+
+      * HTTPRedirectHandler Objects
+
+      * HTTPCookieProcessor Objects
+
+      * ProxyHandler Objects
+
+      * HTTPPasswordMgr Objects
+
+      * HTTPPasswordMgrWithPriorAuth Objects
+
+      * AbstractBasicAuthHandler Objects
+
+      * HTTPBasicAuthHandler Objects
+
+      * ProxyBasicAuthHandler Objects
+
+      * AbstractDigestAuthHandler Objects
+
+      * HTTPDigestAuthHandler Objects
+
+      * ProxyDigestAuthHandler Objects
+
+      * HTTPHandler Objects
+
+      * HTTPSHandler Objects
+
+      * FileHandler Objects
+
+      * DataHandler Objects
+
+      * FTPHandler Objects
+
+      * CacheFTPHandler Objects
+
+      * UnknownHandler Objects
+
+      * HTTPErrorProcessor Objects
+
+      * Examples
+
+      * Legacy interface
+
+      * "urllib.request" Restrictions
+
+    * "urllib.response" --- Response classes used by urllib
+
+    * "urllib.parse" --- Parse URLs into components
+
+      * URL Parsing
+
+      * URL parsing security
+
+      * Parsing ASCII Encoded Bytes
+
+      * Structured Parse Results
+
+      * URL Quoting
+
+    * "urllib.error" --- Exception classes raised by urllib.request
+
+    * "urllib.robotparser" ---  Parser for robots.txt
+
+    * "http" --- HTTP modules
+
+      * HTTP status codes
+
+      * HTTP status category
+
+      * HTTP methods
+
+    * "http.client" --- HTTP protocol client
+
+      * HTTPConnection Objects
+
+      * HTTPResponse Objects
+
+      * Examples
+
+      * HTTPMessage Objects
+
+    * "ftplib" --- FTP protocol client
+
+      * Reference
+
+        * FTP objects
+
+        * FTP_TLS objects
+
+        * Module variables
+
+    * "poplib" --- POP3 protocol client
+
+      * POP3 Objects
+
+      * POP3 Example
+
+    * "imaplib" --- IMAP4 protocol client
+
+      * IMAP4 Objects
+
+      * IMAP4 Example
+
+    * "smtplib" --- SMTP protocol client
+
+      * SMTP Objects
+
+      * SMTP Example
+
+    * "uuid" --- UUID objects according to **RFC 4122**
+
+      * Command-Line Usage
+
+      * Example
+
+      * Command-Line Example
+
+    * "socketserver" --- A framework for network servers
+
+      * Server Creation Notes
+
+      * Server Objects
+
+      * Request Handler Objects
+
+      * Examples
+
+        * "socketserver.TCPServer" Example
+
+        * "socketserver.UDPServer" Example
+
+        * Asynchronous Mixins
+
+    * "http.server" --- HTTP servers
+
+      * Command-line interface
+
+      * Security considerations
+
+    * "http.cookies" --- HTTP state management
+
+      * Cookie Objects
+
+      * Morsel Objects
+
+      * Example
+
+    * "http.cookiejar" --- Cookie handling for HTTP clients
+
+      * CookieJar and FileCookieJar objects
+
+      * FileCookieJar subclasses and co-operation with web browsers
+
+      * CookiePolicy objects
+
+      * DefaultCookiePolicy objects
+
+      * Cookie objects
+
+      * Examples
+
+    * "xmlrpc" --- XMLRPC server and client modules
+
+    * "xmlrpc.client" --- XML-RPC client access
+
+      * ServerProxy Objects
+
+      * DateTime Objects
+
+      * Binary Objects
+
+      * Fault Objects
+
+      * ProtocolError Objects
+
+      * MultiCall Objects
+
+      * Convenience Functions
+
+      * Example of Client Usage
+
+      * Example of Client and Server Usage
+
+    * "xmlrpc.server" --- Basic XML-RPC servers
+
+      * SimpleXMLRPCServer objects
+
+        * SimpleXMLRPCServer example
+
+      * CGIXMLRPCRequestHandler
+
+      * Documenting XMLRPC server
+
+      * DocXMLRPCServer objects
+
+      * DocCGIXMLRPCRequestHandler
+
+    * "ipaddress" --- IPv4/IPv6 manipulation library
+
+      * Convenience factory functions
+
+      * IP Addresses
+
+        * Address objects
+
+        * Conversion to Strings and Integers
+
+        * Operators
+
+          * Comparison operators
+
+          * Arithmetic operators
+
+      * IP Network definitions
+
+        * Prefix, net mask and host mask
+
+        * Network objects
+
+        * Operators
+
+          * Logical operators
+
+          * Iteration
+
+          * Networks as containers of addresses
+
+      * Interface objects
+
+        * Operators
+
+          * Logical operators
+
+      * Other Module Level Functions
+
+      * Custom Exceptions
+
+  * Multimedia Services
+
+    * "wave" --- Read and write WAV files
+
+      * Wave_read Objects
+
+      * Wave_write Objects
+
+    * "colorsys" --- Conversions between color systems
+
+  * Internationalization
+
+    * "gettext" --- Multilingual internationalization services
+
+      * GNU **gettext** API
+
+      * Class-based API
+
+        * The "NullTranslations" class
+
+        * The "GNUTranslations" class
+
+        * Solaris message catalog support
+
+        * The Catalog constructor
+
+      * Internationalizing your programs and modules
+
+        * Localizing your module
+
+        * Localizing your application
+
+        * Changing languages on the fly
+
+        * Deferred translations
+
+      * Acknowledgements
+
+    * "locale" --- Internationalization services
+
+      * Background, details, hints, tips and caveats
+
+      * Locale names
+
+      * For extension writers and programs that embed Python
+
+      * Access to message catalogs
+
+  * Graphical user interfaces with Tk
+
+    * "tkinter" --- Python interface to Tcl/Tk
+
+      * Architecture
+
+      * Tkinter modules
+
+      * Tkinter life preserver
+
+        * A Hello World program
+
+        * Important Tk concepts
+
+        * Understanding how Tkinter wraps Tcl/Tk
+
+        * How do I...? What option does...?
+
+        * Navigating the Tcl/Tk reference manual
+
+      * Threading model
+
+      * Handy reference
+
+        * Setting options
+
+        * Geometry management
+
+        * Coupling widget variables
+
+        * The window manager
+
+        * Tk option data types
+
+        * Bindings and events
+
+        * The index parameter
+
+        * Images
+
+      * Reference
+
+        * Base and mixin classes
+
+        * Toplevel widgets
+
+        * Widget classes
+
+        * Variable classes
+
+        * Image classes
+
+        * Other classes
+
+        * Module-level functions
+
+        * File handlers
+
+        * Constants
+
+    * "tkinter.colorchooser" --- Color choosing dialog
+
+    * "tkinter.font" --- Tkinter font wrapper
+
+    * Tkinter dialogs
+
+      * "tkinter.simpledialog" --- Standard Tkinter input dialogs
+
+      * "tkinter.filedialog" --- File selection dialogs
+
+        * Native load/save dialogs
+
+      * "tkinter.commondialog" --- Dialog window templates
+
+      * "tkinter.dialog" --- Classic Tk dialog boxes
+
+    * "tkinter.messagebox" --- Tkinter message prompts
+
+    * "tkinter.scrolledtext" --- Scrolled text widget
+
+    * "tkinter.dnd" --- Drag and drop support
+
+    * "tkinter.ttk" --- Tk themed widgets
+
+      * Using Ttk
+
+      * Ttk widgets
+
+      * Widget
+
+        * Standard options
+
+        * Scrollable widget options
+
+        * Label options
+
+        * Compatibility options
+
+        * Widget states
+
+        * ttk.Widget
+
+      * Combobox
+
+        * Options
+
+        * Virtual events
+
+        * ttk.Combobox
+
+      * Spinbox
+
+        * Options
+
+        * Virtual events
+
+        * ttk.Spinbox
+
+      * Notebook
+
+        * Options
+
+        * Tab options
+
+        * Tab identifiers
+
+        * Virtual events
+
+        * ttk.Notebook
+
+      * Progressbar
+
+        * Options
+
+        * ttk.Progressbar
+
+      * Separator
+
+        * Options
+
+      * Sizegrip
+
+        * Platform-specific notes
+
+        * Bugs
+
+      * Treeview
+
+        * Options
+
+        * Item options
+
+        * Tag options
+
+        * Column identifiers
+
+        * Virtual events
+
+        * ttk.Treeview
+
+      * Ttk styling
+
+        * Layouts
+
+      * Additional widgets
+
+    * IDLE --- Python editor and shell
+
+      * Menus
+
+        * File menu (Shell and Editor)
+
+        * Edit menu (Shell and Editor)
+
+        * Format menu (Editor window only)
+
+        * Run menu (Editor window only)
+
+        * Shell menu (Shell window only)
+
+        * Debug menu (Shell window only)
+
+        * Options menu (Shell and Editor)
+
+        * Window menu (Shell and Editor)
+
+        * Help menu (Shell and Editor)
+
+        * Context menus
+
+      * Editing and Navigation
+
+        * Editor windows
+
+        * Key bindings
+
+        * Automatic indentation
+
+        * Search and Replace
+
+        * Completions
+
+        * Calltips
+
+        * Format block
+
+        * Code Context
+
+        * Shell window
+
+        * Text colors
+
+      * Startup and Code Execution
+
+        * Command-line usage
+
+        * Startup failure
+
+        * Running user code
+
+        * User output in Shell
+
+        * Developing tkinter applications
+
+        * Running without a subprocess
+
+      * Help and Preferences
+
+        * Help sources
+
+        * Setting preferences
+
+        * IDLE on macOS
+
+        * Extensions
+
+      * idlelib --- implementation of IDLE application
+
+    * "turtle" --- Turtle graphics
+
+      * Introduction
+
+      * Get started
+
+      * Tutorial
+
+        * Starting a turtle environment
+
+        * Basic drawing
+
+          * Pen control
+
+          * The turtle's position
+
+        * Making algorithmic patterns
+
+      * How to...
+
+        * Get started as quickly as possible
+
+        * Use the "turtle" module namespace
+
+        * Use turtle graphics in a script
+
+        * Use object-oriented turtle graphics
+
+      * Turtle graphics reference
+
+        * Turtle methods
+
+        * Methods of TurtleScreen/Screen
+
+      * Methods of RawTurtle/Turtle and corresponding functions
+
+        * Turtle motion
+
+        * Tell Turtle's state
+
+        * Settings for measurement
+
+        * Pen control
+
+          * Drawing state
+
+          * Color control
+
+          * Filling
+
+          * More drawing control
+
+        * Turtle state
+
+          * Visibility
+
+          * Appearance
+
+        * Using events
+
+        * Special Turtle methods
+
+        * Compound shapes
+
+      * Methods of TurtleScreen/Screen and corresponding functions
+
+        * Window control
+
+        * Animation control
+
+        * Using screen events
+
+        * Input methods
+
+        * Settings and special methods
+
+        * Methods specific to Screen, not inherited from TurtleScreen
+
+      * Public classes
+
+      * Explanation
+
+      * Help and configuration
+
+        * How to use help
+
+        * Translation of docstrings into different languages
+
+        * How to configure Screen and Turtles
+
+      * "turtledemo" --- Demo scripts
+
+      * Changes since Python 2.6
+
+      * Changes since Python 3.0
+
+  * Development Tools
+
+    * "typing" --- Support for type hints
+
+      * Specification for the Python Type System
+
+      * Type aliases
+
+      * NewType
+
+      * Annotating callable objects
+
+      * Generics
+
+      * Annotating tuples
+
+      * The type of class objects
+
+      * Annotating generators and coroutines
+
+      * User-defined generic types
+
+      * The "Any" type
+
+      * Nominal vs structural subtyping
+
+      * Module contents
+
+        * Special typing primitives
+
+          * Special types
+
+          * Special forms
+
+          * Building generic types and type aliases
+
+          * Other special directives
+
+        * Protocols
+
+        * ABCs for working with IO
+
+        * Functions and decorators
+
+        * Introspection helpers
+
+        * Constant
+
+        * Deprecated aliases
+
+          * Aliases to built-in types
+
+          * Aliases to types in "collections"
+
+          * Aliases to other concrete types
+
+          * Aliases to container ABCs in "collections.abc"
+
+          * Aliases to asynchronous ABCs in "collections.abc"
+
+          * Aliases to other ABCs in "collections.abc"
+
+          * Aliases to "contextlib" ABCs
+
+      * Deprecation Timeline of Major Features
+
+    * "pydoc" --- Documentation generator and online help system
+
+    * Python Development Mode
+
+      * Effects of the Python Development Mode
+
+      * ResourceWarning Example
+
+      * Bad file descriptor error example
+
+    * "doctest" --- Test interactive Python examples
+
+      * Simple Usage: Checking Examples in Docstrings
+
+      * Simple Usage: Checking Examples in a Text File
+
+      * Command-line Usage
+
+      * How It Works
+
+        * Which Docstrings Are Examined?
+
+        * How are Docstring Examples Recognized?
+
+        * What's the Execution Context?
+
+        * What About Exceptions?
+
+        * Option Flags
+
+        * Directives
+
+        * Warnings
+
+      * Basic API
+
+      * Unittest API
+
+      * Advanced API
+
+        * DocTest Objects
+
+        * Example Objects
+
+        * DocTestFinder objects
+
+        * DocTestParser objects
+
+        * TestResults objects
+
+        * DocTestRunner objects
+
+        * OutputChecker objects
+
+      * Debugging
+
+      * Soapbox
+
+    * "unittest" --- Unit testing framework
+
+      * Basic example
+
+      * Command-Line Interface
+
+        * Command-line options
+
+      * Test Discovery
+
+      * Organizing test code
+
+      * Re-using old test code
+
+      * Skipping tests and expected failures
+
+      * Distinguishing test iterations using subtests
+
+      * Classes and functions
+
+        * Test cases
+
+        * Grouping tests
+
+        * Loading and running tests
+
+          * load_tests Protocol
+
+      * Class and Module Fixtures
+
+        * setUpClass and tearDownClass
+
+        * setUpModule and tearDownModule
+
+      * Signal Handling
+
+    * "unittest.mock" --- mock object library
+
+      * Quick Guide
+
+      * The Mock Class
+
+        * Calling
+
+        * Deleting Attributes
+
+        * Mock names and the name attribute
+
+        * Attaching Mocks as Attributes
+
+      * The patchers
+
+        * patch
+
+        * patch.object
+
+        * patch.dict
+
+        * patch.multiple
+
+        * patch methods: start and stop
+
+        * patch builtins
+
+        * TEST_PREFIX
+
+        * Nesting Patch Decorators
+
+        * Where to patch
+
+        * Patching Descriptors and Proxy Objects
+
+      * MagicMock and magic method support
+
+        * Mocking Magic Methods
+
+        * Magic Mock
+
+      * Helpers
+
+        * sentinel
+
+        * DEFAULT
+
+        * call
+
+        * create_autospec
+
+        * ANY
+
+        * FILTER_DIR
+
+        * mock_open
+
+        * Autospeccing
+
+        * Sealing mocks
+
+      * Order of precedence of "side_effect", "return_value" and
+        *wraps*
+
+    * "unittest.mock" --- getting started
+
+      * Using Mock
+
+        * Mock patching methods
+
+        * Mock for method calls on an object
+
+        * Mocking classes
+
+        * Naming your mocks
+
+        * Tracking all calls
+
+        * Setting return values and attributes
+
+        * Raising exceptions with mocks
+
+        * Side effect functions and iterables
+
+        * Mocking asynchronous iterators
+
+        * Mocking asynchronous context manager
+
+        * Creating a mock from an existing object
+
+        * Using side_effect to return per file content
+
+      * Patch decorators
+
+      * Further examples
+
+        * Mocking chained calls
+
+        * Partial mocking
+
+        * Mocking a generator method
+
+        * Applying the same patch to every test method
+
+        * Mocking unbound methods
+
+        * Checking multiple calls with mock
+
+        * Coping with mutable arguments
+
+        * Nesting patches
+
+        * Mocking a dictionary with MagicMock
+
+        * Mock subclasses and their attributes
+
+        * Mocking imports with patch.dict
+
+        * Tracking order of calls and less verbose call assertions
+
+        * More complex argument matching
+
+    * "test" --- Regression tests package for Python
+
+      * Writing Unit Tests for the "test" package
+
+      * Running tests using the command-line interface
+
+    * "test.support" --- Utilities for the Python test suite
+
+    * "test.support.socket_helper" --- Utilities for socket tests
+
+    * "test.support.script_helper" --- Utilities for the Python
+      execution tests
+
+    * "test.support.bytecode_helper" --- Support tools for testing
+      correct bytecode generation
+
+    * "test.support.threading_helper" --- Utilities for threading
+      tests
+
+    * "test.support.os_helper" --- Utilities for os tests
+
+    * "test.support.import_helper" --- Utilities for import tests
+
+    * "test.support.warnings_helper" --- Utilities for warnings tests
+
+  * Debugging and Profiling
+
+    * Audit events table
+
+    * "bdb" --- Debugger framework
+
+    * "faulthandler" --- Dump the Python traceback
+
+      * Dumping the traceback
+
+      * Fault handler state
+
+      * Dumping the tracebacks after a timeout
+
+      * Dumping the traceback on a user signal
+
+      * Issue with file descriptors
+
+      * Example
+
+    * "pdb" --- The Python Debugger
+
+      * Command-line interface
+
+      * Debugger commands
+
+    * The Python Profilers
+
+      * Introduction to the profilers
+
+      * Instant User's Manual
+
+      * "profile" and "cProfile" Module Reference
+
+      * The "Stats" Class
+
+      * What Is Deterministic Profiling?
+
+      * Limitations
+
+      * Calibration
+
+      * Using a custom timer
+
+    * "timeit" --- Measure execution time of small code snippets
+
+      * Basic Examples
+
+      * Python Interface
+
+      * Command-Line Interface
+
+      * Examples
+
+    * "trace" --- Trace or track Python statement execution
+
+      * Command-Line Usage
+
+        * Main options
+
+        * Modifiers
+
+        * Filters
+
+      * Programmatic Interface
+
+    * "tracemalloc" --- Trace memory allocations
+
+      * Examples
+
+        * Display the top 10
+
+        * Compute differences
+
+        * Get the traceback of a memory block
+
+        * Pretty top
+
+          * Record the current and peak size of all traced memory
+            blocks
+
+      * API
+
+        * Functions
+
+        * DomainFilter
+
+        * Filter
+
+        * Frame
+
+        * Snapshot
+
+        * Statistic
+
+        * StatisticDiff
+
+        * Trace
+
+        * Traceback
+
+  * Software Packaging and Distribution
+
+    * "ensurepip" --- Bootstrapping the "pip" installer
+
+      * Command-line interface
+
+      * Module API
+
+    * "venv" --- Creation of virtual environments
+
+      * Creating virtual environments
+
+      * How venvs work
+
+      * API
+
+      * An example of extending "EnvBuilder"
+
+    * "zipapp" --- Manage executable Python zip archives
+
+      * Basic Example
+
+      * Command-Line Interface
+
+      * Python API
+
+      * Examples
+
+      * Specifying the Interpreter
+
+      * Creating Standalone Applications with zipapp
+
+        * Caveats
+
+      * The Python Zip Application Archive Format
+
+  * Python Runtime Services
+
+    * "sys" --- System-specific parameters and functions
+
+    * "sys.monitoring" --- Execution event monitoring
+
+      * Tool identifiers
+
+        * Registering and using tools
+
+      * Events
+
+        * Local events
+
+        * Ancillary events
+
+        * Other events
+
+        * The STOP_ITERATION event
+
+      * Turning events on and off
+
+        * Setting events globally
+
+        * Per code object events
+
+        * Disabling events
+
+      * Registering callback functions
+
+        * Callback function arguments
+
+    * "sysconfig" --- Provide access to Python's configuration
+      information
+
+      * Configuration variables
+
+      * Installation paths
+
+      * User scheme
+
+        * "posix_user"
+
+        * "nt_user"
+
+        * "osx_framework_user"
+
+      * Home scheme
+
+        * "posix_home"
+
+      * Prefix scheme
+
+        * "posix_prefix"
+
+        * "nt"
+
+      * Installation path functions
+
+      * Other functions
+
+      * Command-line usage
+
+    * "builtins" --- Built-in objects
+
+    * "__main__" --- Top-level code environment
+
+      * "__name__ == '__main__'"
+
+        * What is the "top-level code environment"?
+
+        * Idiomatic Usage
+
+        * Packaging Considerations
+
+      * "__main__.py" in Python Packages
+
+        * Idiomatic Usage
+
+      * "import __main__"
+
+    * "warnings" --- Warning control
+
+      * Warning Categories
+
+      * The Warnings Filter
+
+        * Repeated Warning Suppression Criteria
+
+        * Describing Warning Filters
+
+        * Default Warning Filter
+
+        * Overriding the default filter
+
+      * Temporarily Suppressing Warnings
+
+      * Testing Warnings
+
+      * Updating Code For New Versions of Dependencies
+
+      * Available Functions
+
+      * Available Context Managers
+
+    * "dataclasses" --- Data Classes
+
+      * Module contents
+
+      * Post-init processing
+
+      * Class variables
+
+      * Init-only variables
+
+      * Frozen instances
+
+      * Inheritance
+
+      * Re-ordering of keyword-only parameters in "__init__()"
+
+      * Default factory functions
+
+      * Mutable default values
+
+      * Descriptor-typed fields
+
+    * "contextlib" --- Utilities for "with"-statement contexts
+
+      * Utilities
+
+      * Examples and Recipes
+
+        * Supporting a variable number of context managers
+
+        * Catching exceptions from "__enter__" methods
+
+        * Cleaning up in an "__enter__" implementation
+
+        * Replacing any use of "try-finally" and flag variables
+
+        * Using a context manager as a function decorator
+
+      * Single use, reusable and reentrant context managers
+
+        * Reentrant context managers
+
+        * Reusable context managers
+
+    * "abc" --- Abstract Base Classes
+
+    * "atexit" --- Exit handlers
+
+      * "atexit" Example
+
+    * "traceback" --- Print or retrieve a stack traceback
+
+      * Module-Level Functions
+
+      * "TracebackException" Objects
+
+      * "StackSummary" Objects
+
+      * "FrameSummary" Objects
+
+      * Examples of Using the Module-Level Functions
+
+      * Examples of Using "TracebackException"
+
+    * "__future__" --- Future statement definitions
+
+      * Module Contents
+
+    * "gc" --- Garbage Collector interface
+
+    * "inspect" --- Inspect live objects
+
+      * Types and members
+
+      * Retrieving source code
+
+      * Introspecting callables with the Signature object
+
+      * Classes and functions
+
+      * The interpreter stack
+
+      * Fetching attributes statically
+
+      * Current State of Generators, Coroutines, and Asynchronous
+        Generators
+
+      * Code Objects Bit Flags
+
+      * Buffer flags
+
+      * Command-line interface
+
+    * "site" --- Site-specific configuration hook
+
+      * "sitecustomize"
+
+      * "usercustomize"
+
+      * Readline configuration
+
+      * Module contents
+
+      * Command-line interface
+
+  * Custom Python Interpreters
+
+    * "code" --- Interpreter base classes
+
+      * Interactive Interpreter Objects
+
+      * Interactive Console Objects
+
+    * "codeop" --- Compile Python code
+
+  * Importing Modules
+
+    * "zipimport" --- Import modules from Zip archives
+
+      * zipimporter Objects
+
+      * Examples
+
+    * "pkgutil" --- Package extension utility
+
+    * "modulefinder" --- Find modules used by a script
+
+      * Example usage of "ModuleFinder"
+
+    * "runpy" --- Locating and executing Python modules
+
+    * "importlib" --- The implementation of "import"
+
+      * Introduction
+
+      * Functions
+
+      * "importlib.abc" -- Abstract base classes related to import
+
+      * "importlib.machinery" -- Importers and path hooks
+
+      * "importlib.util" -- Utility code for importers
+
+      * Examples
+
+        * Importing programmatically
+
+        * Checking if a module can be imported
+
+        * Importing a source file directly
+
+        * Implementing lazy imports
+
+        * Setting up an importer
+
+        * Approximating "importlib.import_module()"
+
+    * "importlib.resources" -- Package resource reading, opening and
+      access
+
+      * Functional API
+
+    * "importlib.resources.abc" -- Abstract base classes for resources
+
+    * "importlib.metadata" -- Accessing package metadata
+
+      * Overview
+
+      * Functional API
+
+        * Entry points
+
+        * Distribution metadata
+
+        * Distribution versions
+
+        * Distribution files
+
+        * Distribution requirements
+
+        * Mapping import to distribution packages
+
+      * Distributions
+
+      * Distribution Discovery
+
+      * Extending the search algorithm
+
+        * Example
+
+    * The initialization of the "sys.path" module search path
+
+      * Virtual environments
+
+      * _pth files
+
+      * Embedded Python
+
+  * Python Language Services
+
+    * "ast" --- Abstract Syntax Trees
+
+      * Abstract Grammar
+
+      * Node classes
+
+        * Root nodes
+
+        * Literals
+
+        * Variables
+
+        * Expressions
+
+          * Subscripting
+
+          * Comprehensions
+
+        * Statements
+
+          * Imports
+
+        * Control flow
+
+        * Pattern matching
+
+        * Type annotations
+
+        * Type parameters
+
+        * Function and class definitions
+
+        * Async and await
+
+      * "ast" Helpers
+
+      * Compiler Flags
+
+      * Command-Line Usage
+
+    * "symtable" --- Access to the compiler's symbol tables
+
+      * Generating Symbol Tables
+
+      * Examining Symbol Tables
+
+      * Command-Line Usage
+
+    * "token" --- Constants used with Python parse trees
+
+    * "keyword" --- Testing for Python keywords
+
+    * "tokenize" --- Tokenizer for Python source
+
+      * Tokenizing Input
+
+      * Command-Line Usage
+
+      * Examples
+
+    * "tabnanny" --- Detection of ambiguous indentation
+
+    * "pyclbr" --- Python module browser support
+
+      * Function Objects
+
+      * Class Objects
+
+    * "py_compile" --- Compile Python source files
+
+      * Command-Line Interface
+
+    * "compileall" --- Byte-compile Python libraries
+
+      * Command-line use
+
+      * Public functions
+
+    * "dis" --- Disassembler for Python bytecode
+
+      * Command-line interface
+
+      * Bytecode analysis
+
+      * Analysis functions
+
+      * Python Bytecode Instructions
+
+      * Opcode collections
+
+    * "pickletools" --- Tools for pickle developers
+
+      * Command line usage
+
+        * Command line options
+
+      * Programmatic Interface
+
+  * MS Windows Specific Services
+
+    * "msvcrt" --- Useful routines from the MS VC++ runtime
+
+      * File Operations
+
+      * Console I/O
+
+      * Other Functions
+
+    * "winreg" --- Windows registry access
+
+      * Functions
+
+      * Constants
+
+        * HKEY_* Constants
+
+        * Access Rights
+
+          * 64-bit Specific
+
+        * Value Types
+
+      * Registry Handle Objects
+
+    * "winsound" --- Sound-playing interface for Windows
+
+  * Unix-specific services
+
+    * "shlex" --- Simple lexical analysis
+
+      * shlex Objects
+
+      * Parsing Rules
+
+      * Improved Compatibility with Shells
+
+    * "posix" --- The most common POSIX system calls
+
+      * Large File Support
+
+      * Notable Module Contents
+
+    * "pwd" --- The password database
+
+    * "grp" --- The group database
+
+    * "termios" --- POSIX style tty control
+
+      * Example
+
+    * "tty" --- Terminal control functions
+
+    * "pty" --- Pseudo-terminal utilities
+
+      * Example
+
+    * "fcntl" --- The "fcntl" and "ioctl" system calls
+
+    * "resource" --- Resource usage information
+
+      * Resource Limits
+
+      * Resource Usage
+
+    * "syslog" --- Unix syslog library routines
+
+      * Examples
+
+        * Simple example
+
+  * Modules command-line interface (CLI)
+
+  * Superseded Modules
+
+    * "getopt" --- C-style parser for command line options
+
+  * Removed Modules
+
+  * Security Considerations
+
+* Extending and Embedding the Python Interpreter
+
+  * Recommended third party tools
+
+  * Creating extensions without third party tools
+
+    * 1. Extending Python with C or C++
+
+      * 1.1. A Simple Example
+
+      * 1.2. Intermezzo: Errors and Exceptions
+
+      * 1.3. Back to the Example
+
+      * 1.4. The Module's Method Table and Initialization Function
+
+      * 1.5. Compilation and Linkage
+
+      * 1.6. Calling Python Functions from C
+
+      * 1.7. Extracting Parameters in Extension Functions
+
+      * 1.8. Keyword Parameters for Extension Functions
+
+      * 1.9. Building Arbitrary Values
+
+      * 1.10. Reference Counts
+
+        * 1.10.1. Reference Counting in Python
+
+        * 1.10.2. Ownership Rules
+
+        * 1.10.3. Thin Ice
+
+        * 1.10.4. NULL Pointers
+
+      * 1.11. Writing Extensions in C++
+
+      * 1.12. Providing a C API for an Extension Module
+
+    * 2. Defining Extension Types: Tutorial
+
+      * 2.1. The Basics
+
+      * 2.2. Adding data and methods to the Basic example
+
+      * 2.3. Providing finer control over data attributes
+
+      * 2.4. Supporting cyclic garbage collection
+
+      * 2.5. Subclassing other types
+
+    * 3. Defining Extension Types: Assorted Topics
+
+      * 3.1. Finalization and De-allocation
+
+      * 3.2. Object Presentation
+
+      * 3.3. Attribute Management
+
+        * 3.3.1. Generic Attribute Management
+
+        * 3.3.2. Type-specific Attribute Management
+
+      * 3.4. Object Comparison
+
+      * 3.5. Abstract Protocol Support
+
+      * 3.6. Weak Reference Support
+
+      * 3.7. More Suggestions
+
+    * 4. Building C and C++ Extensions
+
+      * 4.1. Building C and C++ Extensions with setuptools
+
+    * 5. Building C and C++ Extensions on Windows
+
+      * 5.1. A Cookbook Approach
+
+      * 5.2. Differences Between Unix and Windows
+
+      * 5.3. Using DLLs in Practice
+
+  * Embedding the CPython runtime in a larger application
+
+    * 1. Embedding Python in Another Application
+
+      * 1.1. Very High Level Embedding
+
+      * 1.2. Beyond Very High Level Embedding: An overview
+
+      * 1.3. Pure Embedding
+
+      * 1.4. Extending Embedded Python
+
+      * 1.5. Embedding Python in C++
+
+      * 1.6. Compiling and Linking under Unix-like systems
+
+* Python/C API Reference Manual
+
+  * Introduction
+
+    * Coding standards
+
+    * Include Files
+
+    * Useful macros
+
+    * Objects, Types and Reference Counts
+
+      * Reference Counts
+
+        * Reference Count Details
+
+      * Types
+
+    * Exceptions
+
+    * Embedding Python
+
+    * Debugging Builds
+
+    * Recommended third party tools
+
+  * C API Stability
+
+    * Unstable C API
+
+    * Stable Application Binary Interface
+
+      * Limited C API
+
+      * Stable ABI
+
+      * Limited API Scope and Performance
+
+      * Limited API Caveats
+
+    * Platform Considerations
+
+    * Contents of Limited API
+
+  * The Very High Level Layer
+
+    * Available start symbols
+
+    * Stack Effects
+
+  * Reference Counting
+
+  * Exception Handling
+
+    * Printing and clearing
+
+    * Raising exceptions
+
+    * Issuing warnings
+
+    * Querying the error indicator
+
+    * Signal Handling
+
+    * Exception Classes
+
+    * Exception Objects
+
+    * Unicode Exception Objects
+
+    * Recursion Control
+
+    * Exception and warning types
+
+      * Exception types
+
+      * OSError aliases
+
+      * Warning types
+
+    * Tracebacks
+
+  * Utilities
+
+    * Operating System Utilities
+
+    * System Functions
+
+    * Process Control
+
+    * Importing Modules
+
+    * Data marshalling support
+
+    * Parsing arguments and building values
+
+      * Parsing arguments
+
+        * Strings and buffers
+
+        * Numbers
+
+        * Other objects
+
+        * API Functions
+
+      * Building values
+
+    * String conversion and formatting
+
+    * Character classification and conversion
+
+    * PyHash API
+
+    * Reflection
+
+    * Codec registry and support functions
+
+      * Codec lookup API
+
+      * Registry API for Unicode encoding error handlers
+
+      * Codec utility variables
+
+    * PyTime C API
+
+      * Types
+
+      * Clock Functions
+
+      * Raw Clock Functions
+
+      * Conversion functions
+
+    * Support for Perf Maps
+
+  * Abstract Objects Layer
+
+    * Object Protocol
+
+    * Call Protocol
+
+      * The *tp_call* Protocol
+
+      * The Vectorcall Protocol
+
+        * Recursion Control
+
+        * Vectorcall Support API
+
+      * Object Calling API
+
+      * Call Support API
+
+    * Number Protocol
+
+    * Sequence Protocol
+
+    * Mapping Protocol
+
+    * Iterator Protocol
+
+    * Buffer Protocol
+
+      * Buffer structure
+
+      * Buffer request types
+
+        * request-independent fields
+
+        * readonly, format
+
+        * shape, strides, suboffsets
+
+        * contiguity requests
+
+        * compound requests
+
+      * Complex arrays
+
+        * NumPy-style: shape and strides
+
+        * PIL-style: shape, strides and suboffsets
+
+      * Buffer-related functions
+
+  * Concrete Objects Layer
+
+    * Fundamental Objects
+
+      * Type Objects
+
+        * Creating Heap-Allocated Types
+
+      * The "None" Object
+
+    * Numeric Objects
+
+      * Integer Objects
+
+      * Boolean Objects
+
+      * Floating-Point Objects
+
+        * Pack and Unpack functions
+
+          * Pack functions
+
+          * Unpack functions
+
+      * Complex Number Objects
+
+        * Complex Numbers as C Structures
+
+        * Complex Numbers as Python Objects
+
+    * Sequence Objects
+
+      * Bytes Objects
+
+      * Byte Array Objects
+
+        * Type check macros
+
+        * Direct API functions
+
+        * Macros
+
+      * Unicode Objects and Codecs
+
+        * Unicode Objects
+
+          * Unicode Type
+
+          * Unicode Character Properties
+
+          * Creating and accessing Unicode strings
+
+          * Locale Encoding
+
+          * File System Encoding
+
+          * wchar_t Support
+
+        * Built-in Codecs
+
+          * Generic Codecs
+
+          * UTF-8 Codecs
+
+          * UTF-32 Codecs
+
+          * UTF-16 Codecs
+
+          * UTF-7 Codecs
+
+          * Unicode-Escape Codecs
+
+          * Raw-Unicode-Escape Codecs
+
+          * Latin-1 Codecs
+
+          * ASCII Codecs
+
+          * Character Map Codecs
+
+          * MBCS codecs for Windows
+
+        * Methods and Slot Functions
+
+      * Tuple Objects
+
+      * Struct Sequence Objects
+
+      * List Objects
+
+    * Container Objects
+
+      * Dictionary Objects
+
+        * Dictionary View Objects
+
+        * Ordered Dictionaries
+
+      * Set Objects
+
+    * Function Objects
+
+      * Function Objects
+
+      * Instance Method Objects
+
+      * Method Objects
+
+      * Cell Objects
+
+      * Code Objects
+
+      * Code Object Flags
+
+      * Extra information
+
+    * Other Objects
+
+      * File Objects
+
+      * Module Objects
+
+        * Initializing C modules
+
+          * Single-phase initialization
+
+          * Multi-phase initialization
+
+          * Low-level module creation functions
+
+          * Support functions
+
+        * Module lookup
+
+      * Iterator Objects
+
+        * Range Objects
+
+        * Builtin Iterator Types
+
+        * Other Iterator Objects
+
+      * Descriptor Objects
+
+        * Built-in descriptors
+
+      * Slice Objects
+
+        * Ellipsis Object
+
+      * MemoryView objects
+
+      * Pickle buffer objects
+
+      * Weak Reference Objects
+
+      * Capsules
+
+      * Frame objects
+
+        * Frame locals proxies
+
+        * Legacy local variable APIs
+
+        * Internal frames
+
+      * Generator Objects
+
+        * Asynchronous Generator Objects
+
+      * Coroutine Objects
+
+      * Context Variables Objects
+
+      * Objects for Type Hinting
+
+    * C API for extension modules
+
+      * Curses C API
+
+      * Internal data
+
+      * DateTime Objects
+
+      * Internal data
+
+  * Initialization, Finalization, and Threads
+
+    * Before Python Initialization
+
+    * Global configuration variables
+
+    * Initializing and finalizing the interpreter
+
+    * Process-wide parameters
+
+    * Thread State and the Global Interpreter Lock
+
+      * Releasing the GIL from extension code
+
+      * Non-Python created threads
+
+      * Cautions about fork()
+
+      * Cautions regarding runtime finalization
+
+      * High-level API
+
+      * Low-level API
+
+    * Sub-interpreter support
+
+      * A Per-Interpreter GIL
+
+      * Bugs and caveats
+
+    * Asynchronous Notifications
+
+    * Profiling and Tracing
+
+    * Reference tracing
+
+    * Advanced Debugger Support
+
+    * Thread Local Storage Support
+
+      * Thread Specific Storage (TSS) API
+
+        * Dynamic Allocation
+
+        * Methods
+
+      * Thread Local Storage (TLS) API
+
+    * Synchronization Primitives
+
+      * Python Critical Section API
+
+      * Legacy Locking APIs
+
+    * Operating System Thread APIs
+
+  * Python Initialization Configuration
+
+    * Example
+
+    * PyWideStringList
+
+    * PyStatus
+
+    * PyPreConfig
+
+    * Preinitialize Python with PyPreConfig
+
+    * PyConfig
+
+    * Initialization with PyConfig
+
+    * Isolated Configuration
+
+    * Python Configuration
+
+    * Python Path Configuration
+
+    * Py_GetArgcArgv()
+
+    * Multi-Phase Initialization Private Provisional API
+
+  * Memory Management
+
+    * Overview
+
+    * Allocator Domains
+
+    * Raw Memory Interface
+
+    * Memory Interface
+
+      * Deprecated aliases
+
+    * Object allocators
+
+    * Default Memory Allocators
+
+    * Customize Memory Allocators
+
+    * Debug hooks on the Python memory allocators
+
+    * The pymalloc allocator
+
+      * Customize pymalloc Arena Allocator
+
+    * The mimalloc allocator
+
+    * tracemalloc C API
+
+    * Examples
+
+  * Object Implementation Support
+
+    * Allocating objects on the heap
+
+      * Soft-deprecated aliases
+
+    * Common Object Structures
+
+      * Base object types and macros
+
+      * Implementing functions and methods
+
+      * Accessing attributes of extension types
+
+        * Member flags
+
+        * Member types
+
+        * Defining Getters and Setters
+
+    * Type Object Structures
+
+      * Quick Reference
+
+        * "tp slots"
+
+        * sub-slots
+
+        * slot typedefs
+
+      * PyTypeObject Definition
+
+      * PyObject Slots
+
+      * PyVarObject Slots
+
+      * PyTypeObject Slots
+
+      * Static Types
+
+      * Heap Types
+
+      * Number Object Structures
+
+      * Mapping Object Structures
+
+      * Sequence Object Structures
+
+      * Buffer Object Structures
+
+      * Async Object Structures
+
+      * Slot Type typedefs
+
+      * Examples
+
+    * Supporting Cyclic Garbage Collection
+
+      * Controlling the Garbage Collector State
+
+      * Querying Garbage Collector State
+
+  * API and ABI Versioning
+
+  * Monitoring C API
+
+  * Generating Execution Events
+
+    * Managing the Monitoring State
+
+* Installing Python modules
+
+  * Key terms
+
+  * Basic usage
+
+  * How do I ...?
+
+    * ... install packages just for the current user?
+
+    * ... install scientific Python packages?
+
+    * ... work with multiple versions of Python installed in parallel?
+
+  * Common installation issues
+
+    * Installing into the system Python on Linux
+
+    * Pip not installed
+
+    * Installing binary extensions
+
+* Python HOWTOs
+
+* Python Frequently Asked Questions
+
+  * General Python FAQ
+
+    * General Information
+
+    * Python in the real world
+
+  * Programming FAQ
+
+    * General questions
+
+    * Core language
+
+    * Numbers and strings
+
+    * Performance
+
+    * Sequences (tuples/lists)
+
+    * Objects
+
+    * Modules
+
+  * Design and History FAQ
+
+    * Why does Python use indentation for grouping of statements?
+
+    * Why am I getting strange results with simple arithmetic
+      operations?
+
+    * Why are floating-point calculations so inaccurate?
+
+    * Why are Python strings immutable?
+
+    * Why must 'self' be used explicitly in method definitions and
+      calls?
+
+    * Why can't I use an assignment in an expression?
+
+    * Why does Python use methods for some functionality (e.g.
+      list.index()) but functions for other (e.g. len(list))?
+
+    * Why is join() a string method instead of a list or tuple method?
+
+    * How fast are exceptions?
+
+    * Why isn't there a switch or case statement in Python?
+
+    * Can't you emulate threads in the interpreter instead of relying
+      on an OS-specific thread implementation?
+
+    * Why can't lambda expressions contain statements?
+
+    * Can Python be compiled to machine code, C or some other
+      language?
+
+    * How does Python manage memory?
+
+    * Why doesn't CPython use a more traditional garbage collection
+      scheme?
+
+    * Why isn't all memory freed when CPython exits?
+
+    * Why are there separate tuple and list data types?
+
+    * How are lists implemented in CPython?
+
+    * How are dictionaries implemented in CPython?
+
+    * Why must dictionary keys be immutable?
+
+    * Why doesn't list.sort() return the sorted list?
+
+    * How do you specify and enforce an interface spec in Python?
+
+    * Why is there no goto?
+
+    * Why can't raw strings (r-strings) end with a backslash?
+
+    * Why doesn't Python have a "with" statement for attribute
+      assignments?
+
+    * Why don't generators support the with statement?
+
+    * Why are colons required for the if/while/def/class statements?
+
+    * Why does Python allow commas at the end of lists and tuples?
+
+  * Library and Extension FAQ
+
+    * General Library Questions
+
+    * Common tasks
+
+    * Threads
+
+    * Input and Output
+
+    * Network/Internet Programming
+
+    * Databases
+
+    * Mathematics and Numerics
+
+  * Extending/Embedding FAQ
+
+    * Can I create my own functions in C?
+
+    * Can I create my own functions in C++?
+
+    * Writing C is hard; are there any alternatives?
+
+    * How can I execute arbitrary Python statements from C?
+
+    * How can I evaluate an arbitrary Python expression from C?
+
+    * How do I extract C values from a Python object?
+
+    * How do I use Py_BuildValue() to create a tuple of arbitrary
+      length?
+
+    * How do I call an object's method from C?
+
+    * How do I catch the output from PyErr_Print() (or anything that
+      prints to stdout/stderr)?
+
+    * How do I access a module written in Python from C?
+
+    * How do I interface to C++ objects from Python?
+
+    * I added a module using the Setup file and the make fails; why?
+
+    * How do I debug an extension?
+
+    * I want to compile a Python module on my Linux system, but some
+      files are missing. Why?
+
+    * How do I tell "incomplete input" from "invalid input"?
+
+    * How do I find undefined g++ symbols __builtin_new or
+      __pure_virtual?
+
+    * Can I create an object class with some methods implemented in C
+      and others in Python (e.g. through inheritance)?
+
+  * Python on Windows FAQ
+
+    * How do I run a Python program under Windows?
+
+    * How do I make Python scripts executable?
+
+    * Why does Python sometimes take so long to start?
+
+    * How do I make an executable from a Python script?
+
+    * Is a "*.pyd" file the same as a DLL?
+
+    * How can I embed Python into a Windows application?
+
+    * How do I keep editors from inserting tabs into my Python source?
+
+    * How do I check for a keypress without blocking?
+
+    * How do I solve the missing api-ms-win-crt-runtime-l1-1-0.dll
+      error?
+
+  * Graphic User Interface FAQ
+
+    * General GUI Questions
+
+    * What GUI toolkits exist for Python?
+
+    * Tkinter questions
+
+  * "Why is Python Installed on my Computer?" FAQ
+
+    * What is Python?
+
+    * Why is Python installed on my machine?
+
+    * Can I delete Python?
+
+* Deprecations
+
+  * Pending Removal in Python 3.14
+
+  * Pending Removal in Python 3.15
+
+  * Pending removal in Python 3.16
+
+  * Pending removal in Python 3.17
+
+  * Pending removal in Python 3.18
+
+  * Pending Removal in Future Versions
+
+  * C API Deprecations
+
+    * Pending Removal in Python 3.14
+
+    * Pending Removal in Python 3.15
+
+    * Pending Removal in Future Versions
+
+* Glossary
+
+* About this documentation
+
+  * Contributors to the Python documentation
+
+* Dealing with Bugs
+
+  * Documentation bugs
+
+  * Using the Python issue tracker
+
+  * Getting started contributing to Python yourself
+
+* Copyright
+
+* History and License
+
+  * History of the software
+
+  * Terms and conditions for accessing or otherwise using Python
+
+    * PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+
+    * BEOPEN.COM LICENSE AGREEMENT FOR PYTHON 2.0
+
+    * CNRI LICENSE AGREEMENT FOR PYTHON 1.6.1
+
+    * CWI LICENSE AGREEMENT FOR PYTHON 0.9.0 THROUGH 1.2
+
+    * ZERO-CLAUSE BSD LICENSE FOR CODE IN THE PYTHON DOCUMENTATION
+
+  * Licenses and Acknowledgements for Incorporated Software
+
+    * Mersenne Twister
+
+    * Sockets
+
+    * Asynchronous socket services
+
+    * Cookie management
+
+    * Execution tracing
+
+    * UUencode and UUdecode functions
+
+    * XML Remote Procedure Calls
+
+    * test_epoll
+
+    * Select kqueue
+
+    * SipHash24
+
+    * strtod and dtoa
+
+    * OpenSSL
+
+    * expat
+
+    * libffi
+
+    * zlib
+
+    * cfuhash
+
+    * libmpdec
+
+    * W3C C14N test suite
+
+    * mimalloc
+
+    * asyncio
+
+    * Global Unbounded Sequences (GUS)
+
+    * Unicode Character Database

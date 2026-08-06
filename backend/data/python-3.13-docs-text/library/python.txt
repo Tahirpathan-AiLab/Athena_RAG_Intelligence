@@ -1,0 +1,213 @@
+Python Runtime Services
+***********************
+
+The modules described in this chapter provide a wide range of services
+related to the Python interpreter and its interaction with its
+environment.  Here's an overview:
+
+* "sys" --- System-specific parameters and functions
+
+* "sys.monitoring" --- Execution event monitoring
+
+  * Tool identifiers
+
+    * Registering and using tools
+
+  * Events
+
+    * Local events
+
+    * Ancillary events
+
+    * Other events
+
+    * The STOP_ITERATION event
+
+  * Turning events on and off
+
+    * Setting events globally
+
+    * Per code object events
+
+    * Disabling events
+
+  * Registering callback functions
+
+    * Callback function arguments
+
+* "sysconfig" --- Provide access to Python's configuration information
+
+  * Configuration variables
+
+  * Installation paths
+
+  * User scheme
+
+    * "posix_user"
+
+    * "nt_user"
+
+    * "osx_framework_user"
+
+  * Home scheme
+
+    * "posix_home"
+
+  * Prefix scheme
+
+    * "posix_prefix"
+
+    * "nt"
+
+  * Installation path functions
+
+  * Other functions
+
+  * Command-line usage
+
+* "builtins" --- Built-in objects
+
+* "__main__" --- Top-level code environment
+
+  * "__name__ == '__main__'"
+
+    * What is the "top-level code environment"?
+
+    * Idiomatic Usage
+
+    * Packaging Considerations
+
+  * "__main__.py" in Python Packages
+
+    * Idiomatic Usage
+
+  * "import __main__"
+
+* "warnings" --- Warning control
+
+  * Warning Categories
+
+  * The Warnings Filter
+
+    * Repeated Warning Suppression Criteria
+
+    * Describing Warning Filters
+
+    * Default Warning Filter
+
+    * Overriding the default filter
+
+  * Temporarily Suppressing Warnings
+
+  * Testing Warnings
+
+  * Updating Code For New Versions of Dependencies
+
+  * Available Functions
+
+  * Available Context Managers
+
+* "dataclasses" --- Data Classes
+
+  * Module contents
+
+  * Post-init processing
+
+  * Class variables
+
+  * Init-only variables
+
+  * Frozen instances
+
+  * Inheritance
+
+  * Re-ordering of keyword-only parameters in "__init__()"
+
+  * Default factory functions
+
+  * Mutable default values
+
+  * Descriptor-typed fields
+
+* "contextlib" --- Utilities for "with"-statement contexts
+
+  * Utilities
+
+  * Examples and Recipes
+
+    * Supporting a variable number of context managers
+
+    * Catching exceptions from "__enter__" methods
+
+    * Cleaning up in an "__enter__" implementation
+
+    * Replacing any use of "try-finally" and flag variables
+
+    * Using a context manager as a function decorator
+
+  * Single use, reusable and reentrant context managers
+
+    * Reentrant context managers
+
+    * Reusable context managers
+
+* "abc" --- Abstract Base Classes
+
+* "atexit" --- Exit handlers
+
+  * "atexit" Example
+
+* "traceback" --- Print or retrieve a stack traceback
+
+  * Module-Level Functions
+
+  * "TracebackException" Objects
+
+  * "StackSummary" Objects
+
+  * "FrameSummary" Objects
+
+  * Examples of Using the Module-Level Functions
+
+  * Examples of Using "TracebackException"
+
+* "__future__" --- Future statement definitions
+
+  * Module Contents
+
+* "gc" --- Garbage Collector interface
+
+* "inspect" --- Inspect live objects
+
+  * Types and members
+
+  * Retrieving source code
+
+  * Introspecting callables with the Signature object
+
+  * Classes and functions
+
+  * The interpreter stack
+
+  * Fetching attributes statically
+
+  * Current State of Generators, Coroutines, and Asynchronous
+    Generators
+
+  * Code Objects Bit Flags
+
+  * Buffer flags
+
+  * Command-line interface
+
+* "site" --- Site-specific configuration hook
+
+  * "sitecustomize"
+
+  * "usercustomize"
+
+  * Readline configuration
+
+  * Module contents
+
+  * Command-line interface

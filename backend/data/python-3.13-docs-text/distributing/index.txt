@@ -1,0 +1,8 @@
+Distributing Python Modules
+***************************
+
+Note:
+
+  Information and guidance on distributing Python modules and packages
+  has been moved to the Python Packaging User Guide, and the tutorial
+  on packaging Python projects.

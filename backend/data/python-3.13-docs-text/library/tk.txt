@@ -1,0 +1,354 @@
+Graphical user interfaces with Tk
+*********************************
+
+Tk/Tcl has long been an integral part of Python.  It provides a robust
+and platform independent windowing toolkit, that is available to
+Python programmers using the "tkinter" package, and its extension, the
+"tkinter.ttk" module.
+
+The "tkinter" package is a thin object-oriented layer on top of
+Tcl/Tk. To use "tkinter", you don't need to write Tcl code, but you
+will need to consult the Tk documentation, and occasionally the Tcl
+documentation. "tkinter" is a set of wrappers that implement the Tk
+widgets as Python classes.
+
+"tkinter"'s chief virtues are that it is fast, and that it usually
+comes bundled with Python. Although its standard documentation is
+weak, good material is available, which includes: references,
+tutorials, a book and others. "tkinter" is also famous for having an
+outdated look and feel, which has been vastly improved in Tk 8.5.
+Nevertheless, there are many other GUI libraries that you could be
+interested in. The Python wiki lists several alternative GUI
+frameworks and tools.
+
+* "tkinter" --- Python interface to Tcl/Tk
+
+  * Architecture
+
+  * Tkinter modules
+
+  * Tkinter life preserver
+
+    * A Hello World program
+
+    * Important Tk concepts
+
+    * Understanding how Tkinter wraps Tcl/Tk
+
+    * How do I...? What option does...?
+
+    * Navigating the Tcl/Tk reference manual
+
+  * Threading model
+
+  * Handy reference
+
+    * Setting options
+
+    * Geometry management
+
+    * Coupling widget variables
+
+    * The window manager
+
+    * Tk option data types
+
+    * Bindings and events
+
+    * The index parameter
+
+    * Images
+
+  * Reference
+
+    * Base and mixin classes
+
+    * Toplevel widgets
+
+    * Widget classes
+
+    * Variable classes
+
+    * Image classes
+
+    * Other classes
+
+    * Module-level functions
+
+    * File handlers
+
+    * Constants
+
+* "tkinter.colorchooser" --- Color choosing dialog
+
+* "tkinter.font" --- Tkinter font wrapper
+
+* Tkinter dialogs
+
+  * "tkinter.simpledialog" --- Standard Tkinter input dialogs
+
+  * "tkinter.filedialog" --- File selection dialogs
+
+    * Native load/save dialogs
+
+  * "tkinter.commondialog" --- Dialog window templates
+
+  * "tkinter.dialog" --- Classic Tk dialog boxes
+
+* "tkinter.messagebox" --- Tkinter message prompts
+
+* "tkinter.scrolledtext" --- Scrolled text widget
+
+* "tkinter.dnd" --- Drag and drop support
+
+* "tkinter.ttk" --- Tk themed widgets
+
+  * Using Ttk
+
+  * Ttk widgets
+
+  * Widget
+
+    * Standard options
+
+    * Scrollable widget options
+
+    * Label options
+
+    * Compatibility options
+
+    * Widget states
+
+    * ttk.Widget
+
+  * Combobox
+
+    * Options
+
+    * Virtual events
+
+    * ttk.Combobox
+
+  * Spinbox
+
+    * Options
+
+    * Virtual events
+
+    * ttk.Spinbox
+
+  * Notebook
+
+    * Options
+
+    * Tab options
+
+    * Tab identifiers
+
+    * Virtual events
+
+    * ttk.Notebook
+
+  * Progressbar
+
+    * Options
+
+    * ttk.Progressbar
+
+  * Separator
+
+    * Options
+
+  * Sizegrip
+
+    * Platform-specific notes
+
+    * Bugs
+
+  * Treeview
+
+    * Options
+
+    * Item options
+
+    * Tag options
+
+    * Column identifiers
+
+    * Virtual events
+
+    * ttk.Treeview
+
+  * Ttk styling
+
+    * Layouts
+
+  * Additional widgets
+
+* IDLE --- Python editor and shell
+
+  * Menus
+
+    * File menu (Shell and Editor)
+
+    * Edit menu (Shell and Editor)
+
+    * Format menu (Editor window only)
+
+    * Run menu (Editor window only)
+
+    * Shell menu (Shell window only)
+
+    * Debug menu (Shell window only)
+
+    * Options menu (Shell and Editor)
+
+    * Window menu (Shell and Editor)
+
+    * Help menu (Shell and Editor)
+
+    * Context menus
+
+  * Editing and Navigation
+
+    * Editor windows
+
+    * Key bindings
+
+    * Automatic indentation
+
+    * Search and Replace
+
+    * Completions
+
+    * Calltips
+
+    * Format block
+
+    * Code Context
+
+    * Shell window
+
+    * Text colors
+
+  * Startup and Code Execution
+
+    * Command-line usage
+
+    * Startup failure
+
+    * Running user code
+
+    * User output in Shell
+
+    * Developing tkinter applications
+
+    * Running without a subprocess
+
+  * Help and Preferences
+
+    * Help sources
+
+    * Setting preferences
+
+    * IDLE on macOS
+
+    * Extensions
+
+  * idlelib --- implementation of IDLE application
+
+* "turtle" --- Turtle graphics
+
+  * Introduction
+
+  * Get started
+
+  * Tutorial
+
+    * Starting a turtle environment
+
+    * Basic drawing
+
+      * Pen control
+
+      * The turtle's position
+
+    * Making algorithmic patterns
+
+  * How to...
+
+    * Get started as quickly as possible
+
+    * Use the "turtle" module namespace
+
+    * Use turtle graphics in a script
+
+    * Use object-oriented turtle graphics
+
+  * Turtle graphics reference
+
+    * Turtle methods
+
+    * Methods of TurtleScreen/Screen
+
+  * Methods of RawTurtle/Turtle and corresponding functions
+
+    * Turtle motion
+
+    * Tell Turtle's state
+
+    * Settings for measurement
+
+    * Pen control
+
+      * Drawing state
+
+      * Color control
+
+      * Filling
+
+      * More drawing control
+
+    * Turtle state
+
+      * Visibility
+
+      * Appearance
+
+    * Using events
+
+    * Special Turtle methods
+
+    * Compound shapes
+
+  * Methods of TurtleScreen/Screen and corresponding functions
+
+    * Window control
+
+    * Animation control
+
+    * Using screen events
+
+    * Input methods
+
+    * Settings and special methods
+
+    * Methods specific to Screen, not inherited from TurtleScreen
+
+  * Public classes
+
+  * Explanation
+
+  * Help and configuration
+
+    * How to use help
+
+    * Translation of docstrings into different languages
+
+    * How to configure Screen and Turtles
+
+  * "turtledemo" --- Demo scripts
+
+  * Changes since Python 2.6
+
+  * Changes since Python 3.0

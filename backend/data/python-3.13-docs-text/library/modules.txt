@@ -1,0 +1,88 @@
+Importing Modules
+*****************
+
+The modules described in this chapter provide new ways to import other
+Python modules and hooks for customizing the import process.
+
+The full list of modules described in this chapter is:
+
+* "zipimport" --- Import modules from Zip archives
+
+  * zipimporter Objects
+
+  * Examples
+
+* "pkgutil" --- Package extension utility
+
+* "modulefinder" --- Find modules used by a script
+
+  * Example usage of "ModuleFinder"
+
+* "runpy" --- Locating and executing Python modules
+
+* "importlib" --- The implementation of "import"
+
+  * Introduction
+
+  * Functions
+
+  * "importlib.abc" -- Abstract base classes related to import
+
+  * "importlib.machinery" -- Importers and path hooks
+
+  * "importlib.util" -- Utility code for importers
+
+  * Examples
+
+    * Importing programmatically
+
+    * Checking if a module can be imported
+
+    * Importing a source file directly
+
+    * Implementing lazy imports
+
+    * Setting up an importer
+
+    * Approximating "importlib.import_module()"
+
+* "importlib.resources" -- Package resource reading, opening and
+  access
+
+  * Functional API
+
+* "importlib.resources.abc" -- Abstract base classes for resources
+
+* "importlib.metadata" -- Accessing package metadata
+
+  * Overview
+
+  * Functional API
+
+    * Entry points
+
+    * Distribution metadata
+
+    * Distribution versions
+
+    * Distribution files
+
+    * Distribution requirements
+
+    * Mapping import to distribution packages
+
+  * Distributions
+
+  * Distribution Discovery
+
+  * Extending the search algorithm
+
+    * Example
+
+* The initialization of the "sys.path" module search path
+
+  * Virtual environments
+
+  * _pth files
+
+  * Embedded Python

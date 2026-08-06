@@ -1,0 +1,103 @@
+Pending Removal in Python 3.14
+******************************
+
+* "argparse": The *type*, *choices*, and *metavar* parameters of
+  "argparse.BooleanOptionalAction" are deprecated and will be removed
+  in 3.14. (Contributed by Nikita Sobolev in gh-92248.)
+
+* "ast": The following features have been deprecated in documentation
+  since Python 3.8, now cause a "DeprecationWarning" to be emitted at
+  runtime when they are accessed or used, and will be removed in
+  Python 3.14:
+
+  * "ast.Num"
+
+  * "ast.Str"
+
+  * "ast.Bytes"
+
+  * "ast.NameConstant"
+
+  * "ast.Ellipsis"
+
+  Use "ast.Constant" instead. (Contributed by Serhiy Storchaka in
+  gh-90953.)
+
+* "asyncio":
+
+  * The child watcher classes "MultiLoopChildWatcher",
+    "FastChildWatcher", "AbstractChildWatcher" and "SafeChildWatcher"
+    are deprecated and will be removed in Python 3.14. (Contributed by
+    Kumar Aditya in gh-94597.)
+
+  * "asyncio.set_child_watcher()", "asyncio.get_child_watcher()",
+    "asyncio.AbstractEventLoopPolicy.set_child_watcher()" and
+    "asyncio.AbstractEventLoopPolicy.get_child_watcher()" are
+    deprecated and will be removed in Python 3.14. (Contributed by
+    Kumar Aditya in gh-94597.)
+
+  * The "get_event_loop()" method of the default event loop policy now
+    emits a "DeprecationWarning" if there is no current event loop set
+    and it decides to create one. (Contributed by Serhiy Storchaka and
+    Guido van Rossum in gh-100160.)
+
+* "builtins": "bool(NotImplemented)" now emits a "DeprecationWarning"
+  and will raise a "TypeError" in Python 3.14. (Contributed by Jelle
+  Zijlstra in gh-118767.)
+
+* "email": Deprecated the *isdst* parameter in
+  "email.utils.localtime()". (Contributed by Alan Williams in
+  gh-72346.)
+
+* "importlib.abc" deprecated classes:
+
+  * "importlib.abc.ResourceReader"
+
+  * "importlib.abc.Traversable"
+
+  * "importlib.abc.TraversableResources"
+
+  Use "importlib.resources.abc" classes instead:
+
+  * "importlib.resources.abc.Traversable"
+
+  * "importlib.resources.abc.TraversableResources"
+
+  (Contributed by Jason R. Coombs and Hugo van Kemenade in gh-93963.)
+
+* "itertools" had undocumented, inefficient, historically buggy, and
+  inconsistent support for copy, deepcopy, and pickle operations. This
+  will be removed in 3.14 for a significant reduction in code volume
+  and maintenance burden. (Contributed by Raymond Hettinger in
+  gh-101588.)
+
+* "multiprocessing": The default start method will change to a safer
+  one on Linux, BSDs, and other non-macOS POSIX platforms where
+  "'fork'" is currently the default (gh-84559). Adding a runtime
+  warning about this was deemed too disruptive as the majority of code
+  is not expected to care. Use the "get_context()" or
+  "set_start_method()" APIs to explicitly specify when your code
+  *requires* "'fork'".  See Contexts and start methods.
+
+* "pathlib": "is_relative_to()" and "relative_to()": passing
+  additional arguments is deprecated.
+
+* "pkgutil": "find_loader()" and "get_loader()" now raise
+  "DeprecationWarning"; use "importlib.util.find_spec()" instead.
+  (Contributed by Nikita Sobolev in gh-97850.)
+
+* "pty":
+
+  * "master_open()": use "pty.openpty()".
+
+  * "slave_open()": use "pty.openpty()".
+
+* "sqlite3":
+
+  * "version" and "version_info".
+
+  * "execute()" and "executemany()" if named placeholders are used and
+    *parameters* is a sequence instead of a "dict".
+
+* "urllib": "urllib.parse.Quoter" is deprecated: it was not intended
+  to be a public API. (Contributed by Gregory P. Smith in gh-88168.)

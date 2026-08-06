@@ -1,0 +1,30 @@
+Pending Removal in Python 3.15
+******************************
+
+* The "PyImport_ImportModuleNoBlock()": Use "PyImport_ImportModule()"
+  instead.
+
+* "PyWeakref_GetObject()" and "PyWeakref_GET_OBJECT()": Use
+  "PyWeakref_GetRef()" instead.
+
+* "Py_UNICODE" type and the "Py_UNICODE_WIDE" macro: Use "wchar_t"
+  instead.
+
+* Python initialization functions:
+
+  * "PySys_ResetWarnOptions()": Clear "sys.warnoptions" and
+    "warnings.filters" instead.
+
+  * "Py_GetExecPrefix()": Get "sys.base_exec_prefix" and
+    "sys.exec_prefix" instead.
+
+  * "Py_GetPath()": Get "sys.path" instead.
+
+  * "Py_GetPrefix()": Get "sys.base_prefix" and "sys.prefix" instead.
+
+  * "Py_GetProgramFullPath()": Get "sys.executable" instead.
+
+  * "Py_GetProgramName()": Get "sys.executable" instead.
+
+  * "Py_GetPythonHome()": Get "PyConfig.home" or the "PYTHONHOME"
+    environment variable instead.

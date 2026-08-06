@@ -1,0 +1,258 @@
+Generic Operating System Services
+*********************************
+
+The modules described in this chapter provide interfaces to operating
+system features that are available on (almost) all operating systems,
+such as files and a clock.  The interfaces are generally modeled after
+the Unix or C interfaces, but they are available on most other systems
+as well.  Here's an overview:
+
+* "os" --- Miscellaneous operating system interfaces
+
+  * File Names, Command Line Arguments, and Environment Variables
+
+  * Python UTF-8 Mode
+
+  * Process Parameters
+
+  * File Object Creation
+
+  * File Descriptor Operations
+
+    * Querying the size of a terminal
+
+    * Inheritance of File Descriptors
+
+  * Files and Directories
+
+    * Timer File Descriptors
+
+    * Linux extended attributes
+
+  * Process Management
+
+  * Interface to the scheduler
+
+  * Miscellaneous System Information
+
+  * Random numbers
+
+* "io" --- Core tools for working with streams
+
+  * Overview
+
+    * Text I/O
+
+    * Binary I/O
+
+    * Raw I/O
+
+  * Text Encoding
+
+    * Opt-in EncodingWarning
+
+  * High-level Module Interface
+
+  * Class hierarchy
+
+    * I/O Base Classes
+
+    * Raw File I/O
+
+    * Buffered Streams
+
+    * Text I/O
+
+  * Performance
+
+    * Binary I/O
+
+    * Text I/O
+
+    * Multi-threading
+
+    * Reentrancy
+
+* "time" --- Time access and conversions
+
+  * Functions
+
+  * Clock ID Constants
+
+  * Timezone Constants
+
+* "logging" --- Logging facility for Python
+
+  * Logger Objects
+
+  * Logging Levels
+
+  * Handler Objects
+
+  * Formatter Objects
+
+  * Filter Objects
+
+  * LogRecord Objects
+
+  * LogRecord attributes
+
+  * LoggerAdapter Objects
+
+  * Thread Safety
+
+  * Module-Level Functions
+
+  * Module-Level Attributes
+
+  * Integration with the warnings module
+
+* "logging.config" --- Logging configuration
+
+  * Configuration functions
+
+  * Security considerations
+
+  * Configuration dictionary schema
+
+    * Dictionary Schema Details
+
+    * Incremental Configuration
+
+    * Object connections
+
+    * User-defined objects
+
+    * Handler configuration order
+
+    * Access to external objects
+
+    * Access to internal objects
+
+    * Import resolution and custom importers
+
+    * Configuring QueueHandler and QueueListener
+
+  * Configuration file format
+
+* "logging.handlers" --- Logging handlers
+
+  * StreamHandler
+
+  * FileHandler
+
+  * NullHandler
+
+  * WatchedFileHandler
+
+  * BaseRotatingHandler
+
+  * RotatingFileHandler
+
+  * TimedRotatingFileHandler
+
+  * SocketHandler
+
+  * DatagramHandler
+
+  * SysLogHandler
+
+  * NTEventLogHandler
+
+  * SMTPHandler
+
+  * MemoryHandler
+
+  * HTTPHandler
+
+  * QueueHandler
+
+  * QueueListener
+
+* "platform" ---  Access to underlying platform's identifying data
+
+  * Cross platform
+
+  * Java platform
+
+  * Windows platform
+
+  * macOS platform
+
+  * iOS platform
+
+  * Unix platforms
+
+  * Linux platforms
+
+  * Android platform
+
+  * Command-line usage
+
+* "errno" --- Standard errno system symbols
+
+* "ctypes" --- A foreign function library for Python
+
+  * ctypes tutorial
+
+    * Loading dynamic link libraries
+
+    * Accessing functions from loaded dlls
+
+    * Calling functions
+
+    * Fundamental data types
+
+    * Calling functions, continued
+
+    * Calling variadic functions
+
+    * Calling functions with your own custom data types
+
+    * Specifying the required argument types (function prototypes)
+
+    * Return types
+
+    * Passing pointers (or: passing parameters by reference)
+
+    * Structures and unions
+
+    * Structure/union alignment and byte order
+
+    * Bit fields in structures and unions
+
+    * Arrays
+
+    * Pointers
+
+    * Type conversions
+
+    * Incomplete Types
+
+    * Callback functions
+
+    * Accessing values exported from dlls
+
+    * Surprises
+
+    * Variable-sized data types
+
+  * ctypes reference
+
+    * Finding shared libraries
+
+    * Loading shared libraries
+
+    * Foreign functions
+
+    * Function prototypes
+
+    * Utility functions
+
+    * Data types
+
+    * Fundamental data types
+
+    * Structured data types
+
+    * Arrays and pointers

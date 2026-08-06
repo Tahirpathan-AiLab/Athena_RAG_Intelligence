@@ -1,0 +1,276 @@
+Internet Protocols and Support
+******************************
+
+The modules described in this chapter implement internet protocols and
+support for related technology.  They are all implemented in Python.
+Most of these modules require the presence of the system-dependent
+module "socket", which is currently supported on most popular
+platforms.  Here is an overview:
+
+* "webbrowser" --- Convenient web-browser controller
+
+  * Command-line interface
+
+  * Browser controller objects
+
+* "wsgiref" --- WSGI Utilities and Reference Implementation
+
+  * "wsgiref.util" -- WSGI environment utilities
+
+  * "wsgiref.headers" -- WSGI response header tools
+
+  * "wsgiref.simple_server" -- a simple WSGI HTTP server
+
+  * "wsgiref.validate" --- WSGI conformance checker
+
+  * "wsgiref.handlers" -- server/gateway base classes
+
+  * "wsgiref.types" -- WSGI types for static type checking
+
+  * Examples
+
+* "urllib" --- URL handling modules
+
+* "urllib.request" --- Extensible library for opening URLs
+
+  * Request Objects
+
+  * OpenerDirector Objects
+
+  * BaseHandler Objects
+
+  * HTTPRedirectHandler Objects
+
+  * HTTPCookieProcessor Objects
+
+  * ProxyHandler Objects
+
+  * HTTPPasswordMgr Objects
+
+  * HTTPPasswordMgrWithPriorAuth Objects
+
+  * AbstractBasicAuthHandler Objects
+
+  * HTTPBasicAuthHandler Objects
+
+  * ProxyBasicAuthHandler Objects
+
+  * AbstractDigestAuthHandler Objects
+
+  * HTTPDigestAuthHandler Objects
+
+  * ProxyDigestAuthHandler Objects
+
+  * HTTPHandler Objects
+
+  * HTTPSHandler Objects
+
+  * FileHandler Objects
+
+  * DataHandler Objects
+
+  * FTPHandler Objects
+
+  * CacheFTPHandler Objects
+
+  * UnknownHandler Objects
+
+  * HTTPErrorProcessor Objects
+
+  * Examples
+
+  * Legacy interface
+
+  * "urllib.request" Restrictions
+
+* "urllib.response" --- Response classes used by urllib
+
+* "urllib.parse" --- Parse URLs into components
+
+  * URL Parsing
+
+  * URL parsing security
+
+  * Parsing ASCII Encoded Bytes
+
+  * Structured Parse Results
+
+  * URL Quoting
+
+* "urllib.error" --- Exception classes raised by urllib.request
+
+* "urllib.robotparser" ---  Parser for robots.txt
+
+* "http" --- HTTP modules
+
+  * HTTP status codes
+
+  * HTTP status category
+
+  * HTTP methods
+
+* "http.client" --- HTTP protocol client
+
+  * HTTPConnection Objects
+
+  * HTTPResponse Objects
+
+  * Examples
+
+  * HTTPMessage Objects
+
+* "ftplib" --- FTP protocol client
+
+  * Reference
+
+    * FTP objects
+
+    * FTP_TLS objects
+
+    * Module variables
+
+* "poplib" --- POP3 protocol client
+
+  * POP3 Objects
+
+  * POP3 Example
+
+* "imaplib" --- IMAP4 protocol client
+
+  * IMAP4 Objects
+
+  * IMAP4 Example
+
+* "smtplib" --- SMTP protocol client
+
+  * SMTP Objects
+
+  * SMTP Example
+
+* "uuid" --- UUID objects according to **RFC 4122**
+
+  * Command-Line Usage
+
+  * Example
+
+  * Command-Line Example
+
+* "socketserver" --- A framework for network servers
+
+  * Server Creation Notes
+
+  * Server Objects
+
+  * Request Handler Objects
+
+  * Examples
+
+    * "socketserver.TCPServer" Example
+
+    * "socketserver.UDPServer" Example
+
+    * Asynchronous Mixins
+
+* "http.server" --- HTTP servers
+
+  * Command-line interface
+
+  * Security considerations
+
+* "http.cookies" --- HTTP state management
+
+  * Cookie Objects
+
+  * Morsel Objects
+
+  * Example
+
+* "http.cookiejar" --- Cookie handling for HTTP clients
+
+  * CookieJar and FileCookieJar objects
+
+  * FileCookieJar subclasses and co-operation with web browsers
+
+  * CookiePolicy objects
+
+  * DefaultCookiePolicy objects
+
+  * Cookie objects
+
+  * Examples
+
+* "xmlrpc" --- XMLRPC server and client modules
+
+* "xmlrpc.client" --- XML-RPC client access
+
+  * ServerProxy Objects
+
+  * DateTime Objects
+
+  * Binary Objects
+
+  * Fault Objects
+
+  * ProtocolError Objects
+
+  * MultiCall Objects
+
+  * Convenience Functions
+
+  * Example of Client Usage
+
+  * Example of Client and Server Usage
+
+* "xmlrpc.server" --- Basic XML-RPC servers
+
+  * SimpleXMLRPCServer objects
+
+    * SimpleXMLRPCServer example
+
+  * CGIXMLRPCRequestHandler
+
+  * Documenting XMLRPC server
+
+  * DocXMLRPCServer objects
+
+  * DocCGIXMLRPCRequestHandler
+
+* "ipaddress" --- IPv4/IPv6 manipulation library
+
+  * Convenience factory functions
+
+  * IP Addresses
+
+    * Address objects
+
+    * Conversion to Strings and Integers
+
+    * Operators
+
+      * Comparison operators
+
+      * Arithmetic operators
+
+  * IP Network definitions
+
+    * Prefix, net mask and host mask
+
+    * Network objects
+
+    * Operators
+
+      * Logical operators
+
+      * Iteration
+
+      * Networks as containers of addresses
+
+  * Interface objects
+
+    * Operators
+
+      * Logical operators
+
+  * Other Module Level Functions
+
+  * Custom Exceptions
