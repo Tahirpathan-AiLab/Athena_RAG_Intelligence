@@ -14,7 +14,7 @@ The frontend is built with **React** and **Vite**, while the backend is powered 
 
 ---
 
-# Key Features
+# Key Features 
 
 - AI-powered Retrieval-Augmented Generation (RAG)
 - Semantic Search with Vector Embeddings
